@@ -116,7 +116,7 @@ function Blog() {
 }
 
 function Consultant({ contact }) {
-  return <section className="page two"><div><span className="pill">Danışmanınız</span><h1>Merhaba, ben {SITE.consultant}</h1><p>İstanbul’da Thermomix danışmanlığı, demo talebi, kampanya bilgilendirmesi ve satış sonrası kullanım rehberliği için buradayım.</p>{['Kişiye özel danışmanlık', 'Demo ve kampanya bilgilendirmesi', 'Tarif ve kullanım desteği', 'Satış sonrası yönlendirme'].map(x => <div className="check" key={x}>✓ {x}</div>)}<button className="primary spaced" onClick={contact}>Doğukan Bey’e Ulaş</button></div><div className="profileBox"><div className="avatar">DY</div><h2>{SITE.consultant}</h2><p>{SITE.brand}</p><small>{SITE.city}</small></div></section>;
+  return <section className="page two"><div><span className="pill">Danışmanınız</span><h1>Merhaba, ben {SITE.consultant}</h1><p>İstanbul’da Thermomix danışmanlığı, demo talebi, kampanya bilgilendirmesi ve satış sonrası kullanım rehberliği için buradayım.</p>{['Kişiye özel danışmanlık', 'Demo ve kampanya bilgilendirmesi', 'Tarif ve kullanım desteği', 'Satış sonrası yönlendirme'].map(x => <div className="check" key={x}>✓ {x}</div>)}<button className="primary spaced" onClick={contact}>Bize Ulaşın</button></div><div className="profileBox"><div className="avatar">DY</div><h2>{SITE.consultant}</h2><p>{SITE.brand}</p><small>{SITE.city}</small></div></section>;
 }
 
 function Demo({ contact }) {
