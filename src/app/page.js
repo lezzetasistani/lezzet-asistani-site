@@ -39,11 +39,11 @@ const blog = [
 function Logo() {
   return (
     <div className="logoWrap">
-      <div className="logoIcon">LA</div>
-      <div>
-        <strong>{SITE.brand}</strong>
-        <span>{SITE.subtitle}</span>
-      </div>
+      <img
+        src="/logo.png"
+        alt="Lezzet Asistanı"
+        className="brandLogo"
+      />
     </div>
   );
 }
