@@ -35,10 +35,38 @@
 @media(max-width:640px){
   header.siteHeader{flex-direction:row;align-items:center;padding:10px 5%}
   header .brandLogo{width:135px}
-  .mobileMenuButton{display:block;border:0;background:#e8f6ee;color:var(--green);border-radius:14px;padding:8px 14px;font-size:24px;font-weight:900}
+  .mobileMenuButton{display:block;border:0;background:#e8f6ee;color:var(--green);border-radius:14px;padding:9px 14px;font-size:16px;font-weight:900}
   header nav{display:none;position:absolute;top:76px;left:5%;right:5%;background:white;border:1px solid #dcefe4;border-radius:22px;padding:12px;box-shadow:0 18px 40px rgba(0,0,0,.12)}
   header nav.open{display:grid;grid-template-columns:1fr;gap:6px}
   header nav button{width:100%;font-size:14px;padding:10px}
   .headerCta{display:none}
   .hero{padding-top:34px}
+}
+.pill{
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 8px 24px rgba(15,107,69,.10);
+  animation:pillPulse 3.5s ease-in-out infinite;
+}
+
+.pill::after{
+  content:"";
+  position:absolute;
+  top:-40%;
+  left:-60%;
+  width:45%;
+  height:180%;
+  background:linear-gradient(90deg,transparent,rgba(199,161,90,.35),transparent);
+  transform:rotate(20deg);
+  animation:pillShine 4s ease-in-out infinite;
+}
+
+@keyframes pillPulse{
+  0%,100%{box-shadow:0 8px 24px rgba(15,107,69,.10);transform:scale(1)}
+  50%{box-shadow:0 12px 32px rgba(199,161,90,.22);transform:scale(1.015)}
+}
+
+@keyframes pillShine{
+  0%{left:-60%}
+  45%,100%{left:130%}
 }

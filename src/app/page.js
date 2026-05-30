@@ -156,7 +156,7 @@ const go = (p) => {
       <ContactModal open={modal} onClose={() => setModal(false)} />
       <header className={`siteHeader ${showHeader ? '' : 'hideHeader'}`}>
   <Logo />
-  <button className="mobileMenuButton" onClick={() => setMenuOpen(!menuOpen)}>☰</button>
+  <button className="mobileMenuButton" onClick={() => setMenuOpen(!menuOpen)}>☰ Menü</button>
   <nav className={menuOpen ? 'open' : ''}>
     {pages.map(([id, label]) => (
       <button key={id} className={page === id ? 'active' : ''} onClick={() => go(id)}>
