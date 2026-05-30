@@ -56,17 +56,23 @@
   left:-60%;
   width:45%;
   height:180%;
-  background:linear-gradient(90deg,transparent,rgba(199,161,90,.35),transparent);
+  background:linear-gradient(90deg,transparent,rgba(199,161,90,.55),transparent);
   transform:rotate(20deg);
   animation:pillShine 4s ease-in-out infinite;
 }
 
 @keyframes pillPulse{
   0%,100%{box-shadow:0 8px 24px rgba(15,107,69,.10);transform:scale(1)}
-  50%{box-shadow:0 12px 32px rgba(199,161,90,.22);transform:scale(1.015)}
+  50%{box-shadow:0 16px 40px rgba(199,161,90,.30);transform:scale(1.02)}
 }
 
 @keyframes pillShine{
   0%{left:-60%}
   45%,100%{left:130%}
+}
+.codeGold{
+  color:#c7a15a;
+  font-weight:800;
+  letter-spacing:.6px;
+  text-shadow:0 0 8px rgba(199,161,90,.25);
 }
