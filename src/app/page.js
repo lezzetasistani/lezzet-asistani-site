@@ -69,7 +69,11 @@ function Hero({ go, contact }) {
   return (
     <section className="hero">
       <div className="heroText">
-        <div className="pill">✨ Thermomix Danışmanlığı - {SITE.consultant}</div>
+        <div className="pill">
+  ✨ Thermomix Danışmanlığı - {SITE.consultant}
+  <br />
+  🎯 Danışman Kodu: <strong>TM101637</strong>
+</div>
         <h1>Mutfaktaki kişisel lezzet asistanınız.</h1>
         <p>Thermomix TM7 hakkında bilgi alın, güncel kampanyaları inceleyin ve ücretsiz demo talep edin. Lezzet Asistanı ile mutfakta daha kolay, daha planlı ve daha keyifli bir deneyim sizi bekliyor.</p>
         <div className="heroButtons">
