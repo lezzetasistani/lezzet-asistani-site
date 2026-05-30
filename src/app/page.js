@@ -55,7 +55,7 @@ function ContactModal({ open, onClose }) {
       <div className="modal" onClick={(e) => e.stopPropagation()}>
         <button className="close" onClick={onClose}>×</button>
         <h2>Bizimle İletişime Geçin</h2>
-        <p>Thermomix TM7, kampanyalar ve demo talebi için size en uygun kanaldan ulaşabilirsiniz.</p>
+        <p>Thermomix TM7, kampanyalar ve demo talebi için bize aşağıdaki kanallardan ulaşabilirsiniz.</p>
         <div className="modalGrid">
           <a className="contactCard whatsapp" href={`https://wa.me/${SITE.whatsapp}?text=Merhaba%20Doğukan%20Bey,%20Thermomix%20TM7%20hakkında%20bilgi%20almak%20istiyorum.`} target="_blank">WhatsApp<br /><small>{SITE.phoneDisplay}</small></a>
           <a className="contactCard instagram" href={SITE.instagram} target="_blank">Instagram<br /><small>@lezzetasistani</small></a>
