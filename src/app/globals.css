@@ -30,3 +30,15 @@
     padding-top:28px;
   }
 }
+.siteHeader{transition:transform .25s ease}.hideHeader{transform:translateY(-100%)}.mobileMenuButton{display:none}
+
+@media(max-width:640px){
+  header.siteHeader{flex-direction:row;align-items:center;padding:10px 5%}
+  header .brandLogo{width:135px}
+  .mobileMenuButton{display:block;border:0;background:#e8f6ee;color:var(--green);border-radius:14px;padding:8px 14px;font-size:24px;font-weight:900}
+  header nav{display:none;position:absolute;top:76px;left:5%;right:5%;background:white;border:1px solid #dcefe4;border-radius:22px;padding:12px;box-shadow:0 18px 40px rgba(0,0,0,.12)}
+  header nav.open{display:grid;grid-template-columns:1fr;gap:6px}
+  header nav button{width:100%;font-size:14px;padding:10px}
+  .headerCta{display:none}
+  .hero{padding-top:34px}
+}

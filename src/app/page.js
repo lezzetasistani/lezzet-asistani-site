@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const SITE = {
   brand: 'Lezzet Asistanı',
@@ -129,16 +129,43 @@ function Contact({ contact }) {
 
 export default function Page() {
   const [page, setPage] = useState('home');
-  const [modal, setModal] = useState(false);
-  const go = (p) => { setPage(p); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+const [modal, setModal] = useState(false);
+const [menuOpen, setMenuOpen] = useState(false);
+const [showHeader, setShowHeader] = useState(true);
+
+useEffect(() => {
+  let lastScroll = 0;
+
+  const handleScroll = () => {
+    const currentScroll = window.scrollY;
+    setShowHeader(currentScroll < lastScroll || currentScroll < 80);
+    lastScroll = currentScroll;
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
+
+const go = (p) => {
+  setPage(p);
+  setMenuOpen(false);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
   return (
     <main>
       <ContactModal open={modal} onClose={() => setModal(false)} />
-      <header>
-        <Logo />
-        <nav>{pages.map(([id, label]) => <button key={id} className={page === id ? 'active' : ''} onClick={() => go(id)}>{label}</button>)}</nav>
-        <button className="headerCta" onClick={() => setModal(true)}>WhatsApp</button>
-      </header>
+      <header className={`siteHeader ${showHeader ? '' : 'hideHeader'}`}>
+  <Logo />
+  <button className="mobileMenuButton" onClick={() => setMenuOpen(!menuOpen)}>☰</button>
+  <nav className={menuOpen ? 'open' : ''}>
+    {pages.map(([id, label]) => (
+      <button key={id} className={page === id ? 'active' : ''} onClick={() => go(id)}>
+        {label}
+      </button>
+    ))}
+  </nav>
+  <button className="headerCta" onClick={() => setModal(true)}>WhatsApp</button>
+</header>
       {page === 'home' && <Home go={go} contact={() => setModal(true)} />}
       {page === 'about' && <About />}
       {page === 'campaigns' && <Campaigns contact={() => setModal(true)} />}
