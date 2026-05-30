@@ -76,3 +76,12 @@
   letter-spacing:.6px;
   text-shadow:0 0 8px rgba(199,161,90,.25);
 }
+footer .logoWrap{
+  background:rgba(255,255,255,.92);
+  padding:14px 18px;
+  border-radius:22px;
+}
+
+footer .brandLogo{
+  width:220px;
+}
