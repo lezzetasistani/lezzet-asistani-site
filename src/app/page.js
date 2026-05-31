@@ -72,6 +72,9 @@ function WhatsAppWidget({ contact }) {
       {open ? (
         <div className="waPopup">
           <button className="waClose" onClick={() => setOpen(false)}>×</button>
+          <div className="waLogoBox">
+  <img src="/logo.png" alt="Lezzet Asistanı" />
+</div>
           <div className="waTitle">👋 Merhaba!</div>
           <p>
             Ben Thermomix Danışmanınız Doğukan Yıldız.<br />
