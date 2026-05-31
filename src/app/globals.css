@@ -85,3 +85,17 @@ footer .logoWrap{
 footer .brandLogo{
   width:220px;
 }
+.waWidget{position:fixed;right:24px;bottom:24px;z-index:60}
+.waPopup{position:relative;width:320px;background:white;border:1px solid #dcefe4;border-radius:24px;padding:22px;box-shadow:0 20px 55px rgba(0,0,0,.18)}
+.waTitle{font-size:20px;font-weight:900;color:var(--dark);margin-bottom:10px}
+.waPopup p{font-size:15px;line-height:1.55;color:#40534a;margin:0 0 16px}
+.waClose{position:absolute;right:12px;top:10px;border:0;background:#edf3ef;border-radius:50%;width:30px;height:30px;font-size:20px}
+.waPopupButton,.waMiniButton{border:0;background:#24c35a;color:white;font-weight:900;border-radius:999px;padding:13px 18px;box-shadow:0 12px 28px rgba(36,195,90,.28)}
+.waMiniButton{position:relative;font-size:16px}
+.waMiniButton span{position:absolute;right:8px;top:6px;width:9px;height:9px;background:#ff3232;border-radius:50%}
+
+@media(max-width:640px){
+  .waWidget{right:14px;bottom:18px}
+  .waPopup{width:calc(100vw - 28px)}
+  .waMiniButton{font-size:14px;padding:12px 16px}
+}

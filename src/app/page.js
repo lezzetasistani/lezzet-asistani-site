@@ -64,7 +64,30 @@ function ContactModal({ open, onClose }) {
     </div>
   );
 }
+function WhatsAppWidget({ contact }) {
+  const [open, setOpen] = useState(true);
 
+  return (
+    <div className="waWidget">
+      {open ? (
+        <div className="waPopup">
+          <button className="waClose" onClick={() => setOpen(false)}>×</button>
+          <div className="waTitle">👋 Merhaba!</div>
+          <p>
+            Ben Thermomix Danışmanınız Doğukan Yıldız.<br />
+            Thermomix hakkında merak ettiklerinizi sorabilirsiniz.
+          </p>
+          <button className="waPopupButton" onClick={contact}>WhatsApp'tan Yaz</button>
+        </div>
+      ) : (
+        <button className="waMiniButton" onClick={contact}>
+          🟢 WhatsApp Destek Hattı
+          <span></span>
+        </button>
+      )}
+    </div>
+  );
+}
 function Hero({ go, contact }) {
   return (
     <section className="hero">
@@ -174,7 +197,7 @@ const go = (p) => {
       {page === 'demo' && <Demo contact={() => setModal(true)} />}
       {page === 'contact' && <Contact contact={() => setModal(true)} />}
       <footer><Logo /><p>© 2026 {SITE.brand}. Thermomix® marka adı ilgili sahibine aittir. Bu site bağımsız danışman tanıtımı için hazırlanmıştır.</p></footer>
-      <button className="float" onClick={() => setModal(true)}>💬</button>
+      <WhatsAppWidget contact={() => setModal(true)} />
     </main>
   );
 }
