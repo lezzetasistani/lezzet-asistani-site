@@ -116,3 +116,43 @@ footer .brandLogo{
   height:auto;
   display:block;
 }
+.waMiniButton{
+  overflow:visible;
+  isolation:isolate;
+  animation:waGlow 2.2s ease-in-out infinite;
+}
+
+.waMiniButton::before,
+.waMiniButton::after{
+  content:"";
+  position:absolute;
+  inset:-12px;
+  border-radius:999px;
+  background:rgba(36,195,90,.22);
+  z-index:-1;
+  animation:waPulse 2.4s ease-out infinite;
+}
+
+.waMiniButton::after{
+  animation-delay:1.2s;
+}
+
+@keyframes waPulse{
+  0%{
+    transform:scale(.95);
+    opacity:.65;
+  }
+  100%{
+    transform:scale(1.55);
+    opacity:0;
+  }
+}
+
+@keyframes waGlow{
+  0%,100%{
+    box-shadow:0 12px 28px rgba(36,195,90,.28);
+  }
+  50%{
+    box-shadow:0 16px 42px rgba(36,195,90,.55);
+  }
+}
