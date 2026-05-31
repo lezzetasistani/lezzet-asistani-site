@@ -105,8 +105,14 @@ footer .brandLogo{
   margin-bottom:10px;
 }
 
-.waLogoBox img{
-  width:130px;
-  height:auto;
-  display:block;
+.waLogoBox{
+  display:flex;
+  justify-content:center;
+  margin-bottom:16px;
+}
+.waDivider{
+  border:none;
+  height:1px;
+  background:#e6e6e6;
+  margin:0 0 16px;
 }

@@ -54,6 +54,11 @@ function ContactModal({ open, onClose }) {
     <div className="modalBackdrop" onClick={onClose}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
         <button className="close" onClick={onClose}>×</button>
+        <div className="waLogoBox">
+  <img src="/logo.png" alt="Lezzet Asistanı" />
+</div>
+
+<hr className="waDivider" />
         <h2>Bizimle İletişime Geçin</h2>
         <p>Thermomix TM7, kampanyalar ve demo talebi için bize aşağıdaki kanallardan ulaşabilirsiniz.</p>
         <div className="modalGrid">
