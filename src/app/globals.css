@@ -156,3 +156,134 @@ footer .brandLogo{
     box-shadow:0 16px 42px rgba(36,195,90,.55);
   }
 }
+.waChatBox{
+  width:360px;
+  border-radius:18px;
+  overflow:hidden;
+  background:white;
+  box-shadow:0 24px 70px rgba(0,0,0,.28);
+  border:1px solid #dcefe4;
+}
+
+.waChatHeader{
+  position:relative;
+  background:linear-gradient(135deg,#20b84f,#168a3d);
+  color:white;
+  padding:22px;
+}
+
+.waChatClose{
+  position:absolute;
+  right:14px;
+  top:12px;
+  border:0;
+  background:transparent;
+  color:white;
+  font-size:26px;
+}
+
+.waAgent{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.waAgent strong{
+  display:block;
+  font-size:18px;
+}
+
+.waAgent small{
+  display:block;
+  opacity:.9;
+  margin-top:3px;
+}
+
+.waAvatar{
+  position:relative;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:white;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+}
+
+.waAvatar img{
+  width:48px;
+  height:auto;
+}
+
+.waAvatar span{
+  position:absolute;
+  right:4px;
+  bottom:4px;
+  width:12px;
+  height:12px;
+  background:#39e75f;
+  border:2px solid white;
+  border-radius:50%;
+}
+
+.waChatBody{
+  padding:18px;
+  background:#f6faf7;
+}
+
+.waMessage{
+  background:white;
+  border-radius:18px 18px 18px 4px;
+  padding:14px 15px;
+  font-size:14px;
+  line-height:1.55;
+  box-shadow:0 8px 22px rgba(0,0,0,.08);
+}
+
+.waMessage small{
+  display:block;
+  color:#8a968f;
+  font-size:11px;
+  margin-top:6px;
+}
+
+.waQuickReplies{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  margin-top:16px;
+  padding-bottom:4px;
+}
+
+.waQuickReplies button{
+  white-space:nowrap;
+  border:1px solid #bce8ca;
+  background:white;
+  color:#244336;
+  border-radius:999px;
+  padding:8px 12px;
+  font-size:13px;
+}
+
+.waChatInput{
+  width:100%;
+  border:0;
+  background:white;
+  padding:16px 18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:#8a968f;
+  font-size:15px;
+}
+
+.waChatInput b{
+  color:var(--green);
+  font-size:24px;
+}
+
+@media(max-width:640px){
+  .waChatBox{
+    width:calc(100vw - 28px);
+  }
+}

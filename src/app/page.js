@@ -70,25 +70,53 @@ function ContactModal({ open, onClose }) {
   );
 }
 function WhatsAppWidget({ contact }) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setOpen(true), 3000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="waWidget">
       {open ? (
-        <div className="waPopup">
-          <button className="waClose" onClick={() => setOpen(false)}>×</button>
-          <div className="waLogoBox">
-  <img src="/logo.png" alt="Lezzet Asistanı" />
-</div>
-          <div className="waTitle">👋 Merhaba!</div>
-          <p>
-            Ben Thermomix Danışmanınız Doğukan Yıldız.<br />
-            Thermomix hakkında merak ettiklerinizi sorabilirsiniz.
-          </p>
-          <button className="waPopupButton" onClick={contact}>WhatsApp'tan Yaz</button>
+        <div className="waChatBox">
+          <div className="waChatHeader">
+            <button className="waChatClose" onClick={() => setOpen(false)}>×</button>
+            <div className="waAgent">
+              <div className="waAvatar">
+                <img src="/logo.png" alt="Lezzet Asistanı" />
+                <span></span>
+              </div>
+              <div>
+                <strong>Lezzet Asistanı</strong>
+                <small>Thermomix Danışmanı</small>
+              </div>
+            </div>
+          </div>
+
+          <div className="waChatBody">
+            <div className="waMessage">
+              👋 Merhaba!<br />
+              Ben Thermomix Danışmanınız Doğukan Yıldız.<br />
+              Thermomix hakkında merak ettiklerinizi sorabilirsiniz.
+              <small>Şimdi</small>
+            </div>
+
+            <div className="waQuickReplies">
+              <button onClick={contact}>Bilgi almak istiyorum.</button>
+              <button onClick={contact}>Demo talep etmek istiyorum.</button>
+              <button onClick={contact}>Kampanyaları öğrenmek istiyorum.</button>
+            </div>
+          </div>
+
+          <button className="waChatInput" onClick={contact}>
+            <span>Mesaj yaz...</span>
+            <b>➤</b>
+          </button>
         </div>
       ) : (
-        <button className="waMiniButton" onClick={contact}>
+        <button className="waMiniButton" onClick={() => setOpen(true)}>
           🟢 WhatsApp Destek Hattı
           <span></span>
         </button>
