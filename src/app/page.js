@@ -163,7 +163,11 @@ function Home({ go, contact }) {
 }
 
 function About() {
-  return <section className="page two"><div><h1>Thermomix Nedir?</h1><p>Thermomix; doğrama, karıştırma, yoğurma, pişirme, buharda pişirme ve rehberli tarif deneyimini tek cihazda sunan çok fonksiyonlu bir mutfak yardımcısıdır.</p>{['20’den fazla fonksiyon', 'Cookidoo ile rehberli tarif deneyimi', 'Planlı ve pratik mutfak rutini', 'Satış öncesi ve sonrası danışman desteği'].map(x => <div className="check" key={x}>✓ {x}</div>)}</div><img src="https://images.unsplash.com/photo-1556909172-8c2f041fca1e?auto=format&fit=crop&w=1200&q=80" alt="Mutfak" /></section>;
+  return <section className="page two"><div><h1>Thermomix Nedir?</h1><p>Thermomix; doğrama, karıştırma, yoğurma, pişirme, buharda pişirme ve rehberli tarif deneyimini tek cihazda sunan çok fonksiyonlu bir mutfak yardımcısıdır.</p>{['20’den fazla fonksiyon', 'Cookidoo ile rehberli tarif deneyimi', 'Planlı ve pratik mutfak rutini', 'Satış öncesi ve sonrası danışman desteği'].map(x => <div className="check" key={x}>✓ {x}</div>)}</div><img
+  src="/20den fazla cihaz - thermo.png"
+  alt="Thermomix Fonksiyonları"
+  className="aboutImage"
+/></section>;
 }
 
 function Campaigns({ contact, compact }) {
