@@ -7,8 +7,8 @@ const SITE = {
   subtitle: 'Thermomix Danışmanlığı • Tarifler • Mutfak İpuçları',
   consultant: 'Doğukan Yıldız',
   city: 'İstanbul',
-  phoneDisplay: '0536 073 31 33',
-  whatsapp: '905360733133',
+  phoneDisplay: '0501 692 31 35',
+  whatsapp: '905016923135',
   instagram: 'https://instagram.com/lezzetasistani',
   domain: 'lezzetasistani.com',
 };
