@@ -125,7 +125,12 @@ function WhatsAppWidget({ contact }) {
   );
 }
 function CampaignPopup({ contact }) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
+
+useEffect(() => {
+  const timer = setTimeout(() => setOpen(true), 3500);
+  return () => clearTimeout(timer);
+}, []);
 
   if (!open) return null;
 

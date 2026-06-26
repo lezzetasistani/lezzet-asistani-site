@@ -552,3 +552,52 @@ header .brandLogo{
     min-height:280px;
   }
 }
+.campaignModalBackdrop{
+  animation:campaignBackdropIn .45s ease forwards;
+}
+
+.campaignModal{
+  animation:campaignModalIn .55s cubic-bezier(.2,.9,.2,1) forwards;
+}
+
+@keyframes campaignBackdropIn{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+@keyframes campaignModalIn{
+  from{
+    opacity:0;
+    transform:translateY(28px) scale(.96);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+
+.campaignModal{
+  background:linear-gradient(135deg,#062b18 0%,#0f6b45 48%,#06311d 100%);
+}
+
+.campaignModalVisual{
+  background:
+    radial-gradient(circle at 65% 40%,rgba(49,211,115,.28),transparent 38%),
+    linear-gradient(135deg,#052515,#0a4f31);
+}
+
+.campaignModalVisual img{
+  background:white;
+  padding:10px;
+  border-radius:28px;
+  box-shadow:0 30px 80px rgba(0,0,0,.38);
+  max-width:92%;
+  max-height:78%;
+  object-fit:contain;
+}
+
+.campaignModalText{
+  background:
+    radial-gradient(circle at 10% 10%,rgba(255,226,130,.10),transparent 28%),
+    linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0));
+}
