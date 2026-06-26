@@ -126,23 +126,34 @@ function WhatsAppWidget({ contact }) {
 }
 function Hero({ go, contact }) {
   return (
-    <section className="hero">
+    <section className="hero heroCampaign">
       <div className="heroText">
         <div className="pill">
-  ✨ Thermomix Danışmanlığı - {SITE.consultant}
-  <br />
-  🎯 Danışman Kodu: <strong className="codeGold">TM101637</strong>
-</div>
-        <h1>Mutfaktaki kişisel lezzet asistanınız.</h1>
-        <p>Thermomix TM7 hakkında bilgi alın, güncel kampanyaları inceleyin ve ücretsiz demo talep edin. Lezzet Asistanı ile mutfakta daha kolay, daha planlı ve daha keyifli bir deneyim sizi bekliyor.</p>
+          ✨ Thermomix Danışmanlığı - {SITE.consultant}
+          <br />
+          🎯 Danışman Kodu: <strong className="codeGold">TM101637</strong>
+        </div>
+
+        <h1>
+          Thermomix TM7 ile
+          <br />
+          mutfakta zaman kazanın.
+        </h1>
+
+        <p>
+          Güncel kampanyaları inceleyin, ücretsiz demo talep edin ve
+          Thermomix deneyimini birebir keşfedin.
+        </p>
+
         <div className="heroButtons">
-          <button className="primary" onClick={contact}>Thermomix Hakkında Bilgi Al</button>
+          <button className="primary" onClick={contact}>WhatsApp’tan Bilgi Al</button>
           <button className="secondary" onClick={() => go('demo')}>Ücretsiz Demo Talep Et</button>
         </div>
       </div>
-      <div className="heroImage">
-        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80" alt="Modern mutfak" />
-        <div className="floating">📍 {SITE.city}<br /><b>{SITE.brand}</b></div>
+
+      <div className="campaignHeroCard">
+        <div className="campaignBadge">Haziran Kampanyası</div>
+        <img src="/tm7-kampanya.jpg" alt="Thermomix TM7 Güncel Kampanya" />
       </div>
     </section>
   );
