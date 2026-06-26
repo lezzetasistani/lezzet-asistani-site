@@ -76,14 +76,27 @@
   letter-spacing:.6px;
   text-shadow:0 0 8px rgba(199,161,90,.25);
 }
+footer{
+  background:
+    radial-gradient(circle at left bottom, rgba(67,255,148,.08), transparent 30%),
+    linear-gradient(135deg,#021b12,#03261a 55%,#01140d);
+  border-top:1px solid rgba(255,255,255,.05);
+}
+
 footer .logoWrap{
-  background:rgba(255,255,255,.92);
-  padding:14px 18px;
-  border-radius:22px;
+  background:transparent !important;
+  padding:0 !important;
+  border-radius:0 !important;
 }
 
 footer .brandLogo{
-  width:220px;
+  width:120px !important;
+  height:auto;
+  object-fit:contain;
+  opacity:.9;
+  filter:
+    drop-shadow(0 0 14px rgba(67,255,148,.14))
+    drop-shadow(0 0 34px rgba(67,255,148,.06));
 }
 .waWidget{position:fixed;right:24px;bottom:24px;z-index:60}
 .waPopup{position:relative;width:320px;background:white;border:1px solid #dcefe4;border-radius:24px;padding:22px;box-shadow:0 20px 55px rgba(0,0,0,.18)}
