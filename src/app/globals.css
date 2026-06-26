@@ -581,19 +581,19 @@ header .brandLogo{
 }
 
 .campaignModalVisual{
-  b.campaignModalVisual{
   position:relative;
   min-height:620px;
   display:flex;
   align-items:center;
   justify-content:center;
   overflow:hidden;
+  padding:24px;
   background:
     radial-gradient(circle at center,rgba(38,255,140,.18),transparent 34%),
     radial-gradient(circle at top right,rgba(255,210,90,.08),transparent 28%),
     linear-gradient(135deg,#041f13,#0a5b39);
 }
-}
+
 @keyframes tmFloat{
   0%{
     transform:translateY(0px) scale(1.03);
