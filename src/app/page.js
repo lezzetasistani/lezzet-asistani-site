@@ -167,7 +167,15 @@ useEffect(() => {
           </div>
 
           <div className="campaignActions">
-            <button className="campaignPrimary" onClick={contact}>WhatsApp’tan Bilgi Al</button>
+            <button
+  className="campaignPrimary"
+  onClick={() => {
+    setOpen(false);
+    contact();
+  }}
+>
+  WhatsApp’tan Bilgi Al
+</button>
             <button className="campaignSecondary" onClick={() => setOpen(false)}>Siteye Devam Et</button>
           </div>
 
