@@ -348,3 +348,16 @@ header .brandLogo{
   height:auto;
   object-fit:contain;
 }
+.campaignHeroCard{
+  overflow:hidden;
+  background:white;
+}
+
+.campaignHeroCard img{
+  border-radius:22px;
+  transition:.35s ease;
+}
+
+.campaignHeroCard:hover img{
+  transform:scale(1.02);
+}
