@@ -124,6 +124,61 @@ function WhatsAppWidget({ contact }) {
     </div>
   );
 }
+function CampaignPopup({ contact }) {
+  const [open, setOpen] = useState(true);
+
+  if (!open) return null;
+
+  return (
+    <div className="campaignModalBackdrop">
+      <div className="campaignModal">
+        <button className="campaignClose" onClick={() => setOpen(false)}>×</button>
+
+        <div className="campaignModalText">
+          <div className="campaignPriceBadge">
+            <span>Vade Farksız</span>
+            <strong>9 Taksitle</strong>
+            <b>TM7 79.990₺</b>
+          </div>
+
+          <small className="campaignDate">25-28 Haziran</small>
+
+          <h2>
+            Fırsatı
+            <br />
+            Kaçırmayın!
+          </h2>
+
+          <p>
+            Thermomix TM7 tanıtımlarından birine katılıp satın alma yapan
+            müşteriler, ekstra karıştırma kabı için avantajlı kupon hakkı
+            kazanabilir.
+          </p>
+
+          <div className="campaignBenefits">
+            <div>✓ Kupon Temmuz veya Ağustos ayında kullanılabilir</div>
+            <div>✓ Kampanya döneminde ek ödeme çıkmaz</div>
+            <div>✓ Kullanmak istemezseniz satın alma zorunluluğu yoktur</div>
+          </div>
+
+          <div className="campaignActions">
+            <button className="campaignPrimary" onClick={contact}>WhatsApp’tan Bilgi Al</button>
+            <button className="campaignSecondary" onClick={() => setOpen(false)}>Siteye Devam Et</button>
+          </div>
+
+          <p className="campaignLegal">
+            Kampanya koşulları ve stok durumu değişiklik gösterebilir.
+            Detaylı bilgi için danışmanınızla iletişime geçiniz.
+          </p>
+        </div>
+
+        <div className="campaignModalVisual">
+          <img src="/tm7-kampanya.jpg" alt="Thermomix TM7 Kampanya" />
+        </div>
+      </div>
+    </div>
+  );
+}
 function Hero({ go, contact }) {
   return (
     <section className="hero heroCampaign">
@@ -228,6 +283,7 @@ const go = (p) => {
   return (
     <main>
       <ContactModal open={modal} onClose={() => setModal(false)} />
+        <CampaignPopup contact={() => setModal(true)} />
       <header className={`siteHeader ${showHeader ? '' : 'hideHeader'}`}>
   <Logo />
   <button className="mobileMenuButton" onClick={() => setMenuOpen(!menuOpen)}>☰ Menü</button>

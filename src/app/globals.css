@@ -361,3 +361,194 @@ header .brandLogo{
 .campaignHeroCard:hover img{
   transform:scale(1.02);
 }
+.campaignModalBackdrop{
+  position:fixed;
+  inset:0;
+  z-index:100;
+  background:rgba(4,15,10,.68);
+  backdrop-filter:blur(8px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+
+.campaignModal{
+  position:relative;
+  width:min(1120px,96vw);
+  min-height:620px;
+  background:linear-gradient(135deg,#072917,#0f6b45);
+  border-radius:34px;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  box-shadow:0 40px 120px rgba(0,0,0,.42);
+  border:1px solid rgba(255,255,255,.16);
+}
+
+.campaignClose{
+  position:absolute;
+  right:18px;
+  top:18px;
+  z-index:4;
+  border:0;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:rgba(255,255,255,.18);
+  color:white;
+  font-size:28px;
+  cursor:pointer;
+}
+
+.campaignModalText{
+  position:relative;
+  z-index:2;
+  padding:54px 48px;
+  color:white;
+}
+
+.campaignPriceBadge{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  background:linear-gradient(145deg,#fff0a8,#c89d30);
+  color:#102015;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  box-shadow:0 16px 40px rgba(0,0,0,.25);
+  margin-bottom:28px;
+}
+
+.campaignPriceBadge span{
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  font-weight:900;
+}
+
+.campaignPriceBadge strong{
+  font-size:25px;
+  line-height:1;
+}
+
+.campaignPriceBadge b{
+  font-size:16px;
+  margin-top:5px;
+}
+
+.campaignDate{
+  display:block;
+  color:#45e27d;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-weight:900;
+  margin-bottom:14px;
+}
+
+.campaignModalText h2{
+  font-size:58px;
+  line-height:.98;
+  margin:0 0 20px;
+  color:white;
+}
+
+.campaignModalText p{
+  font-size:17px;
+  line-height:1.65;
+  color:rgba(255,255,255,.88);
+}
+
+.campaignBenefits{
+  display:grid;
+  gap:12px;
+  margin:26px 0;
+}
+
+.campaignBenefits div{
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:999px;
+  padding:12px 16px;
+  font-weight:800;
+}
+
+.campaignActions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.campaignPrimary,
+.campaignSecondary{
+  border:0;
+  border-radius:999px;
+  padding:15px 22px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.campaignPrimary{
+  background:#20c05c;
+  color:white;
+  box-shadow:0 16px 34px rgba(32,192,92,.28);
+}
+
+.campaignSecondary{
+  background:transparent;
+  color:white;
+  border:1px solid rgba(255,255,255,.45);
+}
+
+.campaignLegal{
+  font-size:12px !important;
+  opacity:.72;
+  margin-top:24px;
+}
+
+.campaignModalVisual{
+  position:relative;
+  min-height:620px;
+  background:radial-gradient(circle at center,#15834f,#042315 70%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+
+.campaignModalVisual img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  border-radius:24px;
+  filter:drop-shadow(0 30px 60px rgba(0,0,0,.35));
+}
+
+@media(max-width:900px){
+  .campaignModal{
+    grid-template-columns:1fr;
+    min-height:auto;
+    max-height:88vh;
+    overflow:auto;
+  }
+
+  .campaignModalText{
+    padding:34px 24px;
+  }
+
+  .campaignModalText h2{
+    font-size:42px;
+  }
+
+  .campaignPriceBadge{
+    width:118px;
+    height:118px;
+  }
+
+  .campaignModalVisual{
+    min-height:280px;
+  }
+}
