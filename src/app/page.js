@@ -142,11 +142,11 @@ useEffect(() => {
         <div className="campaignModalText">
           <div className="campaignPriceBadge">
             <span>Vade Farksız</span>
-            <strong>9 Taksitle</strong>
-            <b>TM7 79.990₺</b>
+            <strong>6 Taksitle</strong>
+            <b>TM7 89.990₺</b>
           </div>
 
-          <small className="campaignDate">25-28 Haziran</small>
+          <small className="campaignDate">29 Haziran - 31 Temmuz</small>
 
           <h2>
             Fırsatı
@@ -154,17 +154,18 @@ useEffect(() => {
             Kaçırmayın!
           </h2>
 
-          <p>
-            Thermomix TM7 tanıtımlarından birine katılıp satın alma yapan
-            müşteriler, ekstra karıştırma kabı için avantajlı kupon hakkı
-            kazanabilir.
-          </p>
+         <p>
+  29 Haziran - 31 Temmuz tarihleri arasında indirim koduyla
+  Thermomix TM7 satın alanlar, Thermomix Vakumlu Saklama Kapları
+  3’lü Set ve Vakum Pompası için avantajlı kupon hakkı kazanabilir.
+  İndirim kodu için iletişime geçebilirsiniz.
+</p>
 
           <div className="campaignBenefits">
-            <div>✓ Kupon Temmuz veya Ağustos ayında kullanılabilir</div>
-            <div>✓ Kampanya döneminde ek ödeme çıkmaz</div>
-            <div>✓ Kullanmak istemezseniz satın alma zorunluluğu yoktur</div>
-          </div>
+  <div>✓ Vade farksız 6 taksitle TM7: 89.990₺</div>
+  <div>✓ 10.280₺ değerindeki vakum seti kuponla 5.000₺</div>
+  <div>✓ 3 aylık Cookidoo üyeliği ücretsiz</div>
+</div>
 
           <div className="campaignActions">
             <button
@@ -180,9 +181,10 @@ useEffect(() => {
           </div>
 
           <p className="campaignLegal">
-            Kampanya koşulları ve stok durumu değişiklik gösterebilir.
-            Detaylı bilgi için danışmanınızla iletişime geçiniz.
-          </p>
+  Kampanya 29 Haziran - 31 Temmuz tarihleri arasında ve 1.300 adet stokla
+  sınırlıdır. Diğer kampanyalarla birleştirilemez. Ayrıntılı bilgi için
+  iletişime geçiniz.
+</p>
         </div>
 
         <div className="campaignModalVisual">
