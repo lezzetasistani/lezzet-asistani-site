@@ -685,3 +685,160 @@ header .brandLogo{
     border-radius:18px;
   }
 }
+.trustCommunity{
+  position:relative;
+  width:min(1500px,88%);
+  margin:30px auto 56px;
+  padding:30px 34px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:26px;
+  overflow:hidden;
+
+  background:
+    radial-gradient(circle at left center,rgba(55,219,123,.16),transparent 30%),
+    linear-gradient(135deg,#062c1c,#0e6542);
+
+  color:white;
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:30px;
+  box-shadow:0 22px 65px rgba(10,67,43,.20);
+}
+
+.trustCommunity::after{
+  content:"";
+  position:absolute;
+  width:230px;
+  height:230px;
+  right:-80px;
+  top:-110px;
+  border-radius:50%;
+  background:rgba(255,255,255,.06);
+}
+
+.trustCommunityIcon{
+  width:74px;
+  height:74px;
+  display:grid;
+  place-items:center;
+  flex-shrink:0;
+  font-size:34px;
+  border-radius:22px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.16);
+}
+
+.trustEyebrow{
+  display:block;
+  margin-bottom:7px;
+  color:#66ee9d;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.trustCommunity h2{
+  margin:0 0 8px;
+  max-width:720px;
+  color:white;
+  font-size:clamp(22px,2.2vw,34px);
+  line-height:1.16;
+}
+
+.trustCommunity h2 strong{
+  color:#75f0a8;
+}
+
+.trustCommunity p{
+  max-width:760px;
+  margin:0;
+  color:rgba(255,255,255,.76);
+  font-size:15px;
+  line-height:1.65;
+}
+
+.trustCommunityStats{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.trustCommunityStats div{
+  min-width:108px;
+  text-align:center;
+}
+
+.trustCommunityStats strong{
+  display:block;
+  color:white;
+  font-size:27px;
+}
+
+.trustCommunityStats span{
+  display:block;
+  margin-top:3px;
+  color:rgba(255,255,255,.68);
+  font-size:12px;
+}
+
+.trustCommunityStats button{
+  border:0;
+  border-radius:999px;
+  padding:14px 19px;
+  background:#29c967;
+  color:white;
+  font-weight:900;
+  white-space:nowrap;
+  box-shadow:0 14px 30px rgba(41,201,103,.25);
+}
+
+.trustCommunityStats button:hover{
+  transform:translateY(-2px);
+  background:#31d672;
+}
+
+@media(max-width:980px){
+  .trustCommunity{
+    grid-template-columns:auto 1fr;
+  }
+
+  .trustCommunityStats{
+    grid-column:1/-1;
+    justify-content:center;
+    padding-top:8px;
+  }
+}
+
+@media(max-width:640px){
+  .trustCommunity{
+    width:calc(100% - 28px);
+    margin:20px auto 38px;
+    padding:25px 20px;
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .trustCommunityIcon{
+    margin:auto;
+  }
+
+  .trustCommunityStats{
+    grid-column:auto;
+    flex-direction:column;
+    width:100%;
+  }
+
+  .trustCommunityStats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+
+  .trustCommunityStats button{
+    grid-column:1/-1;
+    width:100%;
+  }
+}

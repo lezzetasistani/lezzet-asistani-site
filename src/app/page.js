@@ -199,6 +199,7 @@ useEffect(() => {
   );
 }
 function Hero({ go, contact }) {
+
   return (
     <section className="hero heroCampaign">
       <div className="heroText">
@@ -232,11 +233,50 @@ function Hero({ go, contact }) {
     </section>
   );
 }
+function TrustCommunity({ contact }) {
+  return (
+    <section className="trustCommunity">
+      <div className="trustCommunityIcon">💬</div>
+
+      <div className="trustCommunityText">
+        <span className="trustEyebrow">Satış sonrası da yanınızdayız</span>
+
+        <h2>
+          <strong>3.400’den fazla</strong> kişinin yer aldığı
+          WhatsApp tarif ve destek topluluğu
+        </h2>
+
+        <p>
+          Thermomix kullanıcılarının yer aldığı topluluğumuzda tarif
+          fikirleri, kullanım önerileri ve ihtiyaç duyduğunuz konularda
+          danışman desteği sunuyoruz.
+        </p>
+      </div>
+
+      <div className="trustCommunityStats">
+        <div>
+          <strong>3.400+</strong>
+          <span>Topluluk üyesi</span>
+        </div>
+
+        <div>
+          <strong>4</strong>
+          <span>Aktif WhatsApp grubu</span>
+        </div>
+
+        <button onClick={contact}>
+          Topluluk Hakkında Bilgi Al
+        </button>
+      </div>
+    </section>
+  );
+}
 
 function Home({ go, contact }) {
   return (
     <>
       <Hero go={go} contact={contact} />
+      <TrustCommunity contact={contact} />
       <section className="features">
         {['Zaman Tasarrufu', 'Çok Fonksiyonlu', 'Sağlıklı Tarifler', 'Danışman Desteği'].map((x, i) => (
           <div className="feature" key={x}><span>{['⏱️','✨','🥗','🤝'][i]}</span><h3>{x}</h3><p>Thermomix deneyimini daha anlaşılır ve pratik hale getiren kişisel destek.</p></div>
