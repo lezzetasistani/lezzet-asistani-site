@@ -362,15 +362,26 @@ function About({ contact }) {
           <div
   className="aboutDeviceBadge"
   onClick={() => setShowFunctions(true)}
+  role="button"
+  tabIndex={0}
+  aria-label="Thermomix TM7 fonksiyon detaylarını göster"
+  onKeyDown={(e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      setShowFunctions(true);
+    }
+  }}
 >
+  <div className="badgeHint">
+    <span>Detayları Gör</span>
+    <b>↗</b>
+  </div>
 
-    <div className="badgeHint">
-        ✨ Detayları görmek için tıklayın
-    </div>
+  <strong>20+</strong>
+  <span>Fonksiyon</span>
 
-    <strong>20+</strong>
-    <span>Fonksiyon</span>
-
+  <small className="badgeClickText">
+    Tıklayın
+  </small>
 </div>
         </div>
       </div>
