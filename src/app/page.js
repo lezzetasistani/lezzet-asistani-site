@@ -236,35 +236,61 @@ function Hero({ go, contact }) {
 function TrustCommunity({ contact }) {
   return (
     <section className="trustCommunity">
-      <div className="trustCommunityIcon">💬</div>
-
-      <div className="trustCommunityText">
-        <span className="trustEyebrow">Satış sonrası da yanınızdayız</span>
+      <div className="trustCommunityHeader">
+        <span className="trustEyebrow">
+          Satış sonrası da yanınızdayız
+        </span>
 
         <h2>
           <strong>3.400’den fazla</strong> kişinin yer aldığı
+          <br />
           WhatsApp tarif ve destek topluluğu
         </h2>
 
         <p>
-          Thermomix kullanıcılarının yer aldığı topluluğumuzda tarif
-          fikirleri, kullanım önerileri ve ihtiyaç duyduğunuz konularda
-          danışman desteği sunuyoruz.
+          Günlük tarif fikirleri, püf noktaları, kullanıcı deneyimleri ve
+          ihtiyaç duyduğunuz konularda danışman desteği sunuyoruz.
         </p>
       </div>
 
       <div className="trustCommunityVisual">
+        <img
+          src="/wp-gruplari.png"
+          alt="3.400+ kişilik WhatsApp tarif ve destek topluluğu"
+        />
+      </div>
 
-    <img
-        src="/wp-gruplari.png"
-        alt="3400+ kişilik WhatsApp Tarif ve Destek Topluluğu"
-    />
+      <div className="trustCommunityFooter">
+        <div className="trustBenefit">
+          <span className="trustBenefitIcon">💬</span>
+          <div>
+            <strong>Günlük tarif paylaşımları</strong>
+            <small>Yeni tarifler ve mutfak fikirleri</small>
+          </div>
+        </div>
 
-    <button onClick={contact}>
-        Topluluk Hakkında Bilgi Al
-    </button>
+        <div className="trustBenefit">
+          <span className="trustBenefitIcon">👥</span>
+          <div>
+            <strong>Soru ve cevap desteği</strong>
+            <small>Merak ettikleriniz için destek</small>
+          </div>
+        </div>
 
-</div>
+        <div className="trustBenefit">
+          <span className="trustBenefitIcon">🛡️</span>
+          <div>
+            <strong>Satış sonrası danışmanlık</strong>
+            <small>Ürünü aldıktan sonra da yanınızdayız</small>
+          </div>
+        </div>
+
+        <button onClick={contact}>
+          <span>◉</span>
+          WhatsApp Topluluğu Hakkında Bilgi Al
+          <b>›</b>
+        </button>
+      </div>
     </section>
   );
 }

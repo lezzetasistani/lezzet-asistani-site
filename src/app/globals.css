@@ -872,3 +872,324 @@ header .brandLogo{
     transform:translateY(-2px);
     background:#2fb962;
 }
+/* ==================================================
+   YENİ WHATSAPP TOPLULUĞU TASARIMI
+   Eski stilleri ezmek için en altta tutulmalıdır.
+================================================== */
+
+.trustCommunity{
+  position:relative;
+  display:block;
+  width:min(1420px,92%);
+  margin:42px auto 68px;
+  padding:46px 48px 34px;
+  overflow:hidden;
+  color:white;
+  text-align:initial;
+
+  background:
+    radial-gradient(
+      circle at 85% 10%,
+      rgba(72,226,132,.18),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 12% 88%,
+      rgba(67,255,148,.10),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #062c1c 0%,
+      #0b5b3a 58%,
+      #063520 100%
+    );
+
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:34px;
+
+  box-shadow:
+    0 30px 80px rgba(8,54,35,.22),
+    inset 0 1px 0 rgba(255,255,255,.07);
+}
+
+.trustCommunity::before,
+.trustCommunity::after{
+  content:"";
+  position:absolute;
+  pointer-events:none;
+  border-radius:50%;
+  opacity:.17;
+}
+
+.trustCommunity::before{
+  width:420px;
+  height:420px;
+  left:-220px;
+  bottom:-230px;
+
+  background:
+    repeating-radial-gradient(
+      circle,
+      rgba(90,255,150,.7) 0 1px,
+      transparent 1px 10px
+    );
+}
+
+.trustCommunity::after{
+  width:480px;
+  height:480px;
+  right:-230px;
+  bottom:-250px;
+
+  background:
+    repeating-radial-gradient(
+      circle,
+      rgba(90,255,150,.55) 0 1px,
+      transparent 1px 11px
+    );
+}
+
+/* Üst başlık alanı */
+
+.trustCommunityHeader{
+  position:relative;
+  z-index:2;
+  max-width:980px;
+  margin:0 auto 30px;
+  text-align:center;
+}
+
+.trustEyebrow{
+  display:block;
+  margin-bottom:11px;
+  color:#74efa8;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+
+.trustCommunityHeader h2{
+  max-width:980px;
+  margin:0 auto 14px;
+  color:white;
+  font-size:clamp(34px,3.4vw,54px);
+  line-height:1.06;
+  letter-spacing:-1.5px;
+}
+
+.trustCommunityHeader h2 strong{
+  color:#68ee9e;
+}
+
+.trustCommunityHeader p{
+  max-width:780px;
+  margin:0 auto;
+  color:rgba(255,255,255,.80);
+  font-size:17px;
+  line-height:1.65;
+}
+
+/* Birleştirilmiş WhatsApp grup görseli */
+
+.trustCommunityVisual{
+  position:relative;
+  z-index:2;
+  display:block;
+  width:min(960px,100%);
+  margin:0 auto;
+  padding:12px;
+
+  background:rgba(3,18,12,.42);
+  border:1px solid rgba(255,255,255,.11);
+  border-radius:28px;
+
+  box-shadow:
+    0 28px 70px rgba(0,0,0,.35),
+    inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+.trustCommunityVisual img{
+  display:block;
+  width:100%;
+  max-width:none;
+  height:auto;
+  margin:0;
+  border-radius:20px;
+  box-shadow:none;
+}
+
+/* Alt avantajlar ve buton */
+
+.trustCommunityFooter{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr)) auto;
+  align-items:center;
+  gap:18px;
+
+  width:min(1180px,100%);
+  margin:30px auto 0;
+  padding-top:28px;
+
+  border-top:1px solid rgba(255,255,255,.12);
+}
+
+.trustBenefit{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:0;
+}
+
+.trustBenefitIcon{
+  width:50px;
+  height:50px;
+  flex-shrink:0;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:16px;
+  background:rgba(62,211,120,.16);
+  border:1px solid rgba(90,236,145,.15);
+  font-size:22px;
+}
+
+.trustBenefit strong{
+  display:block;
+  color:white;
+  font-size:14px;
+  line-height:1.25;
+}
+
+.trustBenefit small{
+  display:block;
+  margin-top:4px;
+  color:rgba(255,255,255,.62);
+  font-size:11px;
+  line-height:1.35;
+}
+
+.trustCommunityFooter button{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:11px;
+
+  min-width:340px;
+  border:0;
+  border-radius:999px;
+  padding:17px 24px;
+
+  background:linear-gradient(135deg,#43db7d,#2fc765);
+  color:white;
+  font-weight:900;
+  white-space:nowrap;
+
+  box-shadow:
+    0 18px 38px rgba(48,204,105,.30),
+    0 0 34px rgba(70,230,130,.12);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    background .25s ease;
+}
+
+.trustCommunityFooter button span{
+  font-size:18px;
+}
+
+.trustCommunityFooter button b{
+  font-size:26px;
+  line-height:1;
+}
+
+.trustCommunityFooter button:hover{
+  transform:translateY(-3px);
+  background:linear-gradient(135deg,#4ce589,#34d06d);
+
+  box-shadow:
+    0 24px 48px rgba(48,204,105,.36),
+    0 0 42px rgba(70,230,130,.18);
+}
+
+/* Tablet */
+
+@media(max-width:1100px){
+  .trustCommunityFooter{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+
+  .trustCommunityFooter button{
+    grid-column:1/-1;
+    width:100%;
+    min-width:0;
+  }
+}
+
+/* Telefon */
+
+@media(max-width:760px){
+  .trustCommunity{
+    display:block;
+    width:calc(100% - 24px);
+    margin:24px auto 44px;
+    padding:30px 18px 22px;
+    border-radius:26px;
+    text-align:initial;
+  }
+
+  .trustCommunityHeader{
+    margin-bottom:22px;
+  }
+
+  .trustCommunityHeader h2{
+    font-size:32px;
+    line-height:1.1;
+    letter-spacing:-1px;
+  }
+
+  .trustCommunityHeader p{
+    font-size:15px;
+  }
+
+  .trustCommunityVisual{
+    display:block;
+    width:100%;
+    padding:7px;
+    border-radius:20px;
+  }
+
+  .trustCommunityVisual img{
+    width:100%;
+    border-radius:15px;
+  }
+
+  .trustCommunityFooter{
+    grid-template-columns:1fr;
+    gap:12px;
+    margin-top:24px;
+    padding-top:22px;
+  }
+
+  .trustBenefit{
+    padding:10px 12px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:18px;
+  }
+
+  .trustCommunityFooter button{
+    grid-column:auto;
+    width:100%;
+    min-width:0;
+    padding:15px 16px;
+    font-size:13px;
+    white-space:normal;
+  }
+}
