@@ -305,7 +305,7 @@ function Home({ go, contact }) {
           <div className="feature" key={x}><span>{['⏱️','✨','🥗','🤝'][i]}</span><h3>{x}</h3><p>Thermomix deneyimini daha anlaşılır ve pratik hale getiren kişisel destek.</p></div>
         ))}
       </section>
-      <Campaigns contact={contact} compact />
+    
     </>
   );
 }
@@ -357,10 +357,18 @@ useEffect(() => {
   return () => window.removeEventListener('scroll', handleScroll);
 }, []);
 
-const go = (p) => {
-  setPage(p);
+const go = (sectionId) => {
   setMenuOpen(false);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  setPage(sectionId);
+
+  const section = document.getElementById(sectionId);
+
+  if (section) {
+    section.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
 };
   return (
     <main>
@@ -378,13 +386,33 @@ const go = (p) => {
   </nav>
   <button className="headerCta" onClick={() => setModal(true)}>WhatsApp</button>
 </header>
-      {page === 'home' && <Home go={go} contact={() => setModal(true)} />}
-      {page === 'about' && <About />}
-      {page === 'campaigns' && <Campaigns contact={() => setModal(true)} />}
-      {page === 'blog' && <Blog />}
-      {page === 'consultant' && <Consultant contact={() => setModal(true)} />}
-      {page === 'demo' && <Demo contact={() => setModal(true)} />}
-      {page === 'contact' && <Contact contact={() => setModal(true)} />}
+      <div id="home" className="scrollSection">
+  <Home go={go} contact={() => setModal(true)} />
+</div>
+
+<div id="about" className="scrollSection">
+  <About />
+</div>
+
+<div id="campaigns" className="scrollSection">
+  <Campaigns contact={() => setModal(true)} />
+</div>
+
+<div id="blog" className="scrollSection">
+  <Blog />
+</div>
+
+<div id="consultant" className="scrollSection">
+  <Consultant contact={() => setModal(true)} />
+</div>
+
+<div id="demo" className="scrollSection">
+  <Demo contact={() => setModal(true)} />
+</div>
+
+<div id="contact" className="scrollSection">
+  <Contact contact={() => setModal(true)} />
+</div>
       <footer><Logo /><p>© 2026 {SITE.brand}. Thermomix® marka adı ilgili sahibine aittir. Bu site bağımsız danışman tanıtımı için hazırlanmıştır.</p></footer>
       <WhatsAppWidget contact={() => setModal(true)} />
     </main>

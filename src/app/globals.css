@@ -1193,3 +1193,15 @@ header .brandLogo{
     white-space:normal;
   }
 }
+html{
+  scroll-behavior:smooth;
+}
+
+.scrollSection{
+  scroll-margin-top:130px;
+}
+@media(max-width:640px){
+  .scrollSection{
+    scroll-margin-top:90px;
+  }
+}
