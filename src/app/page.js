@@ -155,9 +155,14 @@ useEffect(() => {
           </h2>
 
          <p>
-  1-31 Ağustos tarihleri arasında tanıtımlarımızdan birine katılıp
-  Thermomix TM7 satın alanlar, Kobold VM7 Şarjlı El Süpürgesi için
-  avantajlı kupon hakkı kazanabilir.
+  Ağustos ayına özel Thermomix TM7 kampanyasında,
+  normal satış fiyatı <strong>6.990₺</strong> olan
+  <strong> Kobold VM7 Şarjlı El Süpürgesi</strong>,
+  kampanya kuponuyla
+  <strong> 4.000₺</strong> oluyor.
+  Kampanya detaylarını öğrenmek ve kupon avantajından
+  nasıl yararlanabileceğinizi öğrenmek için
+  bana WhatsApp'tan ulaşabilirsiniz.
 </p>
 
           <div className="campaignBenefits">
@@ -221,7 +226,7 @@ function Hero({ go, contact }) {
       </div>
 
       <div className="campaignHeroCard">
-        <div className="campaignBadge">Haziran Kampanyası</div>
+        <div className="campaignBadge">🔥 Ağustos Fırsatı</div>
         <img src="/tm7-kampanya.jpg" alt="Thermomix TM7 Güncel Kampanya" />
       </div>
     </section>
