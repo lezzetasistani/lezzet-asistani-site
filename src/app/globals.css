@@ -2270,3 +2270,34 @@ body{
 }
 
 }
+@media (max-width:768px){
+
+.whatsappFloat{
+    bottom:12px !important;
+    right:12px !important;
+}
+
+body{
+    padding-bottom:90px;
+}
+
+}
+@media (max-width:768px){
+
+.infoCard,
+.blogCard,
+.serviceCard{
+    padding:24px;
+    min-height:auto;
+}
+
+}
+@media (max-width:768px){
+
+.featureBadge{
+    width:92px;
+    height:92px;
+    font-size:.9rem;
+}
+
+}
