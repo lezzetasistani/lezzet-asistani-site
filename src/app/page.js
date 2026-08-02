@@ -310,12 +310,78 @@ function Home({ go, contact }) {
   );
 }
 
-function About() {
-  return <section className="page two"><div><h1>Thermomix Nedir?</h1><p>Thermomix; doğrama, karıştırma, yoğurma, pişirme, buharda pişirme ve rehberli tarif deneyimini tek cihazda sunan çok fonksiyonlu bir mutfak yardımcısıdır.</p>{['20’den fazla fonksiyon', 'Cookidoo ile rehberli tarif deneyimi', 'Planlı ve pratik mutfak rutini', 'Satış öncesi ve sonrası danışman desteği'].map(x => <div className="check" key={x}>✓ {x}</div>)}</div><img
-  src="/20den fazla cihaz - thermo.png"
-  alt="Thermomix Fonksiyonları"
-  className="aboutImage"
-/></section>;
+function About({ contact }) {
+  const functions = [
+    ['🔪', 'Doğrama', 'Sebze, meyve ve malzemeleri hızlıca doğrar.'],
+    ['🥣', 'Karıştırma', 'Sos, çorba ve karışımları homojen hale getirir.'],
+    ['🍞', 'Yoğurma', 'Ekmek, pizza ve hamur işlerini kolaylaştırır.'],
+    ['♨️', 'Buharda Pişirme', 'Varoma ile sağlıklı ve dengeli pişirme sunar.'],
+    ['⚖️', 'Hassas Tartı', 'Malzemeleri doğrudan haznede ölçmenizi sağlar.'],
+    ['📖', 'Rehberli Tarifler', 'Cookidoo ile adım adım tarif yönlendirmesi sunar.'],
+  ];
+
+  return (
+    <section className="aboutPremium">
+      <div className="aboutPremiumHeader">
+        <span>Thermomix TM7</span>
+
+        <h1>
+          Tek cihazda
+          <strong> mutfağınızın tüm ihtiyaçları</strong>
+        </h1>
+
+        <p>
+          Thermomix TM7; hazırlıktan pişirmeye kadar birçok işlemi tek cihazda
+          birleştirerek mutfakta zamandan ve alandan tasarruf sağlar.
+        </p>
+      </div>
+
+      <div className="aboutPremiumContent">
+        <div className="aboutFunctionGrid">
+          {functions.map(([icon, title, description]) => (
+            <div className="aboutFunctionCard" key={title}>
+              <span>{icon}</span>
+
+              <div>
+                <h3>{title}</h3>
+                <p>{description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="aboutDevice">
+          <div className="aboutDeviceGlow"></div>
+
+          <img
+            src="/tm7-about.png"
+            alt="Thermomix TM7"
+          />
+
+          <div className="aboutDeviceBadge">
+            <strong>20+</strong>
+            <span>Fonksiyon</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="aboutPremiumFooter">
+        <div>
+          <strong>Cookidoo ile rehberli tarif deneyimi</strong>
+          <span>Adım adım tarifler, planlama ve alışveriş listeleri</span>
+        </div>
+
+        <div>
+          <strong>Satış öncesi ve sonrası destek</strong>
+          <span>Demo, kullanım ve tarif konusunda danışman desteği</span>
+        </div>
+
+        <button onClick={contact}>
+          Thermomix TM7 Hakkında Bilgi Al
+        </button>
+      </div>
+    </section>
+  );
 }
 
 function Campaigns({ contact, compact }) {
@@ -391,7 +457,7 @@ const go = (sectionId) => {
 </div>
 
 <div id="about" className="scrollSection">
-  <About />
+  <About contact={() => setModal(true)} />
 </div>
 
 <div id="campaigns" className="scrollSection">
