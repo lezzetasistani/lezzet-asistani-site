@@ -311,6 +311,7 @@ function Home({ go, contact }) {
 }
 
 function About({ contact }) {
+  const [showFunctions, setShowFunctions] = useState(false);
   const functions = [
     ['🔪', 'Doğrama', 'Sebze, meyve ve malzemeleri hızlıca doğrar.'],
     ['🥣', 'Karıştırma', 'Sos, çorba ve karışımları homojen hale getirir.'],
@@ -358,10 +359,19 @@ function About({ contact }) {
             alt="Thermomix TM7"
           />
 
-          <div className="aboutDeviceBadge">
-            <strong>20+</strong>
-            <span>Fonksiyon</span>
-          </div>
+          <div
+  className="aboutDeviceBadge"
+  onClick={() => setShowFunctions(true)}
+>
+
+    <div className="badgeHint">
+        ✨ Detayları görmek için tıklayın
+    </div>
+
+    <strong>20+</strong>
+    <span>Fonksiyon</span>
+
+</div>
         </div>
       </div>
 
@@ -380,6 +390,31 @@ function About({ contact }) {
           Thermomix TM7 Hakkında Bilgi Al
         </button>
       </div>
+      {showFunctions && (
+  <div
+    className="functionsModalBackdrop"
+    onClick={() => setShowFunctions(false)}
+  >
+    <div
+      className="functionsModal"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button
+        className="functionsModalClose"
+        onClick={() => setShowFunctions(false)}
+      >
+        ×
+      </button>
+
+      <h2>Thermomix TM7 Fonksiyonları</h2>
+
+      <img
+        src="/tm7-fonksiyonlar.png"
+        alt="Thermomix TM7 fonksiyonları"
+      />
+    </div>
+  </div>
+)}
     </section>
   );
 }

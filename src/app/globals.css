@@ -1212,8 +1212,8 @@ html{
 .aboutPremium{
   position:relative;
   width:min(1480px,92%);
-  margin:40px auto 80px;
-  padding:64px 58px 42px;
+  margin:24px auto 50px;
+  padding:40px 50px 28px;
   overflow:hidden;
 
   background:
@@ -1230,7 +1230,7 @@ html{
 
 .aboutPremiumHeader{
   max-width:850px;
-  margin:0 auto 46px;
+  margin:0 auto 28px;
   text-align:center;
 }
 
@@ -1245,9 +1245,9 @@ html{
 }
 
 .aboutPremiumHeader h1{
-  margin:0 0 18px;
+  margin:0 0 12px;
   color:#10241b;
-  font-size:clamp(38px,4vw,62px);
+  font-size:clamp(34px,3.3vw,54px);
   line-height:1.04;
   letter-spacing:-2px;
 }
@@ -1282,8 +1282,8 @@ html{
   display:flex;
   align-items:flex-start;
   gap:14px;
-  min-height:126px;
-  padding:20px;
+  min-height:102px;
+padding:16px;
 
   background:rgba(255,255,255,.88);
   border:1px solid #d8ecdf;
@@ -1325,7 +1325,7 @@ html{
 
 .aboutDevice{
   position:relative;
-  min-height:540px;
+  min-height:420px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -1343,8 +1343,8 @@ html{
 .aboutDevice img{
   position:relative;
   z-index:2;
-  width:min(520px,100%);
-  max-height:520px;
+  width:min(420px,100%);
+max-height:420px;
   object-fit:contain;
   filter:drop-shadow(0 35px 45px rgba(12,58,36,.25));
 }
@@ -1354,6 +1354,11 @@ html{
   z-index:3;
   right:20px;
   bottom:46px;
+
+cursor:pointer;
+overflow:hidden;
+animation:badgePulse 2.2s infinite;
+transition:.3s;
 
   width:112px;
   height:112px;
@@ -1368,6 +1373,74 @@ html{
   border-radius:50%;
 
   box-shadow:0 20px 45px rgba(15,107,69,.28);
+}
+.aboutDeviceBadge:hover{
+
+    transform:scale(1.08);
+
+}
+.aboutDeviceBadge::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-20%;
+
+    left:-80%;
+
+    width:60%;
+
+    height:160%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.7),
+        transparent
+    );
+
+    transform:rotate(20deg);
+
+    animation:badgeShine 3s infinite;
+
+}
+@keyframes badgePulse{
+
+    0%,100%{
+
+        box-shadow:
+            0 18px 40px rgba(15,107,69,.25);
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        box-shadow:
+            0 28px 60px rgba(43,200,106,.45);
+
+        transform:scale(1.06);
+
+    }
+
+}
+
+@keyframes badgeShine{
+
+    0%{
+        left:-80%;
+    }
+
+    45%{
+        left:160%;
+    }
+
+    100%{
+        left:160%;
+    }
+
 }
 
 .aboutDeviceBadge strong{
@@ -1387,8 +1460,8 @@ html{
   align-items:center;
   gap:20px;
 
-  margin-top:42px;
-  padding:26px 28px;
+  margin-top:24px;
+  padding:18px 24px;
 
   background:#082f1f;
   color:white;
@@ -1493,5 +1566,145 @@ html{
 
   .aboutPremiumFooter button{
     grid-column:auto;
+  }
+}
+.badgeHint{
+    position:absolute;
+    top:-56px;
+    left:50%;
+    transform:translateX(-50%);
+    white-space:nowrap;
+
+    background:white;
+    color:#0f6b45;
+
+    font-size:13px;
+    font-weight:800;
+
+    padding:10px 16px;
+    border-radius:999px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+
+    animation:hintFloat 2s ease-in-out infinite;
+}
+
+.badgeHint::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:-8px;
+    transform:translateX(-50%);
+
+    border-left:8px solid transparent;
+    border-right:8px solid transparent;
+    border-top:8px solid white;
+}
+
+@keyframes hintFloat{
+
+    0%,100%{
+        transform:translateX(-50%) translateY(0);
+    }
+
+    50%{
+        transform:translateX(-50%) translateY(-5px);
+    }
+
+}
+.functionsModalBackdrop{
+  position:fixed;
+  inset:0;
+  z-index:150;
+  display:grid;
+  place-items:center;
+  padding:20px;
+  background:rgba(3,18,12,.72);
+  backdrop-filter:blur(9px);
+  animation:functionsBackdropIn .3s ease;
+}
+
+.functionsModal{
+  position:relative;
+  width:min(1050px,95vw);
+  max-height:90vh;
+  overflow:auto;
+  padding:28px;
+  background:white;
+  border:1px solid #d8ecdf;
+  border-radius:30px;
+  box-shadow:0 35px 100px rgba(0,0,0,.35);
+  animation:functionsModalIn .4s cubic-bezier(.2,.9,.2,1);
+}
+
+.functionsModal h2{
+  margin:0 0 20px;
+  padding-right:50px;
+  text-align:center;
+  color:#0f6b45;
+  font-size:32px;
+}
+
+.functionsModal img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:20px;
+}
+
+.functionsModalClose{
+  position:absolute;
+  right:16px;
+  top:14px;
+  z-index:2;
+  width:40px;
+  height:40px;
+  border:0;
+  border-radius:50%;
+  background:#eaf5ee;
+  color:#0f6b45;
+  font-size:26px;
+  line-height:1;
+  transition:.2s ease;
+}
+
+.functionsModalClose:hover{
+  transform:rotate(90deg);
+  background:#d7f1e1;
+}
+
+@keyframes functionsBackdropIn{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+@keyframes functionsModalIn{
+  from{
+    opacity:0;
+    transform:translateY(24px) scale(.96);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+
+@media(max-width:640px){
+  .functionsModal{
+    width:calc(100vw - 20px);
+    padding:18px;
+    border-radius:22px;
+  }
+
+  .functionsModal h2{
+    font-size:23px;
+    text-align:left;
+  }
+
+  .badgeHint{
+    top:-48px;
+    font-size:10px;
+    padding:8px 11px;
   }
 }
