@@ -146,24 +146,23 @@ useEffect(() => {
             <b>TM7 89.990₺</b>
           </div>
 
-          <small className="campaignDate">29 Haziran - 31 Temmuz</small>
+          <small className="campaignDate">1 - 31 Ağustos</small>
 
           <h2>
-            Fırsatı
+            Çekici
             <br />
-            Kaçırmayın!
+            Fırsat!
           </h2>
 
          <p>
-  29 Haziran - 31 Temmuz tarihleri arasında indirim koduyla
-  Thermomix TM7 satın alanlar, Thermomix Vakumlu Saklama Kapları
-  3’lü Set ve Vakum Pompası için avantajlı kupon hakkı kazanabilir.
-  İndirim kodu için iletişime geçebilirsiniz.
+  1-31 Ağustos tarihleri arasında tanıtımlarımızdan birine katılıp
+  Thermomix TM7 satın alanlar, Kobold VM7 Şarjlı El Süpürgesi için
+  avantajlı kupon hakkı kazanabilir.
 </p>
 
           <div className="campaignBenefits">
   <div>✓ Vade farksız 6 taksitle TM7: 89.990₺</div>
-  <div>✓ 10.280₺ değerindeki vakum seti kuponla 5.000₺</div>
+  <div>✓ Kobold VM7 kuponlu fiyatı: 4.000₺</div>
   <div>✓ 3 aylık Cookidoo üyeliği ücretsiz</div>
 </div>
 
@@ -181,7 +180,7 @@ useEffect(() => {
           </div>
 
           <p className="campaignLegal">
-  Kampanya 29 Haziran - 31 Temmuz tarihleri arasında ve 1.300 adet stokla
+  Kampanya 1-31 Ağustos tarihleri arasında ve 3000 adet stokla
   sınırlıdır. Diğer kampanyalarla birleştirilemez. Ayrıntılı bilgi için
   iletişime geçiniz.
 </p>

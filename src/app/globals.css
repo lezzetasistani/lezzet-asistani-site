@@ -636,3 +636,52 @@ header .brandLogo{
     radial-gradient(circle at 10% 10%,rgba(255,226,130,.10),transparent 28%),
     linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0));
 }
+/* Ağustos kampanya popup düzeni */
+.campaignModal{
+  width:min(1280px,96vw);
+  min-height:560px;
+  grid-template-columns:.82fr 1.18fr;
+}
+
+.campaignModalText{
+  padding:44px 42px;
+}
+
+.campaignModalVisual{
+  min-height:560px;
+  padding:12px;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at center,rgba(38,255,140,.14),transparent 42%),
+    linear-gradient(135deg,#041f13,#0a5b39);
+}
+
+.campaignModalVisual img{
+  width:100%;
+  max-width:none;
+  height:auto;
+  max-height:none;
+  object-fit:contain;
+  border-radius:22px;
+  box-shadow:0 28px 70px rgba(0,0,0,.38);
+  transform:none;
+  animation:none;
+}
+@media(max-width:900px){
+  .campaignModal{
+    grid-template-columns:1fr;
+    width:calc(100vw - 24px);
+    max-height:90vh;
+    overflow-y:auto;
+  }
+
+  .campaignModalVisual{
+    min-height:auto;
+    padding:10px;
+  }
+
+  .campaignModalVisual img{
+    width:100%;
+    border-radius:18px;
+  }
+}
