@@ -1980,3 +1980,118 @@ transition:.3s;
     font-size:24px;
   }
 }
+/* =========================================
+   KAMPANYA POPUP - MOBİL TEK EKRAN
+========================================= */
+
+@media(max-width:900px){
+
+  .campaignModalBackdrop{
+    padding:8px;
+    align-items:center;
+  }
+
+  .campaignModal{
+    width:min(390px,calc(100vw - 16px));
+    max-height:96vh;
+    min-height:0;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    border-radius:24px;
+  }
+
+  .campaignModalText{
+    padding:18px 18px 12px;
+    overflow:visible;
+  }
+
+  .campaignPriceBadge{
+    width:82px;
+    height:82px;
+    margin:0 0 10px;
+  }
+
+  .campaignPriceBadge span{
+    font-size:8px;
+  }
+
+  .campaignPriceBadge strong{
+    font-size:17px;
+  }
+
+  .campaignPriceBadge b{
+    font-size:10px;
+    margin-top:3px;
+  }
+
+  .campaignDate{
+    margin-bottom:5px;
+    font-size:9px;
+    letter-spacing:.10em;
+  }
+
+  .campaignModalText h2{
+    margin:0 0 9px;
+    font-size:29px;
+    line-height:.95;
+  }
+
+  .campaignModalText p{
+    margin:0;
+    font-size:11px;
+    line-height:1.42;
+  }
+
+  .campaignBenefits{
+    gap:6px;
+    margin:11px 0;
+  }
+
+  .campaignBenefits div{
+    padding:7px 10px;
+    font-size:10px;
+    line-height:1.25;
+  }
+
+  .campaignActions{
+    gap:7px;
+    flex-wrap:nowrap;
+  }
+
+  .campaignPrimary,
+  .campaignSecondary{
+    flex:1;
+    padding:9px 8px;
+    font-size:10px;
+    white-space:nowrap;
+  }
+
+  .campaignLegal{
+    margin:8px 0 0;
+    font-size:7.5px !important;
+    line-height:1.35;
+  }
+
+  .campaignModalVisual{
+    min-height:0;
+    padding:0 12px 12px;
+    background:transparent;
+  }
+
+  .campaignModalVisual img{
+    width:100%;
+    max-height:27vh;
+    object-fit:contain;
+    border-radius:15px;
+    box-shadow:0 14px 35px rgba(0,0,0,.25);
+  }
+
+  .campaignClose{
+    right:9px;
+    top:9px;
+    width:32px;
+    height:32px;
+    font-size:20px;
+  }
+}
