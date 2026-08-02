@@ -2095,3 +2095,178 @@ transition:.3s;
     font-size:20px;
   }
 }
+/* =========================================
+   MOBİL GENEL BOŞLUK DÜZENLEMESİ
+========================================= */
+
+@media(max-width:680px){
+
+  .page{
+    padding:42px 22px;
+  }
+
+  .sectionTitle{
+    margin-bottom:24px;
+  }
+
+  .sectionTitle span{
+    font-size:12px;
+    letter-spacing:.10em;
+  }
+
+  .sectionTitle h1{
+    margin:12px 0 14px;
+    font-size:36px;
+    line-height:1.08;
+    letter-spacing:-1.2px;
+  }
+
+  .sectionTitle p{
+    margin:0;
+    font-size:16px;
+    line-height:1.6;
+  }
+
+  .scrollSection{
+    scroll-margin-top:88px;
+  }
+
+  .aboutPremium{
+    margin:18px auto 34px;
+  }
+
+  .trustCommunity{
+    margin:18px auto 36px;
+  }
+
+  .features{
+    padding:28px 22px;
+    gap:14px;
+  }
+
+  .cards{
+    gap:14px;
+  }
+
+  .note{
+    margin-top:18px;
+  }
+}
+@media (max-width:680px){
+
+  .blogCard,
+  .campaignCard,
+  .benefitCard,
+  .featureCard{
+      padding:28px 24px;
+      min-height:auto;
+  }
+
+  .blogCard h3,
+  .campaignCard h3,
+  .benefitCard h3{
+      font-size:22px;
+      margin-bottom:12px;
+  }
+
+  .blogCard p,
+  .campaignCard p,
+  .benefitCard p{
+      font-size:16px;
+      line-height:1.6;
+      margin-bottom:22px;
+  }
+
+}
+@media(max-width:680px){
+
+.button,
+.primaryButton,
+.secondaryButton,
+.blogButton,
+.campaignButton{
+
+    padding:14px 22px;
+    font-size:17px;
+    border-radius:16px;
+}
+
+}
+@media(max-width:680px){
+
+.feature{
+
+    padding:18px;
+    gap:16px;
+    border-radius:22px;
+}
+
+.feature span{
+
+    width:62px;
+    height:62px;
+    font-size:30px;
+}
+
+.feature h3{
+
+    font-size:20px;
+}
+
+.feature p{
+
+    font-size:16px;
+}
+
+}
+@media(max-width:680px){
+
+.functionsBadge{
+
+    width:94px;
+    height:94px;
+    right:12px;
+    bottom:12px;
+}
+
+.functionsBadge strong{
+
+    font-size:34px;
+}
+
+.functionsBadge small{
+
+    font-size:15px;
+}
+
+}
+@media(max-width:680px){
+
+body{
+
+    padding-bottom:120px;
+}
+
+}
+@media(max-width:680px){
+
+.hero h1{
+
+    font-size:52px;
+    line-height:1.05;
+}
+
+.hero p{
+
+    font-size:19px;
+}
+
+}
+@media(max-width:680px){
+
+.logo{
+
+    width:110px;
+}
+
+}
