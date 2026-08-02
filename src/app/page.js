@@ -14,13 +14,13 @@ const SITE = {
 };
 
 const pages = [
-  ['home', 'Anasayfa'],
-  ['about', 'Thermomix Nedir?'],
-  ['campaigns', 'Kampanyalar'],
-  ['blog', 'Tarifler & Blog'],
-  ['consultant', 'Danışmanınız'],
-  ['demo', 'Demo Talebi'],
-  ['contact', 'İletişim'],
+  ['home-nav', 'Anasayfa', 'home'],
+  ['about-nav', 'Thermomix Nedir?', 'about'],
+  ['campaign-nav', 'Kampanyalar', 'home'],
+  ['blog-nav', 'Tarifler & Blog', 'blog'],
+  ['consultant-nav', 'Danışmanınız', 'consultant'],
+  ['demo-nav', 'Demo Talebi', 'demo'],
+  ['contact-nav', 'İletişim', 'contact'],
 ];
 
 const campaigns = [
@@ -490,11 +490,15 @@ const go = (sectionId) => {
   <Logo />
   <button className="mobileMenuButton" onClick={() => setMenuOpen(!menuOpen)}>☰ Menü</button>
   <nav className={menuOpen ? 'open' : ''}>
-    {pages.map(([id, label]) => (
-      <button key={id} className={page === id ? 'active' : ''} onClick={() => go(id)}>
-        {label}
-      </button>
-    ))}
+    {pages.map(([key, label, target]) => (
+  <button
+    key={key}
+    className={page === target ? 'active' : ''}
+    onClick={() => go(target)}
+  >
+    {label}
+  </button>
+))}
   </nav>
   <button className="headerCta" onClick={() => setModal(true)}>WhatsApp</button>
 </header>
