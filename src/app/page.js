@@ -253,11 +253,18 @@ function TrustCommunity({ contact }) {
         </p>
       </div>
 
-      <div className="trustCommunityStats">
-        <div>
-          <strong>3.400+</strong>
-          <span>Topluluk üyesi</span>
-        </div>
+      <div className="trustCommunityVisual">
+
+    <img
+        src="/wp-gruplari.png"
+        alt="3400+ kişilik WhatsApp Tarif ve Destek Topluluğu"
+    />
+
+    <button onClick={contact}>
+        Topluluk Hakkında Bilgi Al
+    </button>
+
+</div>
 
         <div>
           <strong>4</strong>
