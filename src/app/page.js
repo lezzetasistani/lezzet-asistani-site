@@ -265,16 +265,6 @@ function TrustCommunity({ contact }) {
     </button>
 
 </div>
-
-        <div>
-          <strong>4</strong>
-          <span>Aktif WhatsApp grubu</span>
-        </div>
-
-        <button onClick={contact}>
-          Topluluk Hakkında Bilgi Al
-        </button>
-      </div>
     </section>
   );
 }
