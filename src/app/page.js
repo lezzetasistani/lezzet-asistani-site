@@ -16,8 +16,7 @@ const SITE = {
 const pages = [
   ['home-nav', 'Anasayfa', 'home'],
   ['about-nav', 'Thermomix Nedir?', 'about'],
-  ['campaign-nav', 'Kampanyalar', 'home'],
-  ['blog-nav', 'Tarifler & Blog', 'blog'],
+  ['community-nav', 'Tarifler / WhatsApp Grubu', 'community'],
   ['consultant-nav', 'Danışmanınız', 'consultant'],
   ['demo-nav', 'Demo Talebi', 'demo'],
   ['contact-nav', 'İletişim', 'contact'],
@@ -235,7 +234,7 @@ function Hero({ go, contact }) {
 }
 function TrustCommunity({ contact }) {
   return (
-    <section className="trustCommunity">
+    <section id="community" className="trustCommunity">
       <div className="trustCommunityHeader">
         <span className="trustEyebrow">
           Satış sonrası da yanınızdayız
@@ -471,16 +470,17 @@ useEffect(() => {
 
 const go = (sectionId) => {
   setMenuOpen(false);
-  setPage(sectionId);
 
   const section = document.getElementById(sectionId);
 
   if (section) {
     section.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+      behavior: "smooth",
+      block: "start",
     });
   }
+
+  setPage(sectionId);
 };
   return (
     <main>
@@ -510,9 +510,6 @@ const go = (sectionId) => {
   <About contact={() => setModal(true)} />
 </div>
 
-<div id="campaigns" className="scrollSection">
-  <Campaigns contact={() => setModal(true)} />
-</div>
 
 <div id="blog" className="scrollSection">
   <Blog />
