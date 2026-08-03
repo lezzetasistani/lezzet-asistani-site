@@ -95,6 +95,11 @@ function WhatsAppWidget({ contact }) {
     return () => clearTimeout(timer);
   }, []);
 
+  const handleContactClick = () => {
+  setOpen(false);
+  contact();
+};
+
   return (
     <div className="waWidget">
       {open ? (
@@ -122,13 +127,24 @@ function WhatsAppWidget({ contact }) {
             </div>
 
             <div className="waQuickReplies">
-              <button onClick={contact}>Bilgi almak istiyorum.</button>
-              <button onClick={contact}>Demo talep etmek istiyorum.</button>
-              <button onClick={contact}>Kampanyaları öğrenmek istiyorum.</button>
+              <button onClick={handleContactClick}>
+  Bilgi almak istiyorum.
+</button>
+
+<button onClick={handleContactClick}>
+  Demo talep etmek istiyorum.
+</button>
+
+<button onClick={handleContactClick}>
+  Kampanyaları öğrenmek istiyorum.
+</button>
             </div>
           </div>
 
-          <button className="waChatInput" onClick={contact}>
+          <button
+  className="waChatInput"
+  onClick={handleContactClick}
+>
             <span>Mesaj yaz...</span>
             <b>➤</b>
           </button>
