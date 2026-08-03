@@ -10,15 +10,16 @@ const SITE = {
   phoneDisplay: '0501 692 31 35',
   whatsapp: '905016923135',
   instagram: 'https://instagram.com/lezzetasistani',
+  tiktok: 'https://www.tiktok.com/@thermo.lezzetasistani',
   domain: 'lezzetasistani.com',
 };
 
 const pages = [
   ['home-nav', 'Anasayfa', 'home'],
   ['about-nav', 'Thermomix Nedir?', 'about'],
+  ['campaign-nav', 'Kampanyalar', 'home'],
   ['community-nav', 'Tarifler / WhatsApp Grubu', 'community'],
   ['consultant-nav', 'Danışmanınız', 'consultant'],
-  ['demo-nav', 'Demo Talebi', 'demo'],
   ['contact-nav', 'İletişim', 'contact'],
 ];
 
@@ -220,9 +221,14 @@ function Hero({ go, contact }) {
         </p>
 
         <div className="heroButtons">
-          <button className="primary" onClick={contact}>WhatsApp’tan Bilgi Al</button>
-          <button className="secondary" onClick={() => go('demo')}>Ücretsiz Demo Talep Et</button>
-        </div>
+  <button className="primary" onClick={contact}>
+    WhatsApp’tan Bilgi Al
+  </button>
+
+  <button className="secondary" onClick={contact}>
+    Ücretsiz Tanıtım Talep Et
+  </button>
+</div>
       </div>
 
       <div className="campaignHeroCard">
@@ -438,7 +444,190 @@ function Blog() {
 }
 
 function Consultant({ contact }) {
-  return <section className="page two"><div><span className="pill">Danışmanınız</span><h1>Merhaba, ben {SITE.consultant}</h1><p>İstanbul’da Thermomix danışmanlığı, demo talebi, kampanya bilgilendirmesi ve satış sonrası kullanım rehberliği için buradayım.</p>{['Kişiye özel danışmanlık', 'Demo ve kampanya bilgilendirmesi', 'Tarif ve kullanım desteği', 'Satış sonrası yönlendirme'].map(x => <div className="check" key={x}>✓ {x}</div>)}<button className="primary spaced" onClick={contact}>Bize Ulaşın</button></div><div className="profileBox"><div className="avatar">DY</div><h2>{SITE.consultant}</h2><p>{SITE.brand}</p><small>{SITE.city}</small></div></section>;
+  return (
+    <section className="consultantPremium">
+      <div className="consultantIntro">
+        <span className="consultantBadge">
+          ✓ Thermomix Bağımsız Danışmanı
+        </span>
+
+        <h2>
+          Merhaba, ben
+          <strong>{SITE.consultant}</strong>
+        </h2>
+
+        <h3>Thermomix Bağımsız Danışmanı</h3>
+
+        <p>
+          Thermomix ile mutfağınızı daha pratik ve keyifli hale getirmeniz
+          için buradayım. Ürün tanıtımı, kampanya bilgilendirmesi, tarif
+          desteği ve satış sonrası süreçlerde size özel danışmanlık
+          sağlıyorum.
+        </p>
+
+        <div className="consultantQuickFeatures">
+          <div>
+            <span>👥</span>
+            <p>Kişiye özel danışmanlık</p>
+          </div>
+
+          <div>
+            <span>📅</span>
+            <p>Online veya yüz yüze tanıtım</p>
+          </div>
+
+          <div>
+            <span>📖</span>
+            <p>Tarif ve Cookidoo desteği</p>
+          </div>
+
+          <div>
+            <span>🏷️</span>
+            <p>Güncel kampanya bilgileri</p>
+          </div>
+
+          <div>
+            <span>🎧</span>
+            <p>Satış öncesi ve sonrası destek</p>
+          </div>
+
+          <div>
+            <span>💬</span>
+            <p>Hızlı ve çözüm odaklı iletişim</p>
+          </div>
+        </div>
+
+        <button className="consultantWhatsappButton" onClick={contact}>
+          <span>◉</span>
+          WhatsApp’tan Bana Ulaşın
+          <b>→</b>
+        </button>
+
+        <small className="consultantTrustText">
+          🛡️ Güvenilir, hızlı ve çözüm odaklı iletişim
+        </small>
+      </div>
+
+      <div className="consultantBrandCard">
+        <div className="consultantLogoCircle">
+          <img src="/logo.png" alt="Lezzet Asistanı" />
+        </div>
+
+        <h2>{SITE.consultant}</h2>
+        <p>Thermomix Bağımsız Danışmanı</p>
+
+        <div className="consultantCodeCard">
+          <span>🪪 Danışman Kodu</span>
+          <strong>TM101637</strong>
+        </div>
+      </div>
+
+      <div className="consultantContactCard">
+        <h3>İletişim Bilgilerim</h3>
+
+        <div className="consultantContactList">
+          <button onClick={contact}>
+            <span>◉</span>
+            <div>
+              <small>WhatsApp</small>
+              <strong>{SITE.phoneDisplay}</strong>
+            </div>
+          </button>
+
+          <a href={`tel:+90${SITE.phoneDisplay.replace(/\s/g, '')}`}>
+            <span>☎</span>
+            <div>
+              <small>Telefon</small>
+              <strong>{SITE.phoneDisplay}</strong>
+            </div>
+          </a>
+
+          <div>
+            <span>📍</span>
+            <div>
+              <small>Konum</small>
+              <strong>{SITE.city}</strong>
+            </div>
+          </div>
+        </div>
+
+        <h3 className="consultantSocialTitle">
+          Sosyal Medya Hesaplarım
+        </h3>
+
+        <div className="consultantSocialList">
+          <a href={SITE.instagram} target="_blank" rel="noreferrer">
+            <span>📷</span>
+            <div>
+              <small>Instagram</small>
+              <strong>@lezzetasistani</strong>
+            </div>
+            <b>›</b>
+          </a>
+
+          <a href={SITE.tiktok} target="_blank" rel="noreferrer">
+            <span>♪</span>
+            <div>
+              <small>TikTok</small>
+              <strong>@thermo.lezzetasistani</strong>
+            </div>
+            <b>›</b>
+          </a>
+
+          <a
+            href="https://lezzetasistani.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>🌐</span>
+            <div>
+              <small>Web Sitesi</small>
+              <strong>lezzetasistani.com</strong>
+            </div>
+            <b>›</b>
+          </a>
+        </div>
+      </div>
+
+      <div className="consultantServiceCards">
+        <article>
+          <span>🤝</span>
+          <h3>Kişiye Özel Danışmanlık</h3>
+          <p>
+            İhtiyaçlarınıza uygun Thermomix çözümleri için size özel
+            bilgilendirme ve yönlendirme sağlıyorum.
+          </p>
+        </article>
+
+        <article>
+          <span>📅</span>
+          <h3>Online / Yüz Yüze Tanıtım</h3>
+          <p>
+            Thermomix’i yakından tanımanız için online veya yüz yüze
+            tanıtım imkânı sunuyorum.
+          </p>
+        </article>
+
+        <article>
+          <span>📖</span>
+          <h3>Tarif & Cookidoo Desteği</h3>
+          <p>
+            Tarif planlama, Cookidoo kullanımı ve mutfak rutininiz
+            konusunda destek sağlıyorum.
+          </p>
+        </article>
+
+        <article>
+          <span>🎧</span>
+          <h3>Satış Sonrası Destek</h3>
+          <p>
+            Bir sorun yaşadığınızda ilgili birimlerle görüşüp süreci
+            sizin adınıza takip ederek çözüm konusunda yardımcı oluyorum.
+          </p>
+        </article>
+      </div>
+    </section>
+  );
 }
 
 function Demo({ contact }) {
@@ -511,17 +700,10 @@ const go = (sectionId) => {
 </div>
 
 
-<div id="blog" className="scrollSection">
-  <Blog />
-</div>
-
 <div id="consultant" className="scrollSection">
   <Consultant contact={() => setModal(true)} />
 </div>
 
-<div id="demo" className="scrollSection">
-  <Demo contact={() => setModal(true)} />
-</div>
 
 <div id="contact" className="scrollSection">
   <Contact contact={() => setModal(true)} />
