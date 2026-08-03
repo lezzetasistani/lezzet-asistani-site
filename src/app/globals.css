@@ -2301,3 +2301,84 @@ body{
 }
 
 }
+/* =========================================
+   WHATSAPP TOPLULUĞU - MASAÜSTÜ KOMPAKT
+========================================= */
+
+@media (min-width:1101px){
+
+  .trustCommunity{
+    width:min(1320px,90%);
+    margin:20px auto 42px;
+    padding:26px 36px 24px;
+    border-radius:30px;
+  }
+
+  .trustCommunityHeader{
+    margin:0 auto 18px;
+  }
+
+  .trustEyebrow{
+    margin-bottom:6px;
+    font-size:11px;
+  }
+
+  .trustCommunityHeader h2{
+    margin:0 auto 8px;
+    font-size:clamp(30px,2.8vw,44px);
+    line-height:1.02;
+  }
+
+  .trustCommunityHeader p{
+    max-width:720px;
+    font-size:14px;
+    line-height:1.45;
+  }
+
+  .trustCommunityVisual{
+    width:min(790px,100%);
+    padding:9px;
+    border-radius:22px;
+  }
+
+  .trustCommunityVisual img{
+    border-radius:16px;
+  }
+
+  .trustCommunityFooter{
+    width:min(1080px,100%);
+    margin:18px auto 0;
+    padding-top:16px;
+    gap:12px;
+  }
+
+  .trustBenefit{
+    gap:8px;
+  }
+
+  .trustBenefitIcon{
+    width:40px;
+    height:40px;
+    border-radius:13px;
+    font-size:18px;
+  }
+
+  .trustBenefit strong{
+    font-size:12px;
+  }
+
+  .trustBenefit small{
+    margin-top:2px;
+    font-size:9px;
+  }
+
+  .trustCommunityFooter button{
+    min-width:300px;
+    padding:13px 20px;
+    font-size:13px;
+  }
+
+  .trustCommunityFooter button b{
+    font-size:20px;
+  }
+}
