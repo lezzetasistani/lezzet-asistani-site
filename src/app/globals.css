@@ -2382,3 +2382,60 @@ body{
     font-size:20px;
   }
 }
+/* =========================================
+   WHATSAPP TOPLULUĞU - TAM GENİŞLİK WEB
+========================================= */
+
+@media (min-width:1101px){
+
+  .trustCommunity{
+    width:100%;
+    max-width:none;
+    margin:20px 0 42px;
+    padding:28px max(36px,calc((100vw - 1400px) / 2)) 26px;
+
+    border-left:0;
+    border-right:0;
+    border-radius:0;
+
+    background:
+      radial-gradient(
+        circle at 88% 8%,
+        rgba(72,226,132,.18),
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 8% 92%,
+        rgba(67,255,148,.12),
+        transparent 27%
+      ),
+      linear-gradient(
+        145deg,
+        #062c1c 0%,
+        #0b5b3a 58%,
+        #063520 100%
+      );
+
+    box-shadow:
+      0 28px 70px rgba(8,54,35,.18),
+      inset 0 1px 0 rgba(255,255,255,.06);
+  }
+
+  .trustCommunityHeader{
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .trustCommunityVisual{
+    width:min(790px,100%);
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .trustCommunityFooter{
+    width:min(1080px,100%);
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
