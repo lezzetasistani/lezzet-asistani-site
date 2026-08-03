@@ -19,8 +19,7 @@ const pages = [
   ['about-nav', 'Thermomix Nedir?', 'about'],
   ['campaign-nav', 'Kampanyalar', 'home'],
   ['community-nav', 'Tarifler / WhatsApp Grubu', 'community'],
-  ['consultant-nav', 'Danışmanınız', 'consultant'],
-  ['contact-nav', 'İletişim', 'contact'],
+['consultant-nav', 'Danışmanınız / İletişim', 'consultant'],
 ];
 
 const campaigns = [
@@ -498,7 +497,13 @@ function Consultant({ contact }) {
         </div>
 
         <button className="consultantWhatsappButton" onClick={contact}>
-          <span>◉</span>
+          <span className="socialIcon">
+        <img
+  src="/whatsapp-icon.png"
+  alt="WhatsApp"
+  className="socialPlatformIcon whatsappIcon"
+/>
+    </span>
           WhatsApp’tan Bana Ulaşın
           <b>→</b>
         </button>
@@ -542,13 +547,14 @@ function Consultant({ contact }) {
             </div>
           </a>
 
-          <div>
-            <span>📍</span>
-            <div>
-              <small>Konum</small>
-              <strong>{SITE.city}</strong>
-            </div>
-          </div>
+          <div className="consultantLocationItem">
+  <span className="consultantContactIcon">📍</span>
+
+  <div className="consultantContactText">
+    <small>Konum</small>
+    <strong>{SITE.city}</strong>
+  </div>
+</div>
         </div>
 
         <h3 className="consultantSocialTitle">
@@ -557,7 +563,13 @@ function Consultant({ contact }) {
 
         <div className="consultantSocialList">
           <a href={SITE.instagram} target="_blank" rel="noreferrer">
-            <span>📷</span>
+            <span className="socialIcon">
+  <img
+    src="/instagram-icon.png"
+    alt="Instagram"
+    className="socialPlatformIcon"
+  />
+</span>
             <div>
               <small>Instagram</small>
               <strong>@lezzetasistani</strong>
@@ -566,7 +578,13 @@ function Consultant({ contact }) {
           </a>
 
           <a href={SITE.tiktok} target="_blank" rel="noreferrer">
-            <span>♪</span>
+            <span className="socialIcon">
+  <img
+    src="/tiktok-icon.png"
+    alt="TikTok"
+    className="socialPlatformIcon"
+  />
+</span>
             <div>
               <small>TikTok</small>
               <strong>@thermo.lezzetasistani</strong>
@@ -587,44 +605,6 @@ function Consultant({ contact }) {
             <b>›</b>
           </a>
         </div>
-      </div>
-
-      <div className="consultantServiceCards">
-        <article>
-          <span>🤝</span>
-          <h3>Kişiye Özel Danışmanlık</h3>
-          <p>
-            İhtiyaçlarınıza uygun Thermomix çözümleri için size özel
-            bilgilendirme ve yönlendirme sağlıyorum.
-          </p>
-        </article>
-
-        <article>
-          <span>📅</span>
-          <h3>Online / Yüz Yüze Tanıtım</h3>
-          <p>
-            Thermomix’i yakından tanımanız için online veya yüz yüze
-            tanıtım imkânı sunuyorum.
-          </p>
-        </article>
-
-        <article>
-          <span>📖</span>
-          <h3>Tarif & Cookidoo Desteği</h3>
-          <p>
-            Tarif planlama, Cookidoo kullanımı ve mutfak rutininiz
-            konusunda destek sağlıyorum.
-          </p>
-        </article>
-
-        <article>
-          <span>🎧</span>
-          <h3>Satış Sonrası Destek</h3>
-          <p>
-            Bir sorun yaşadığınızda ilgili birimlerle görüşüp süreci
-            sizin adınıza takip ederek çözüm konusunda yardımcı oluyorum.
-          </p>
-        </article>
       </div>
     </section>
   );
@@ -704,10 +684,6 @@ const go = (sectionId) => {
   <Consultant contact={() => setModal(true)} />
 </div>
 
-
-<div id="contact" className="scrollSection">
-  <Contact contact={() => setModal(true)} />
-</div>
       <footer><Logo /><p>© 2026 {SITE.brand}. Thermomix® marka adı ilgili sahibine aittir. Bu site bağımsız danışman tanıtımı için hazırlanmıştır.</p></footer>
       <WhatsAppWidget contact={() => setModal(true)} />
     </main>
