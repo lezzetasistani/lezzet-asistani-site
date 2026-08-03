@@ -14,6 +14,15 @@ const SITE = {
   domain: 'lezzetasistani.com',
 };
 
+function reportWhatsAppConversion() {
+  if (
+    typeof window !== 'undefined' &&
+    typeof window.gtag_report_conversion === 'function'
+  ) {
+    window.gtag_report_conversion();
+  }
+}
+
 const pages = [
   ['home-nav', 'Anasayfa', 'home'],
   ['about-nav', 'Thermomix Nedir?', 'about'],
@@ -61,7 +70,17 @@ function ContactModal({ open, onClose }) {
     kanallardan ulaşabilirsiniz.
   </p>
         <div className="modalGrid">
-          <a className="contactCard whatsapp" href={`https://wa.me/${SITE.whatsapp}?text=Merhaba%20Doğukan%20Bey,%20Thermomix%20TM7%20hakkında%20bilgi%20almak%20istiyorum.`} target="_blank">WhatsApp<br /><small>{SITE.phoneDisplay}</small></a>
+          <a
+  className="contactCard whatsapp"
+  href={`https://wa.me/${SITE.whatsapp}?text=Merhaba%20Doğukan%20Bey,%20Thermomix%20TM7%20hakkında%20bilgi%20almak%20istiyorum.`}
+  target="_blank"
+  rel="noreferrer"
+  onClick={reportWhatsAppConversion}
+>
+  WhatsApp
+  <br />
+  <small>{SITE.phoneDisplay}</small>
+</a>
           <a className="contactCard instagram" href={SITE.instagram} target="_blank">Instagram<br /><small>@lezzetasistani</small></a>
         </div>
       </div>
