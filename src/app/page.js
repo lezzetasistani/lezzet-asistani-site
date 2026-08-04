@@ -11,6 +11,7 @@ const SITE = {
   whatsapp: '905016923135',
   instagram: 'https://instagram.com/lezzetasistani',
   tiktok: 'https://www.tiktok.com/@thermo.lezzetasistani',
+  youtube: 'https://www.youtube.com/@LezzetAsistani',
   domain: 'lezzetasistani.com',
 };
 
@@ -763,6 +764,126 @@ function Consultant({ contact }) {
   );
 }
 
+function SiteFooter({ contact }) {
+  return (
+    <footer className="professionalFooter">
+      <div className="footerMain">
+        <div className="footerBrand">
+          <div className="footerLogoCircle">
+            <img src="/logo.png" alt="Lezzet Asistanı" />
+          </div>
+        </div>
+
+        <div className="footerIntro">
+          <h3>
+            Lezzetli anlar,
+            <strong> profesyonel destekle başlar.</strong>
+            <span>♥</span>
+          </h3>
+
+          <p>
+            Thermomix® marka adı ilgili sahibine aittir.
+            <br />
+            Bu site bağımsız danışman tanıtımı için hazırlanmıştır.
+          </p>
+
+          <div className="footerConsultantBadge">
+            <span>✓</span>
+
+            <div>
+              <small>Thermomix Bağımsız Danışmanı</small>
+              <strong>TM101637</strong>
+            </div>
+          </div>
+        </div>
+
+        <div className="footerContactList">
+          <button type="button" onClick={contact}>
+            <span className="footerContactIcon">
+              <img src="/whatsapp-icon.png" alt="" />
+            </span>
+
+            <div>
+              <small>WhatsApp</small>
+              <strong>WhatsApp Destek Hattı</strong>
+            </div>
+
+            <b>›</b>
+          </button>
+
+          <a href={`tel:+90${SITE.phoneDisplay.replace(/\s/g, '')}`}>
+            <span className="footerContactIcon footerPhoneIcon">☎</span>
+
+            <div>
+              <small>Telefon</small>
+              <strong>{SITE.phoneDisplay}</strong>
+            </div>
+
+            <b>›</b>
+          </a>
+
+          <a href={SITE.instagram} target="_blank" rel="noreferrer">
+            <span className="footerContactIcon">
+              <img src="/instagram-icon.png" alt="" />
+            </span>
+
+            <div>
+              <small>Instagram</small>
+              <strong>@lezzetasistani</strong>
+            </div>
+
+            <b>›</b>
+          </a>
+
+          <a href={SITE.youtube} target="_blank" rel="noreferrer">
+            <span className="footerContactIcon footerYoutubeIcon">▶</span>
+
+            <div>
+              <small>YouTube</small>
+              <strong>Lezzet Asistanı</strong>
+            </div>
+
+            <b>›</b>
+          </a>
+        </div>
+      </div>
+
+      <div className="footerTrustRow">
+        <div>
+          <span>🛡️</span>
+
+          <div>
+            <strong>Güvenilir İletişim</strong>
+            <small>Kişisel bilgileriniz güvende.</small>
+          </div>
+        </div>
+
+        <div>
+          <span>◷</span>
+
+          <div>
+            <strong>Hızlı Destek</strong>
+            <small>Mesajlarınıza en kısa sürede dönüş.</small>
+          </div>
+        </div>
+
+        <div>
+          <span>✓</span>
+
+          <div>
+            <strong>Bağımsız Danışman</strong>
+            <small>Size özel bilgilendirme ve yönlendirme.</small>
+          </div>
+        </div>
+      </div>
+
+      <div className="footerCopyright">
+        © 2026 {SITE.brand}. Tüm hakları saklıdır.
+      </div>
+    </footer>
+  );
+}
+
 function Demo({ contact }) {
   return <section className="page"><div className="sectionTitle"><span>📅 Demo Talebi</span><h1>Ücretsiz tanıtım görüşmesi isteyin</h1><p>Form demo mantığını gösterir. Şimdilik buton WhatsApp’a yönlendirilir.</p></div><div className="form"><input placeholder="Ad Soyad" /><input placeholder="Telefon" /><input placeholder="E-posta" /><select><option>Online demo</option><option>Yüz yüze demo</option><option>Sadece bilgi almak istiyorum</option></select><textarea placeholder="Notunuz" /><button className="primary" onClick={contact}>Demo Talebi Gönder</button></div></section>;
 }
@@ -837,7 +958,8 @@ const go = (sectionId) => {
   <Consultant contact={() => setModal(true)} />
 </div>
 
-      <footer><Logo /><p>© 2026 {SITE.brand}. Thermomix® marka adı ilgili sahibine aittir. Bu site bağımsız danışman tanıtımı için hazırlanmıştır.</p></footer>
+      <SiteFooter contact={() => setModal(true)} />
+        
       <WhatsAppWidget
   contact={() => setModal(true)}
   contactModalOpen={modal}
