@@ -58,42 +58,160 @@ function Logo() {
 
 function ContactModal({ open, onClose }) {
   if (!open) return null;
+
   return (
-    <div className="modalBackdrop" onClick={onClose}>
-      <div className="modal" onClick={(e) => e.stopPropagation()}>
-  <button className="close" onClick={onClose}>×</button>
+    <div className="modalBackdrop contactModalBackdrop" onClick={onClose}>
+      <div
+        className="modal professionalContactModal"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          className="close professionalContactClose"
+          onClick={onClose}
+          aria-label="İletişim penceresini kapat"
+        >
+          ×
+        </button>
 
-  <h2>Bizimle İletişime Geçin</h2>
+        <div className="contactModalTop">
+          <div className="contactModalIntro">
+            <span className="contactModalMessageIcon">•••</span>
 
-  <p>
-    Thermomix TM7, kampanyalar ve demo talebi için bize aşağıdaki
-    kanallardan ulaşabilirsiniz.
-  </p>
-        <div className="modalGrid">
+            <h2>Bizimle İletişime Geçin</h2>
+
+            <div className="contactModalTitleLine"></div>
+
+            <p>
+              Thermomix TM7, kampanyalar ve satın alım süreci için bize
+              <strong> aşağıdaki kanallardan </strong>
+              ulaşabilirsiniz.
+            </p>
+          </div>
+
+          <div className="contactModalDevice">
+            <div className="contactModalDeviceGlow"></div>
+            <img src="/tm7-about.png" alt="Thermomix TM7" />
+          </div>
+        </div>
+
+        <div className="professionalContactGrid">
           <a
-  className="contactCard whatsapp"
-  href={`https://wa.me/${SITE.whatsapp}?text=Merhaba%20Doğukan%20Bey,%20Thermomix%20TM7%20hakkında%20bilgi%20almak%20istiyorum.`}
-  target="_blank"
-  rel="noreferrer"
-  onClick={reportWhatsAppConversion}
->
-  WhatsApp
-  <br />
-  <small>{SITE.phoneDisplay}</small>
-</a>
-          <a className="contactCard instagram" href={SITE.instagram} target="_blank">Instagram<br /><small>@lezzetasistani</small></a>
+            className="professionalContactCard professionalWhatsappCard"
+            href={`https://wa.me/${SITE.whatsapp}?text=Merhaba%20Doğukan%20Bey,%20Thermomix%20TM7%20hakkında%20bilgi%20almak%20istiyorum.`}
+            target="_blank"
+            rel="noreferrer"
+            onClick={reportWhatsAppConversion}
+          >
+            <span className="contactCardBadge whatsappBadge">Hızlı Yanıt</span>
+
+            <div className="contactCardMain">
+              <span className="contactPlatformIcon whatsappPlatformIcon">
+                <img src="/whatsapp-icon.png" alt="WhatsApp" />
+              </span>
+
+              <div className="contactCardContent">
+                <h3>WhatsApp</h3>
+                <p>
+                  Hızlı destek ve bilgi almak için WhatsApp’tan
+                  yazabilirsiniz.
+                </p>
+              </div>
+            </div>
+
+            <div className="contactCardBottom">
+              <strong>{SITE.phoneDisplay}</strong>
+
+              <span className="contactClickArea">
+                <small>Tıklayın</small>
+                <b>›</b>
+              </span>
+            </div>
+          </a>
+
+          <a
+            className="professionalContactCard professionalInstagramCard"
+            href={SITE.instagram}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="contactCardBadge instagramBadge">Takip Edin</span>
+
+            <div className="contactCardMain">
+              <span className="contactPlatformIcon instagramPlatformIcon">
+                <img src="/instagram-icon.png" alt="Instagram" />
+              </span>
+
+              <div className="contactCardContent">
+                <h3>Instagram</h3>
+                <p>
+                  Güncel kampanyalar ve tarifler için Instagram hesabımızı
+                  ziyaret edin.
+                </p>
+              </div>
+            </div>
+
+            <div className="contactCardBottom">
+              <strong>@lezzetasistani</strong>
+
+              <span className="contactClickArea">
+                <small>Tıklayın</small>
+                <b>›</b>
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <div className="contactModalBenefits">
+          <div>
+            <span>🛡️</span>
+            <div>
+              <strong>Güvenilir Destek</strong>
+              <small>Size özel ve güvenilir danışmanlık</small>
+            </div>
+          </div>
+
+          <div>
+            <span>◷</span>
+            <div>
+              <strong>Hızlı Yanıt</strong>
+              <small>Mesajlarınıza en kısa sürede dönüş</small>
+            </div>
+          </div>
+
+          <div>
+            <span>👥</span>
+            <div>
+              <strong>Kişiye Özel Danışmanlık</strong>
+              <small>İhtiyaçlarınıza uygun çözümler</small>
+            </div>
+          </div>
+        </div>
+
+        <div className="contactModalFooterText">
+          <span>♥</span>
+          Lezzetli anlar, profesyonel destekle başlar.
         </div>
       </div>
     </div>
   );
 }
-function WhatsAppWidget({ contact }) {
+function WhatsAppWidget({ contact, contactModalOpen }) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setOpen(true), 3000);
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+  if (typeof window === 'undefined') return;
+
+  const isMobile = window.matchMedia('(max-width: 640px)').matches;
+
+  if (isMobile && contactModalOpen) {
+    setOpen(false);
+  }
+}, [contactModalOpen]);
 
   const handleContactClick = () => {
   setOpen(false);
@@ -720,7 +838,10 @@ const go = (sectionId) => {
 </div>
 
       <footer><Logo /><p>© 2026 {SITE.brand}. Thermomix® marka adı ilgili sahibine aittir. Bu site bağımsız danışman tanıtımı için hazırlanmıştır.</p></footer>
-      <WhatsAppWidget contact={() => setModal(true)} />
+      <WhatsAppWidget
+  contact={() => setModal(true)}
+  contactModalOpen={modal}
+/>
     </main>
   );
 }
