@@ -12949,3 +12949,127 @@ body {
     border-right: 1px solid rgba(20, 80, 55, 0.09) !important;
   }
 }
+/* ==================================================
+   HEADER - DESKTOP SON RÖTUŞLAR
+================================================== */
+
+@media (min-width: 901px) {
+
+  /* ÜST BİLGİ BANDI */
+  .siteTopBar {
+    min-height: 46px !important;
+    padding: 9px max(4.5vw, 46px) !important;
+
+    background:
+      linear-gradient(
+        90deg,
+        #f4fbf7 0%,
+        #ffffff 50%,
+        #f4fbf7 100%
+      ) !important;
+
+    border-bottom:
+      1px solid rgba(26, 125, 78, .16) !important;
+
+    font-size: 13px !important;
+
+    box-shadow:
+      0 3px 16px rgba(21, 91, 57, .035);
+  }
+
+
+  .topBarInstagram {
+    gap: 9px !important;
+
+    font-size: 13px !important;
+    font-weight: 800 !important;
+
+    color: #127949 !important;
+  }
+
+
+  .topBarInstagram img {
+    width: 21px !important;
+    height: 21px !important;
+  }
+
+
+  .topBarConsultant {
+    gap: 20px !important;
+
+    font-size: 12.5px !important;
+  }
+
+
+  .topBarConsultant strong {
+    font-weight: 800 !important;
+    color: #087443 !important;
+  }
+
+
+  .topBarConsultant i {
+    height: 20px !important;
+
+    background:
+      rgba(27, 120, 76, .22) !important;
+  }
+
+
+  /* ANA HEADER */
+  .newSiteHeader {
+    min-height: 105px !important;
+
+    grid-template-columns:
+      280px 1fr auto !important;
+
+    gap: 32px !important;
+
+    padding-left: max(4.5vw, 46px) !important;
+    padding-right: max(4.5vw, 46px) !important;
+  }
+
+
+  /* LOGO / MARKA BÖLÜMÜ */
+  .newHeaderBrand > img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+
+  .newHeaderBrand strong {
+    font-size: 21px !important;
+  }
+
+
+  .newHeaderBrand span {
+    font-size: 12px !important;
+  }
+
+
+  /* MENÜ */
+  .newDesktopNav {
+    gap: 27px !important;
+  }
+
+
+  .newDesktopNav > button {
+    font-size: 14px !important;
+    font-weight: 650 !important;
+  }
+
+
+  /* ÜCRETSİZ BİLGİ AL */
+  .newHeaderCta {
+    min-height: 50px !important;
+
+    padding: 0 22px !important;
+
+    font-size: 14px !important;
+  }
+
+
+  .newHeaderCta img {
+    width: 23px !important;
+    height: 23px !important;
+  }
+}
