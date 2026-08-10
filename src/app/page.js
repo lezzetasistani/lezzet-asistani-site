@@ -341,13 +341,17 @@ useEffect(() => {
         <button className="campaignClose" onClick={() => setOpen(false)}>×</button>
 
         <div className="campaignModalText">
-          <div className="campaignPriceBadge">
-            <span>Vade Farksız</span>
-            <strong>6 Taksitle</strong>
-            <b>TM7 89.990₺</b>
-          </div>
+          <div className="campaignTopInfo">
+  <div className="campaignPriceBadge">
+    <span>Vade Farksız</span>
+    <strong>6 Taksitle</strong>
+    <b>TM7 89.990₺</b>
+  </div>
 
-          <small className="campaignDate">1 - 31 Ağustos</small>
+  <small className="campaignDate">
+    1 - 31 AĞUSTOS
+  </small>
+</div>
 
           <h2>
             Çekici
