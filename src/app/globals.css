@@ -13269,3 +13269,83 @@ body {
     margin: 0 0 14px !important;
   }
 }
+/* ==========================================
+   TM7 FONKSİYONLARI - MOBİL 2'Lİ GRID
+========================================== */
+
+@media (max-width: 640px) {
+
+  .tm7ModesGrid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  .tm7ModeCard {
+    min-width: 0 !important;
+    border-radius: 18px !important;
+  }
+
+  .tm7ModeMedia {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+
+  .tm7ModeMedia video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .tm7ModeNumber {
+    top: 10px !important;
+    left: 10px !important;
+
+    min-width: 31px !important;
+    height: 31px !important;
+
+    padding: 0 7px !important;
+
+    font-size: 10px !important;
+    border-radius: 10px !important;
+  }
+
+  .tm7ModeCardBody {
+    min-height: 84px !important;
+
+    padding: 11px 10px 12px !important;
+
+    gap: 6px !important;
+  }
+
+  .tm7ModeCardBody small {
+    margin-bottom: 4px !important;
+
+    font-size: 7px !important;
+    line-height: 1.15 !important;
+    letter-spacing: .08em !important;
+  }
+
+  .tm7ModeCardBody h3 {
+    margin: 0 !important;
+
+    font-size: 13px !important;
+    line-height: 1.15 !important;
+    letter-spacing: -.15px !important;
+  }
+
+  .tm7ModeCardBody > button {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    flex-basis: 30px !important;
+
+    font-size: 15px !important;
+  }
+
+  .tm7ModeHoverText {
+    display: none !important;
+  }
+}
