@@ -13128,3 +13128,134 @@ body {
     margin-top: 0 !important;
   }
 }
+/* ==========================================
+   KAMPANYA POPUP - MOBİL ÜST BİLGİ FINAL
+========================================== */
+
+@media (max-width: 640px) {
+
+  .campaignTopInfo {
+    width: 100% !important;
+
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    align-items: stretch !important;
+
+    gap: 9px !important;
+
+    margin: 0 0 14px !important;
+    padding-right: 45px !important;
+  }
+
+
+  /* 6 TAKSİT KARTI */
+  .campaignPriceBadge {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 66px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+
+    margin: 0 !important;
+    padding: 9px 12px !important;
+
+    border: 1px solid #d5e8dd !important;
+    border-radius: 15px !important;
+
+    background:
+      linear-gradient(
+        135deg,
+        #edf8f1,
+        #f8fcf9
+      ) !important;
+
+    text-align: left !important;
+  }
+
+  .campaignPriceBadge span {
+    font-size: 7px !important;
+    font-weight: 750 !important;
+    letter-spacing: .08em !important;
+
+    color: #64786d !important;
+  }
+
+  .campaignPriceBadge strong {
+    margin-top: 1px !important;
+
+    font-size: 17px !important;
+    line-height: 1 !important;
+
+    color: #087844 !important;
+  }
+
+  .campaignPriceBadge b {
+    margin-top: 4px !important;
+
+    font-size: 9px !important;
+    font-weight: 750 !important;
+
+    color: #18382a !important;
+  }
+
+
+  /* TARİH KARTI */
+  .campaignDate {
+    width: 100% !important;
+    height: 66px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+
+    margin: 0 !important;
+    padding: 9px 12px !important;
+
+    border: 1px solid #d5e8dd !important;
+    border-radius: 15px !important;
+
+    background:
+      linear-gradient(
+        135deg,
+        #f8fcf9,
+        #eef8f2
+      ) !important;
+
+    color: #137848 !important;
+
+    font-size: 12px !important;
+    font-weight: 850 !important;
+
+    letter-spacing: .06em !important;
+    white-space: nowrap !important;
+  }
+
+  .campaignDate::before {
+    content: "KAMPANYA TARİHİ";
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #718077;
+
+    font-size: 7px;
+    font-weight: 750;
+
+    letter-spacing: .08em;
+  }
+
+
+  /* BAŞLIK */
+  .campaignModalText h2 {
+    margin: 0 0 13px !important;
+
+    font-size: 36px !important;
+    line-height: .93 !important;
+    letter-spacing: -1px !important;
+  }
+}
