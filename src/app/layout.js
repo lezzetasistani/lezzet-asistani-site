@@ -14,14 +14,14 @@ export const metadata = {
     'Lezzet Asistanı',
   ],
   openGraph: {
-    title: 'Lezzet Asistanı | Thermomix Danışmanlığı',
-    description:
-      'Thermomix TM7 danışmanlığı, tarifler, kampanyalar ve mutfak ipuçları.',
-    url: 'https://lezzetasistani.com',
-    siteName: 'Lezzet Asistanı',
-    locale: 'tr_TR',
-    type: 'website',
-  },
+  title: 'Lezzet Asistanı | Thermomix Danışmanlığı',
+  description:
+    'Thermomix TM7 danışmanlığı, tarifler, kampanyalar ve mutfak ipuçları.',
+  url: 'https://lezzetasistani.com',
+  siteName: 'Lezzet Asistanı',
+  locale: 'tr_TR',
+  type: 'website',
+},
 };
 
 export default function RootLayout({ children }) {
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
       <head>
 
         {/* GOOGLE TAG MANAGER */}
-        <Script id="google-tag-manager" strategy="afterInteractive">
+        <Script id="google-tag-manager" strategy="beforeInteractive">
           {`
             (function(w,d,s,l,i){
               w[l]=w[l]||[];
