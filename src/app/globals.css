@@ -1981,121 +1981,6 @@ transition:.3s;
   }
 }
 /* =========================================
-   KAMPANYA POPUP - MOBİL TEK EKRAN
-========================================= */
-
-@media(max-width:900px){
-
-  .campaignModalBackdrop{
-    padding:8px;
-    align-items:center;
-  }
-
-  .campaignModal{
-    width:min(390px,calc(100vw - 16px));
-    max-height:96vh;
-    min-height:0;
-    display:flex;
-    flex-direction:column;
-    overflow:hidden;
-    border-radius:24px;
-  }
-
-  .campaignModalText{
-    padding:18px 18px 12px;
-    overflow:visible;
-  }
-
-  .campaignPriceBadge{
-    width:82px;
-    height:82px;
-    margin:0 0 10px;
-  }
-
-  .campaignPriceBadge span{
-    font-size:8px;
-  }
-
-  .campaignPriceBadge strong{
-    font-size:17px;
-  }
-
-  .campaignPriceBadge b{
-    font-size:10px;
-    margin-top:3px;
-  }
-
-  .campaignDate{
-    margin-bottom:5px;
-    font-size:9px;
-    letter-spacing:.10em;
-  }
-
-  .campaignModalText h2{
-    margin:0 0 9px;
-    font-size:29px;
-    line-height:.95;
-  }
-
-  .campaignModalText p{
-    margin:0;
-    font-size:11px;
-    line-height:1.42;
-  }
-
-  .campaignBenefits{
-    gap:6px;
-    margin:11px 0;
-  }
-
-  .campaignBenefits div{
-    padding:7px 10px;
-    font-size:10px;
-    line-height:1.25;
-  }
-
-  .campaignActions{
-    gap:7px;
-    flex-wrap:nowrap;
-  }
-
-  .campaignPrimary,
-  .campaignSecondary{
-    flex:1;
-    padding:9px 8px;
-    font-size:10px;
-    white-space:nowrap;
-  }
-
-  .campaignLegal{
-    margin:8px 0 0;
-    font-size:7.5px !important;
-    line-height:1.35;
-  }
-
-  .campaignModalVisual{
-    min-height:0;
-    padding:0 12px 12px;
-    background:transparent;
-  }
-
-  .campaignModalVisual img{
-    width:100%;
-    max-height:27vh;
-    object-fit:contain;
-    border-radius:15px;
-    box-shadow:0 14px 35px rgba(0,0,0,.25);
-  }
-
-  .campaignClose{
-    right:9px;
-    top:9px;
-    width:32px;
-    height:32px;
-    font-size:20px;
-  }
-}
-/* =========================================
    MOBİL GENEL BOŞLUK DÜZENLEMESİ
 ========================================= */
 
@@ -4251,5 +4136,8816 @@ body {
 
   .footerTrustRow > div:last-child {
     border-bottom: 0;
+  }
+}
+/* ==================================================
+   2026 YENİ PREMIUM HEADER
+================================================== */
+
+.siteTopBar {
+  position: relative;
+  z-index: 102;
+
+  width: 100%;
+  min-height: 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 7px max(4vw, 34px);
+
+  background: #f7fbf8;
+  border-bottom: 1px solid #e3eee8;
+
+  color: #41554b;
+  font-size: 12px;
+}
+
+.topBarInstagram {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #167747;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.topBarInstagram img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.topBarConsultant {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.topBarConsultant strong {
+  color: #147b49;
+}
+
+.topBarConsultant i {
+  width: 1px;
+  height: 17px;
+  background: #cfdfd6;
+}
+
+/* Ana navbar */
+
+.newSiteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 101;
+
+  width: 100%;
+  min-height: 88px;
+
+  display: grid;
+  grid-template-columns: 245px 1fr auto;
+  align-items: center;
+  gap: 25px;
+
+  padding: 10px max(4vw, 34px);
+
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(206, 225, 215, 0.75);
+
+  box-shadow:
+    0 12px 32px rgba(17, 70, 43, 0.045);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.newSiteHeader.hideHeader {
+  transform: translateY(-110%);
+}
+
+/* Logo / marka */
+
+.newHeaderBrand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.newHeaderBrand > img {
+  width: 56px;
+  height: 56px;
+
+  border-radius: 50%;
+  object-fit: contain;
+
+  background: white;
+}
+
+.newHeaderBrand > div {
+  display: grid;
+  line-height: 1;
+}
+
+.newHeaderBrand strong {
+  color: #17482f;
+  font-size: 21px;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+
+.newHeaderBrand span {
+  margin-top: 3px;
+
+  color: #64a83f;
+  font-size: 13px;
+  letter-spacing: 6px;
+}
+
+.newHeaderBrand small {
+  margin-top: 6px;
+
+  color: #66736c;
+  font-size: 7px;
+  letter-spacing: 1.7px;
+}
+
+/* Menü */
+
+.newDesktopNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.newDesktopNav > button,
+.productDropdownTrigger {
+  padding: 11px 12px;
+
+  border: 0;
+  border-radius: 13px;
+
+  background: transparent;
+  color: #293830;
+
+  font-size: 13px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.newDesktopNav > button:hover,
+.productDropdownTrigger:hover,
+.productDropdown.productOpen .productDropdownTrigger {
+  background: #edf8f1;
+  color: #137644;
+}
+
+.productDropdown {
+  position: relative;
+}
+
+.productDropdownTrigger {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.productDropdownTrigger b {
+  color: #168350;
+  font-size: 12px;
+}
+
+.productDropdownMenu {
+  position: absolute;
+  top: calc(100% + 11px);
+  left: 0;
+
+  width: 270px;
+  padding: 9px;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transform: translateY(-6px);
+
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(18px);
+
+  border: 1px solid #dfece5;
+  border-radius: 20px;
+
+  box-shadow:
+    0 22px 48px rgba(17, 77, 46, 0.14);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.productDropdown.productOpen .productDropdownMenu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.productDropdownMenu button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 14px 12px;
+
+  border: 0;
+  border-radius: 14px;
+
+  background: transparent;
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.productDropdownMenu button:hover {
+  background: #f0f9f4;
+}
+
+.productDropdownMenu button + button {
+  border-top: 1px solid #edf3ef;
+}
+
+.productDropdownMenu button > span {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  flex: 0 0 38px;
+
+  border-radius: 11px;
+
+  background: #e8f7ee;
+  color: #13814c;
+
+  font-size: 18px;
+}
+
+.productDropdownMenu strong {
+  display: block;
+
+  color: #21362b;
+  font-size: 13px;
+}
+
+.productDropdownMenu small {
+  display: block;
+  margin-top: 3px;
+
+  color: #829087;
+  font-size: 10px;
+}
+
+/* CTA */
+
+.newHeaderCta {
+  min-height: 45px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 10px 18px;
+
+  border: 0;
+  border-radius: 999px;
+
+  background:
+    linear-gradient(135deg, #149b55, #117c45);
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 850;
+
+  box-shadow:
+    0 10px 25px rgba(20, 139, 76, 0.2);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.newHeaderCta:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 30px rgba(20, 139, 76, 0.27);
+}
+
+.newHeaderCta img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.newMobileMenuButton,
+.mobileNavHeader,
+.mobileNavContact,
+.mobileNavBackdrop {
+  display: none;
+}
+
+.siteTopBar {
+  position: relative;
+  justify-content: center;
+}
+
+.topBarInstagram {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.topBarConsultant {
+  margin-left: auto;
+}
+
+/* ==================================================
+   MOBİL HEADER
+================================================== */
+
+@media (max-width: 900px) {
+  .siteTopBar {
+    min-height: 34px;
+
+    justify-content: center;
+
+    padding: 7px 12px;
+
+    font-size: 10px;
+  }
+
+  .topBarConsultant {
+    display: none;
+  }
+
+  .newSiteHeader {
+    min-height: 72px;
+
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+
+    padding: 8px 15px;
+  }
+
+  .newHeaderBrand {
+    gap: 8px;
+  }
+
+  .newHeaderBrand > img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .newHeaderBrand strong {
+    font-size: 17px;
+    letter-spacing: 4px;
+  }
+
+  .newHeaderBrand span {
+    font-size: 10px;
+    letter-spacing: 5px;
+  }
+
+  .newHeaderBrand small {
+    font-size: 6px;
+  }
+
+  .newHeaderCta {
+    display: none;
+  }
+
+  .newMobileMenuButton {
+    width: 45px;
+    height: 45px;
+
+    display: grid;
+    place-content: center;
+    gap: 5px;
+
+    padding: 0;
+
+    border: 1px solid #d9ebe1;
+    border-radius: 14px;
+
+    background: #f4faf6;
+
+    cursor: pointer;
+  }
+
+  .newMobileMenuButton span {
+    width: 21px;
+    height: 2px;
+
+    background: #176b44;
+    border-radius: 999px;
+  }
+
+  .newDesktopNav {
+    position: fixed;
+    z-index: 1000;
+
+    top: 0;
+    right: 0;
+
+    width: min(360px, 88vw);
+    height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    gap: 2px;
+
+    padding: 22px 18px 30px;
+
+    overflow-y: auto;
+
+    background: white;
+
+    box-shadow:
+      -20px 0 55px rgba(9, 50, 30, 0.18);
+
+    transform: translateX(105%);
+
+    transition:
+      transform 0.28s ease;
+  }
+
+  .newDesktopNav.mobileOpen {
+    transform: translateX(0);
+  }
+
+  .mobileNavHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 15px;
+    margin-bottom: 8px;
+
+    border-bottom: 1px solid #e5eee9;
+  }
+
+  .mobileNavHeader strong {
+    font-size: 18px;
+  }
+
+  .mobileNavHeader button {
+    width: 38px;
+    height: 38px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: #eef6f1;
+
+    font-size: 25px;
+
+    cursor: pointer;
+  }
+
+  .newDesktopNav > button,
+  .productDropdownTrigger {
+    width: 100%;
+
+    padding: 13px 9px;
+
+    text-align: left;
+
+    font-size: 14px;
+  }
+
+  .productDropdownTrigger {
+    justify-content: space-between;
+  }
+
+  .productDropdownMenu {
+    position: static;
+
+    width: 100%;
+
+    display: none;
+
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+
+    padding: 4px 0 7px 13px;
+
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .productDropdown.productOpen .productDropdownMenu {
+    display: block;
+  }
+
+  .productDropdownMenu button {
+    padding: 11px 8px;
+  }
+
+  .mobileNavContact {
+    display: block !important;
+
+    margin-top: 15px;
+
+    background:
+      linear-gradient(135deg, #159a56, #117744) !important;
+
+    color: white !important;
+
+    text-align: center !important;
+
+    font-weight: 850 !important;
+  }
+
+  .mobileNavBackdrop {
+    position: fixed;
+    z-index: 999;
+
+    inset: 0;
+
+    display: block;
+
+    background: rgba(7, 30, 20, 0.48);
+    backdrop-filter: blur(4px);
+  }
+}
+/* ==================================================
+   HEADER SON DÜZELTMELER
+================================================== */
+
+/* Mobilde Instagram merkezde ama absolute olmasın */
+@media (max-width: 900px) {
+  .topBarInstagram {
+    position: static;
+    transform: none;
+  }
+}
+
+/* Ürünler oku */
+.dropdownChevron {
+  width: 7px;
+  height: 7px;
+
+  display: inline-block;
+  margin-left: 2px;
+
+  border-right: 1.8px solid #168350;
+  border-bottom: 1.8px solid #168350;
+
+  transform: rotate(45deg) translateY(-2px);
+  transform-origin: center;
+
+  transition: transform 0.2s ease;
+}
+
+.productDropdown.productOpen .dropdownChevron {
+  transform: rotate(225deg) translate(-1px, -1px);
+}
+
+/* Masaüstünde hover ile dropdown aç */
+@media (min-width: 901px) {
+  .productDropdown:hover .productDropdownMenu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .productDropdown:hover .productDropdownTrigger {
+    background: #edf8f1;
+    color: #137644;
+  }
+
+  .productDropdown:hover .dropdownChevron {
+    transform: rotate(225deg) translate(-1px, -1px);
+  }
+}
+/* ==================================================
+   HAKKIMIZDA PREMIUM BÖLÜM
+================================================== */
+
+.aboutUsPremium {
+  position: relative;
+
+  width: min(1420px, 92%);
+  margin: 55px auto;
+  padding: 58px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(52, 203, 112, 0.10),
+      transparent 28%
+    ),
+    linear-gradient(145deg, #ffffff, #f6fbf8);
+
+  border: 1px solid #dcece3;
+  border-radius: 36px;
+
+  box-shadow:
+    0 28px 70px rgba(18, 71, 44, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.aboutUsIntro {
+  max-width: 870px;
+  margin: 0 auto 46px;
+  text-align: center;
+}
+
+.aboutUsEyebrow {
+  display: inline-block;
+
+  margin-bottom: 15px;
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  background: #e8f6ee;
+  color: #147b49;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .13em;
+}
+
+.aboutUsIntro h2 {
+  margin: 0 0 20px;
+
+  color: #15261d;
+
+  font-size: clamp(36px, 4vw, 58px);
+  line-height: 1.05;
+  letter-spacing: -1.8px;
+}
+
+.aboutUsIntro h2 strong {
+  display: block;
+  color: #238054;
+}
+
+.aboutUsIntro p {
+  max-width: 780px;
+  margin: 0 auto 12px;
+
+  color: #607168;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.aboutUsIntro button {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-top: 20px;
+  padding: 14px 23px;
+
+  border: 0;
+  border-radius: 999px;
+
+  background: #18834f;
+  color: white;
+
+  font-weight: 850;
+
+  box-shadow:
+    0 14px 32px rgba(24, 131, 79, .20);
+
+  transition: .25s ease;
+}
+
+.aboutUsIntro button:hover {
+  transform: translateY(-3px);
+  background: #22945e;
+}
+
+.aboutUsIntro button b {
+  font-size: 20px;
+}
+
+/* İstatistikler */
+
+.aboutUsStats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+
+  margin-top: 35px;
+}
+
+.aboutStatCard {
+  min-height: 210px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 27px;
+
+  border: 1px solid #dae9e1;
+  border-radius: 25px;
+
+  background: rgba(255, 255, 255, .92);
+
+  box-shadow:
+    0 14px 34px rgba(22, 72, 45, .05);
+
+  transition: .25s ease;
+}
+
+.aboutStatCard:hover {
+  transform: translateY(-5px);
+
+  border-color: #badbc8;
+
+  box-shadow:
+    0 22px 45px rgba(22, 72, 45, .10);
+}
+
+.aboutStatCard span {
+  margin-bottom: 15px;
+
+  color: #15794a;
+
+  font-size: 43px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.aboutStatCard strong {
+  color: #182d22;
+  font-size: 18px;
+}
+
+.aboutStatCard small {
+  margin-top: 8px;
+
+  color: #738078;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Alt değerler */
+
+.aboutUsValues {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+
+  margin-top: 32px;
+  padding: 26px 0;
+
+  border-top: 1px solid #dce9e2;
+}
+
+.aboutUsValues > div {
+  padding: 0 32px;
+
+  border-right: 1px solid #dce9e2;
+}
+
+.aboutUsValues > div:last-child {
+  border-right: 0;
+}
+
+.aboutUsValues span {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 13px;
+
+  border-radius: 14px;
+
+  background: #e9f6ee;
+  color: #14804c;
+
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.aboutUsValues strong {
+  display: block;
+
+  color: #19784b;
+
+  font-size: 15px;
+}
+
+.aboutUsValues p {
+  margin: 7px 0 0;
+
+  color: #697970;
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* MOBİL */
+
+@media (max-width: 800px) {
+  .aboutUsPremium {
+    width: calc(100% - 24px);
+
+    margin: 30px auto;
+    padding: 32px 18px;
+
+    border-radius: 28px;
+  }
+
+  .aboutUsIntro {
+    margin-bottom: 28px;
+  }
+
+  .aboutUsIntro h2 {
+    font-size: 35px;
+    letter-spacing: -1px;
+  }
+
+  .aboutUsIntro p {
+    font-size: 14px;
+  }
+
+  .aboutUsStats {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .aboutStatCard {
+    min-height: 175px;
+    padding: 19px;
+  }
+
+  .aboutStatCard span {
+    font-size: 34px;
+  }
+
+  .aboutStatCard strong {
+    font-size: 15px;
+  }
+
+  .aboutUsValues {
+    grid-template-columns: 1fr;
+    padding-bottom: 0;
+  }
+
+  .aboutUsValues > div {
+    padding: 18px 5px;
+
+    border-right: 0;
+    border-bottom: 1px solid #dce9e2;
+  }
+
+  .aboutUsValues > div:last-child {
+    border-bottom: 0;
+  }
+}
+/* HAKKIMIZDA — SON RÖTUŞLAR */
+
+.aboutUsStats {
+  align-items: stretch;
+}
+
+.aboutStatCard {
+  justify-content: flex-start;
+}
+
+.aboutStatCard span {
+  min-height: 54px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.aboutStatCard strong {
+  min-height: 44px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.aboutUsValues {
+  margin-top: 22px;
+}
+
+/* ==================================================
+   TM7 FONKSİYONLARI
+================================================== */
+
+.tm7ModesSection {
+  width: min(1440px, 92%);
+  margin: 70px auto;
+  padding: 64px 58px;
+
+  background:
+    radial-gradient(
+      circle at 10% 5%,
+      rgba(54, 196, 111, 0.10),
+      transparent 28%
+    ),
+    linear-gradient(145deg, #ffffff, #f6fbf8);
+
+  border: 1px solid #dbeae2;
+  border-radius: 38px;
+
+  box-shadow:
+    0 26px 70px rgba(19, 78, 47, 0.08);
+
+  overflow: hidden;
+}
+
+.tm7ModesHeader {
+  max-width: 820px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.tm7ModesHeader > span {
+  display: inline-block;
+
+  margin-bottom: 14px;
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  background: #e8f6ee;
+  color: #147d4a;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+}
+
+.tm7ModesHeader h2 {
+  margin: 0;
+
+  color: #16281e;
+
+  font-size: clamp(38px, 4.3vw, 60px);
+  line-height: 1.04;
+  letter-spacing: -1.7px;
+}
+
+.tm7ModesHeader h2 strong {
+  color: #238457;
+}
+
+.tm7ModesHeader p {
+  max-width: 720px;
+  margin: 20px auto 0;
+
+  color: #68776f;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ==================================================
+   GRID
+================================================== */
+
+.tm7ModesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* ==================================================
+   KART
+================================================== */
+
+.tm7ModeCard {
+  overflow: hidden;
+
+  border: 1px solid #dae9e1;
+  border-radius: 27px;
+
+  background: white;
+
+  box-shadow:
+    0 14px 34px rgba(17, 71, 43, 0.06);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+.tm7ModeCard:hover {
+  transform: translateY(-7px);
+
+  border-color: #b7dac5;
+
+  box-shadow:
+    0 24px 48px rgba(19, 91, 54, 0.12);
+}
+
+/* ==================================================
+   VİDEO / KAPAK
+================================================== */
+
+.tm7ModeMedia {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 16 / 10;
+
+  overflow: hidden;
+
+  background: #eaf3ed;
+}
+
+.tm7ModeMedia video {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transform: scale(1.001);
+
+  transition:
+    transform 0.45s ease,
+    filter 0.3s ease;
+}
+
+.tm7ModeCard:hover .tm7ModeMedia video {
+  transform: scale(1.045);
+}
+
+.tm7ModeMediaShade {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(8, 34, 22, 0.44),
+      rgba(8, 34, 22, 0.05) 45%,
+      transparent 70%
+    );
+}
+
+.tm7ModeNumber {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  min-width: 39px;
+  height: 39px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0 8px;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 12px;
+
+  background: rgba(10, 41, 26, 0.52);
+  backdrop-filter: blur(10px);
+
+  color: white;
+
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+}
+
+.tm7ModeHoverText {
+  position: absolute;
+  left: 17px;
+  bottom: 15px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 8px 12px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(10px);
+
+  color: #176e46;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  opacity: 0;
+  transform: translateY(7px);
+
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease;
+}
+
+.tm7ModeCard:hover .tm7ModeHoverText {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==================================================
+   KART ALT BÖLÜMÜ
+================================================== */
+
+.tm7ModeCardBody {
+  min-height: 108px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  padding: 19px 20px 20px;
+}
+
+.tm7ModeCardBody > div {
+  min-width: 0;
+}
+
+.tm7ModeCardBody small {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #7b8a82;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.tm7ModeCardBody h3 {
+  margin: 0;
+
+  color: #17291f;
+
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.tm7ModeCardBody > button {
+  width: 45px;
+  height: 45px;
+
+  display: grid;
+  place-items: center;
+
+  flex: 0 0 45px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: #eaf7ef;
+  color: #17804d;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.22s ease,
+    background 0.22s ease,
+    color 0.22s ease;
+}
+
+.tm7ModeCard:hover .tm7ModeCardBody > button {
+  transform: rotate(45deg);
+
+  background: #16844f;
+  color: white;
+}
+
+/* ==================================================
+   DETAY MODAL
+================================================== */
+
+.tm7ModeModalBackdrop {
+  position: fixed;
+  z-index: 3000;
+
+  inset: 0;
+
+  display: grid;
+  place-items: center;
+
+  padding: 24px;
+
+  background: rgba(7, 28, 19, 0.72);
+  backdrop-filter: blur(13px);
+
+  animation: tm7ModalFade 0.22s ease;
+}
+
+@keyframes tm7ModalFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.tm7ModeModal {
+  position: relative;
+
+  width: min(940px, 94vw);
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  padding: 38px;
+
+  border: 1px solid rgba(207, 228, 216, 0.95);
+  border-radius: 31px;
+
+  background:
+    radial-gradient(
+      circle at 90% 5%,
+      rgba(59, 202, 116, 0.11),
+      transparent 28%
+    ),
+    #ffffff;
+
+  box-shadow:
+    0 35px 100px rgba(0, 0, 0, 0.26);
+
+  animation: tm7ModalUp 0.26s ease;
+}
+
+@keyframes tm7ModalUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* X */
+
+.tm7ModeModalClose {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  width: 43px;
+  height: 43px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid #dbe9e1;
+  border-radius: 50%;
+
+  background: rgba(243, 249, 245, 0.95);
+
+  color: #17392a;
+
+  font-size: 25px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.22s ease,
+    background 0.22s ease;
+}
+
+.tm7ModeModalClose:hover {
+  transform: rotate(90deg);
+  background: #e5f4eb;
+}
+
+/* Modal üstü */
+
+.tm7ModeModalHeader {
+  max-width: 760px;
+
+  padding-right: 65px;
+  margin-bottom: 24px;
+}
+
+.tm7ModeModalHeader > span {
+  display: inline-block;
+
+  margin-bottom: 12px;
+  padding: 7px 11px;
+
+  border-radius: 999px;
+
+  background: #e8f6ee;
+  color: #167a4a;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.tm7ModeModalHeader h2 {
+  margin: 0 0 13px;
+
+  color: #17291f;
+
+  font-size: clamp(29px, 3.5vw, 44px);
+  letter-spacing: -1px;
+}
+
+.tm7ModeModalHeader p {
+  margin: 0;
+
+  color: #627269;
+
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* Video */
+
+.tm7ModeModalVideo {
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  background: #0f1713;
+
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.12);
+}
+
+.tm7ModeModalVideo video {
+  width: 100%;
+
+  display: block;
+
+  aspect-ratio: 16 / 9;
+
+  background: black;
+
+  object-fit: cover;
+}
+
+/* Modal bilgi kartları */
+
+.tm7ModeModalInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+
+  margin-top: 19px;
+}
+
+.tm7ModeModalInfo > div {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 17px 18px;
+
+  border: 1px solid #dceae2;
+  border-radius: 17px;
+
+  background: #f7fbf8;
+}
+
+.tm7ModeModalInfo > div > span {
+  width: 39px;
+  height: 39px;
+
+  display: grid;
+  place-items: center;
+
+  flex: 0 0 39px;
+
+  border-radius: 12px;
+
+  background: #e4f4ea;
+  color: #16814e;
+
+  font-size: 18px;
+}
+
+.tm7ModeModalInfo small {
+  display: block;
+
+  color: #78867e;
+
+  font-size: 10px;
+}
+
+.tm7ModeModalInfo strong {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #1c3227;
+
+  font-size: 13px;
+}
+
+.tm7ModeModalSource {
+  margin-top: 18px;
+
+  color: #87948d;
+
+  text-align: center;
+
+  font-size: 10px;
+}
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1050px) {
+  .tm7ModesSection {
+    padding: 48px 30px;
+  }
+
+  .tm7ModesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==================================================
+   MOBİL
+================================================== */
+
+@media (max-width: 640px) {
+  .tm7ModesSection {
+    width: calc(100% - 20px);
+
+    margin: 32px auto;
+    padding: 34px 13px;
+
+    border-radius: 27px;
+  }
+
+  .tm7ModesHeader {
+    margin-bottom: 28px;
+    padding: 0 6px;
+  }
+
+  .tm7ModesHeader h2 {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .tm7ModesHeader p {
+    font-size: 13px;
+  }
+
+  .tm7ModesGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .tm7ModeCard {
+    border-radius: 22px;
+  }
+
+  .tm7ModeMedia {
+    aspect-ratio: 16 / 10;
+  }
+
+  .tm7ModeCardBody {
+    min-height: 92px;
+
+    padding: 15px 16px;
+  }
+
+  .tm7ModeCardBody h3 {
+    font-size: 17px;
+  }
+
+  .tm7ModeCardBody > button {
+    width: 42px;
+    height: 42px;
+
+    flex-basis: 42px;
+  }
+
+  .tm7ModeHoverText {
+    display: none;
+  }
+
+  .tm7ModeModalBackdrop {
+    padding: 10px;
+    align-items: flex-end;
+  }
+
+  .tm7ModeModal {
+    width: 100%;
+    max-height: 92dvh;
+
+    padding: 27px 16px 22px;
+
+    border-radius: 26px 26px 18px 18px;
+  }
+
+  .tm7ModeModalClose {
+    top: 13px;
+    right: 13px;
+
+    width: 39px;
+    height: 39px;
+  }
+
+  .tm7ModeModalHeader {
+    padding-right: 44px;
+    margin-bottom: 18px;
+  }
+
+  .tm7ModeModalHeader h2 {
+    font-size: 28px;
+  }
+
+  .tm7ModeModalHeader p {
+    font-size: 13px;
+  }
+
+  .tm7ModeModalVideo {
+    border-radius: 17px;
+  }
+
+  .tm7ModeModalInfo {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .tm7ModeModalInfo > div {
+    padding: 14px;
+  }
+
+  .tm7ModeModalSource {
+    margin-bottom: 4px;
+  }
+}
+/* ==================================================
+   COOKIDOO PREMIUM BÖLÜM
+================================================== */
+
+.cookidooPremium {
+  width: min(1440px, 92%);
+  margin: 70px auto;
+  padding: 60px 56px;
+
+  background:
+    radial-gradient(
+      circle at 92% 10%,
+      rgba(61, 193, 112, 0.10),
+      transparent 30%
+    ),
+    linear-gradient(145deg, #ffffff, #f7fbf8);
+
+  border: 1px solid #dcebe3;
+  border-radius: 38px;
+
+  box-shadow:
+    0 28px 70px rgba(18, 72, 44, 0.08);
+
+  overflow: hidden;
+}
+
+/* ==================================================
+   HERO
+================================================== */
+
+.cookidooHero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 52px;
+}
+
+.cookidooHeroText {
+  max-width: 670px;
+}
+
+.cookidooEyebrow {
+  display: inline-block;
+
+  margin-bottom: 15px;
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  background: #e9f6ee;
+  color: #157b4b;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.cookidooHeroText h2 {
+  margin: 0;
+
+  color: #16281e;
+
+  font-size: clamp(40px, 4.4vw, 62px);
+  line-height: 1.03;
+  letter-spacing: -1.8px;
+}
+
+.cookidooHeroText h2 strong {
+  display: block;
+  color: #248256;
+}
+
+.cookidooHeroText > p {
+  margin: 22px 0 0;
+
+  color: #64746b;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Butonlar */
+
+.cookidooHeroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.cookidooHeroActions a,
+.cookidooHeroActions button {
+  min-height: 48px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 12px 20px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 850;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease;
+}
+
+.cookidooHeroActions a {
+  background: #18844f;
+  color: white;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 14px 30px rgba(24, 132, 79, 0.20);
+}
+
+.cookidooHeroActions a:hover {
+  transform: translateY(-2px);
+  background: #21925d;
+}
+
+.cookidooHeroActions button {
+  border: 1px solid #cfe3d8;
+
+  background: white;
+  color: #1b7049;
+}
+
+.cookidooHeroActions button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 24px rgba(28, 91, 57, 0.08);
+}
+
+/* Quick stats */
+
+.cookidooQuickStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  margin-top: 30px;
+
+  border-top: 1px solid #deebe4;
+}
+
+.cookidooQuickStats > div {
+  padding: 20px 18px 0;
+
+  border-right: 1px solid #deebe4;
+}
+
+.cookidooQuickStats > div:first-child {
+  padding-left: 0;
+}
+
+.cookidooQuickStats > div:last-child {
+  border-right: 0;
+}
+
+.cookidooQuickStats strong {
+  display: block;
+
+  color: #177b4a;
+
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.cookidooQuickStats span {
+  display: block;
+  margin-top: 3px;
+
+  color: #718078;
+
+  font-size: 11px;
+}
+
+/* ==================================================
+   SAĞ MOCKUP
+================================================== */
+
+.cookidooVisual {
+  position: relative;
+
+  min-height: 470px;
+
+  display: grid;
+  place-items: center;
+}
+
+.cookidooVisualGlow {
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(55, 190, 108, 0.18),
+      rgba(55, 190, 108, 0.02) 65%,
+      transparent 75%
+    );
+
+  filter: blur(4px);
+}
+
+.cookidooScreenMockup {
+  position: relative;
+  z-index: 2;
+
+  width: min(430px, 90%);
+  min-height: 355px;
+
+  padding: 26px;
+
+  border: 1px solid #dcebe3;
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.98),
+      rgba(245,250,247,0.98)
+    );
+
+  box-shadow:
+    0 28px 60px rgba(17, 74, 44, 0.13);
+}
+
+.cookidooScreenBadge {
+  display: inline-block;
+
+  padding: 7px 11px;
+
+  border-radius: 999px;
+
+  background: #e8f6ee;
+  color: #18814f;
+
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.cookidooFakeSearch {
+  margin-top: 18px;
+  padding: 14px 16px;
+
+  border: 1px solid #dce9e2;
+  border-radius: 16px;
+
+  background: white;
+
+  color: #718078;
+
+  font-size: 12px;
+}
+
+.cookidooFakeRecipes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  margin-top: 16px;
+}
+
+.cookidooFakeRecipes > div {
+  min-height: 105px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 8px;
+
+  border: 1px solid #dce9e2;
+  border-radius: 16px;
+
+  background: white;
+
+  text-align: center;
+}
+
+.cookidooFakeRecipes span {
+  font-size: 27px;
+}
+
+.cookidooFakeRecipes small {
+  margin-top: 8px;
+
+  color: #66756d;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.cookidooFakeWeek {
+  margin-top: 16px;
+  padding: 15px;
+
+  border: 1px solid #dce9e2;
+  border-radius: 16px;
+
+  background: #f8fbf9;
+}
+
+.cookidooFakeWeek strong {
+  display: block;
+
+  color: #1a6f48;
+
+  font-size: 12px;
+}
+
+.cookidooFakeWeek > div {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 7px;
+
+  margin-top: 10px;
+}
+
+.cookidooFakeWeek span {
+  padding: 8px 4px;
+
+  border-radius: 10px;
+
+  background: white;
+
+  color: #738179;
+
+  text-align: center;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+/* Floating kartlar */
+
+.cookidooFloatingCard {
+  position: absolute;
+  z-index: 4;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 11px 14px;
+
+  border: 1px solid #d8e9e0;
+  border-radius: 15px;
+
+  background: rgba(255,255,255,0.93);
+  backdrop-filter: blur(12px);
+
+  color: #236f4c;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  box-shadow:
+    0 15px 30px rgba(21, 78, 47, 0.12);
+}
+
+.cookidooFloatingOne {
+  top: 35px;
+  left: 0;
+}
+
+.cookidooFloatingTwo {
+  right: 0;
+  bottom: 48px;
+}
+
+/* ==================================================
+   ÖZELLİK KARTLARI
+================================================== */
+
+.cookidooFeatureGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+
+  margin-top: 52px;
+}
+
+.cookidooFeatureCard {
+  min-height: 210px;
+
+  padding: 24px;
+
+  border: 1px solid #dceae2;
+  border-radius: 24px;
+
+  background: rgba(255,255,255,0.94);
+
+  box-shadow:
+    0 14px 32px rgba(19, 72, 44, 0.05);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.cookidooFeatureCard:hover {
+  transform: translateY(-5px);
+
+  border-color: #b9d9c7;
+
+  box-shadow:
+    0 22px 44px rgba(19, 72, 44, 0.09);
+}
+
+.cookidooFeatureTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cookidooFeatureIcon {
+  width: 45px;
+  height: 45px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 14px;
+
+  background: #e9f6ee;
+
+  font-size: 21px;
+}
+
+.cookidooFeatureTop small {
+  color: #b1beb6;
+
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.cookidooFeatureCard h3 {
+  margin: 19px 0 8px;
+
+  color: #192d22;
+
+  font-size: 18px;
+}
+
+.cookidooFeatureCard p {
+  margin: 0;
+
+  color: #6d7b73;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* ==================================================
+   NASIL ÇALIŞIR
+================================================== */
+
+.cookidooHow {
+  margin-top: 48px;
+  padding: 34px;
+
+  border: 1px solid #dbe9e1;
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eff8f3,
+      #f8fbf9
+    );
+}
+
+.cookidooHowHeader {
+  max-width: 560px;
+}
+
+.cookidooHowHeader > span {
+  color: #18804d;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+}
+
+.cookidooHowHeader h3 {
+  margin: 8px 0 0;
+
+  color: #1a2f24;
+
+  font-size: 28px;
+  letter-spacing: -0.5px;
+}
+
+.cookidooHowSteps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+
+  margin-top: 30px;
+}
+
+.cookidooHowSteps > div {
+  padding: 0 28px;
+
+  border-right: 1px solid #d5e5dc;
+}
+
+.cookidooHowSteps > div:first-child {
+  padding-left: 0;
+}
+
+.cookidooHowSteps > div:last-child {
+  border-right: 0;
+}
+
+.cookidooHowSteps > div > span {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 14px;
+
+  border-radius: 13px;
+
+  background: #18824f;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.cookidooHowSteps strong {
+  display: block;
+
+  color: #1b6d49;
+
+  font-size: 15px;
+}
+
+.cookidooHowSteps p {
+  margin: 7px 0 0;
+
+  color: #6b7a72;
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1050px) {
+  .cookidooPremium {
+    padding: 46px 30px;
+  }
+
+  .cookidooHero {
+    grid-template-columns: 1fr;
+  }
+
+  .cookidooHeroText {
+    max-width: none;
+  }
+
+  .cookidooVisual {
+    min-height: 430px;
+  }
+
+  .cookidooFeatureGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==================================================
+   MOBİL
+================================================== */
+
+@media (max-width: 640px) {
+  .cookidooPremium {
+    width: calc(100% - 20px);
+
+    margin: 32px auto;
+    padding: 32px 15px;
+
+    border-radius: 28px;
+  }
+
+  .cookidooHero {
+    gap: 28px;
+  }
+
+  .cookidooHeroText {
+    text-align: center;
+  }
+
+  .cookidooHeroText h2 {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .cookidooHeroText > p {
+    font-size: 13px;
+  }
+
+  .cookidooHeroActions {
+    flex-direction: column;
+  }
+
+  .cookidooHeroActions a,
+  .cookidooHeroActions button {
+    width: 100%;
+  }
+
+  .cookidooQuickStats {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .cookidooQuickStats > div {
+    padding: 16px 6px 0;
+  }
+
+  .cookidooQuickStats strong {
+    font-size: 19px;
+  }
+
+  .cookidooQuickStats span {
+    font-size: 9px;
+  }
+
+  .cookidooVisual {
+    min-height: 360px;
+  }
+
+  .cookidooVisualGlow {
+    width: 300px;
+    height: 300px;
+  }
+
+  .cookidooScreenMockup {
+    width: 100%;
+    min-height: 0;
+
+    padding: 18px;
+
+    border-radius: 23px;
+  }
+
+  .cookidooFakeRecipes {
+    gap: 7px;
+  }
+
+  .cookidooFakeRecipes > div {
+    min-height: 90px;
+  }
+
+  .cookidooFloatingOne {
+    top: -7px;
+    left: 4px;
+  }
+
+  .cookidooFloatingTwo {
+    right: 4px;
+    bottom: 5px;
+  }
+
+  .cookidooFeatureGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+
+    margin-top: 34px;
+  }
+
+  .cookidooFeatureCard {
+    min-height: auto;
+    padding: 19px;
+  }
+
+  .cookidooHow {
+    margin-top: 30px;
+    padding: 24px 17px;
+
+    border-radius: 22px;
+  }
+
+  .cookidooHowHeader {
+    text-align: center;
+  }
+
+  .cookidooHowHeader h3 {
+    font-size: 23px;
+  }
+
+  .cookidooHowSteps {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .cookidooHowSteps > div {
+    padding: 18px 0;
+
+    border-right: 0;
+    border-bottom: 1px solid #d5e5dc;
+  }
+
+  .cookidooHowSteps > div:last-child {
+    border-bottom: 0;
+  }
+
+  .cookidooHowSteps > div > span {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cookidooHowSteps strong,
+  .cookidooHowSteps p {
+    text-align: center;
+  }
+}
+/* ==================================================
+   COOKIDOO — GERÇEK TM7 EKRANI / PREMIUM REVİZYON
+================================================== */
+
+.cookidooQuickStats {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.cookidooQuickStats > div {
+  min-width: 0;
+}
+
+.cookidooQuickStats strong {
+  font-size: 23px;
+}
+
+.cookidooQuickStats span {
+  line-height: 1.35;
+}
+
+/* Sağ gerçek görsel alan */
+
+.cookidooRealVisual {
+  min-height: 500px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cookidooRealGlow {
+  position: absolute;
+
+  width: 82%;
+  height: 76%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(41, 157, 95, 0.20) 0%,
+      rgba(41, 157, 95, 0.07) 45%,
+      transparent 72%
+    );
+
+  filter: blur(35px);
+}
+
+.cookidooRealScreen {
+  position: relative;
+  z-index: 2;
+
+  width: min(520px, 94%);
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(189, 218, 201, 0.9);
+
+  border-radius: 30px;
+
+  background: #0f1813;
+
+  box-shadow:
+    0 35px 80px rgba(17, 72, 44, 0.18),
+    0 8px 25px rgba(0, 0, 0, 0.08);
+
+  transform: rotate(-1deg);
+}
+
+.cookidooRealScreen img {
+  width: 100%;
+  height: 390px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  filter:
+    brightness(1.07)
+    contrast(1.04)
+    saturate(0.92);
+}
+
+.cookidooRealOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(5, 27, 16, 0.03) 15%,
+      rgba(5, 27, 16, 0.08) 52%,
+      rgba(5, 27, 16, 0.72) 100%
+    );
+
+  pointer-events: none;
+}
+
+/* üst küçük badge */
+
+.cookidooRealTopBadge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 13px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.35);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.86);
+
+  backdrop-filter: blur(12px);
+
+  color: #176e46;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cookidooRealTopBadge span {
+  color: #2ab46a;
+  font-size: 11px;
+}
+
+/* görsel üzerindeki yazı */
+
+.cookidooRealBottom {
+  position: absolute;
+
+  left: 24px;
+  right: 24px;
+  bottom: 23px;
+
+  color: white;
+}
+
+.cookidooRealBottom small {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: rgba(255,255,255,0.73);
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.cookidooRealBottom strong {
+  font-size: 22px;
+  line-height: 1.18;
+
+  letter-spacing: -0.3px;
+}
+
+/* floating badge'leri daha şık yap */
+
+.cookidooRealVisual .cookidooFloatingCard {
+  padding: 11px 15px;
+
+  border:
+    1px solid rgba(202, 225, 212, 0.9);
+
+  background:
+    rgba(255,255,255,0.92);
+
+  backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 16px 35px rgba(20, 78, 48, 0.12);
+}
+
+.cookidooRealVisual .cookidooFloatingOne {
+  top: 36px;
+  left: -2px;
+}
+
+.cookidooRealVisual .cookidooFloatingTwo {
+  right: -2px;
+  bottom: 54px;
+}
+.cookidooFeatureCard {
+  min-height: 185px;
+  padding: 22px 23px;
+}
+
+.cookidooFeatureCard h3 {
+  font-size: 17px;
+  letter-spacing: -0.2px;
+}
+
+.cookidooFeatureIcon {
+  width: 42px;
+  height: 42px;
+}
+@media (max-width: 640px) {
+
+  .cookidooQuickStats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .cookidooQuickStats > div {
+    padding: 14px 8px;
+
+    border-bottom: 1px solid #deebe4;
+  }
+
+  .cookidooQuickStats > div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .cookidooQuickStats > div:nth-child(3),
+  .cookidooQuickStats > div:nth-child(4) {
+    border-bottom: 0;
+  }
+
+  .cookidooRealVisual {
+    min-height: 390px;
+  }
+
+  .cookidooRealScreen {
+    width: 100%;
+    border-radius: 24px;
+
+    transform: none;
+  }
+
+  .cookidooRealScreen img {
+    height: 300px;
+  }
+
+  .cookidooRealBottom {
+    left: 17px;
+    right: 17px;
+    bottom: 17px;
+  }
+
+  .cookidooRealBottom strong {
+    font-size: 18px;
+  }
+
+  .cookidooRealVisual .cookidooFloatingOne {
+    top: -10px;
+    left: 5px;
+  }
+
+  .cookidooRealVisual .cookidooFloatingTwo {
+    right: 5px;
+    bottom: 12px;
+  }
+}
+
+/* =====================================================
+   COOKIDOO HERO V2
+   ===================================================== */
+
+.cookidooHeroV2 {
+  position: relative;
+
+  grid-template-columns: 1fr 1.12fr;
+  gap: 0;
+
+  min-height: 540px;
+
+  overflow: hidden;
+
+  border: 1px solid #dcebe3;
+  border-radius: 30px;
+
+  background: #fff;
+}
+
+
+/* ===============================
+   SOL TARAF
+================================ */
+
+.cookidooHeroLeft {
+  position: relative;
+  z-index: 3;
+
+  max-width: none;
+
+  padding: 56px 54px 48px 56px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 90% 50%,
+      rgba(38, 148, 88, 0.08),
+      transparent 34%
+    ),
+    #ffffff;
+}
+
+.cookidooTopMiniBadge {
+  width: max-content;
+
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 18px;
+  padding: 8px 13px;
+
+  border-radius: 999px;
+
+  background: #edf8f2;
+
+  color: #167647;
+
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.cookidooHeroLeft h2 {
+  max-width: 620px;
+
+  font-size: clamp(40px, 4.3vw, 62px);
+  line-height: 1.02;
+
+  letter-spacing: -1.7px;
+}
+
+.cookidooHeroLeft h2 strong {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #19834f;
+}
+
+.cookidooHeroLeft > p {
+  max-width: 590px;
+
+  margin-top: 22px;
+
+  font-size: 14px;
+  line-height: 1.72;
+}
+
+
+/* ===============================
+   İSTATİSTİKLER
+================================ */
+
+.cookidooHeroLeft .cookidooQuickStats {
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 30px;
+}
+
+.cookidooHeroLeft .cookidooQuickStats > div {
+  padding: 18px 15px 0;
+}
+
+.cookidooHeroLeft .cookidooQuickStats > div:first-child {
+  padding-left: 0;
+}
+
+.cookidooHeroLeft .cookidooQuickStats strong {
+  font-size: 22px;
+}
+
+.cookidooHeroLeft .cookidooQuickStats span {
+  max-width: 110px;
+
+  font-size: 9px;
+  line-height: 1.35;
+}
+
+
+/* =====================================================
+   SAĞ DARK EXPERIENCE ALANI
+===================================================== */
+
+.cookidooExperience {
+  position: relative;
+
+  min-height: 540px;
+
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+
+  align-items: center;
+
+  background:
+    linear-gradient(
+      115deg,
+      #17231d 0%,
+      #0d1712 48%,
+      #07100b 100%
+    );
+
+  color: white;
+}
+
+
+/* mutfak hissi */
+
+.cookidooExperienceBackground {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 25% 48%,
+      rgba(42, 145, 82, 0.20),
+      transparent 37%
+    ),
+    radial-gradient(
+      circle at 90% 75%,
+      rgba(79, 115, 56, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(
+      to right,
+      rgba(102, 73, 42, 0.20),
+      transparent 48%
+    );
+
+  pointer-events: none;
+}
+
+
+/* hafif mutfak ışıkları */
+
+.cookidooExperience::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  left: -130px;
+  top: -100px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(210, 164, 102, .16),
+      transparent 65%
+    );
+
+  filter: blur(25px);
+}
+
+
+/* =====================================================
+   TM7 + GERÇEK COOKIDOO EKRANI
+===================================================== */
+
+.cookidooDeviceArea {
+  position: relative;
+  z-index: 2;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* mevcut TM7 */
+
+.cookidooTm7Device {
+  position: absolute;
+
+  width: 430px;
+  max-width: 105%;
+
+  left: 50%;
+  top: 50%;
+
+  transform:
+    translate(-50%, -52%);
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 35px 30px rgba(0,0,0,.42)
+    );
+}
+
+
+/* gerçek Cookidoo ekranını cihaz üzerinde/önünde göster */
+
+.cookidooRealScreenCard {
+  position: absolute;
+  z-index: 4;
+
+  width: 320px;
+
+  left: 50%;
+  bottom: 58px;
+
+  transform:
+    translateX(-50%)
+    perspective(800px)
+    rotateX(3deg);
+
+  overflow: hidden;
+
+  border:
+    4px solid rgba(15, 21, 18, 0.95);
+
+  border-radius: 14px;
+
+  background: #111;
+
+  box-shadow:
+    0 24px 45px rgba(0,0,0,.48);
+}
+
+.cookidooRealScreenCard img {
+  width: 100%;
+  height: 170px;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center 30%;
+
+  filter:
+    brightness(1.08)
+    contrast(1.04)
+    saturate(.94);
+}
+
+
+/* =====================================================
+   DARK PANEL METNİ
+===================================================== */
+
+.cookidooExperienceContent {
+  position: relative;
+  z-index: 4;
+
+  padding: 48px 38px 48px 8px;
+}
+
+.cookidooExperienceBrand {
+  display: block;
+
+  margin-bottom: 13px;
+
+  color: #58ba77;
+
+  font-size: 20px;
+  font-weight: 900;
+
+  letter-spacing: .10em;
+}
+
+.cookidooExperienceContent h3 {
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(30px, 2.8vw, 43px);
+  line-height: 1.07;
+
+  letter-spacing: -1px;
+}
+
+.cookidooExperienceLine {
+  width: 120px;
+  height: 1px;
+
+  margin: 24px 0 15px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #2eb168,
+      transparent
+    );
+}
+
+
+/* =====================================================
+   DARK PANEL İSTATİSTİKLER
+===================================================== */
+
+.cookidooExperienceStats {
+  display: flex;
+  flex-direction: column;
+}
+
+.cookidooExperienceStats > div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  min-height: 74px;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.09);
+}
+
+.cookidooExperienceStats > div:last-child {
+  border-bottom: 0;
+}
+
+.cookidooDarkIcon {
+  width: 43px;
+  height: 43px;
+
+  flex: 0 0 43px;
+
+  display: grid;
+  place-items: center;
+
+  border:
+    1px solid rgba(50, 193, 106, .45);
+
+  border-radius: 50%;
+
+  background:
+    rgba(27, 111, 63, .17);
+
+  font-size: 19px;
+}
+
+.cookidooExperienceStats strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 14px;
+}
+
+.cookidooExperienceStats small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: rgba(255,255,255,.64);
+
+  font-size: 10px;
+}
+
+
+/* =====================================================
+   ALTTKİ ÖZELLİK KARTLARINI SIKIŞTIR
+===================================================== */
+
+.cookidooFeatureGrid {
+  margin-top: 22px;
+}
+
+.cookidooFeatureCard {
+  min-height: 145px;
+
+  padding: 20px 22px;
+}
+
+.cookidooFeatureCard h3 {
+  margin-top: 13px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .cookidooHeroV2 {
+    grid-template-columns: 1fr;
+  }
+
+  .cookidooExperience {
+    min-height: 520px;
+  }
+
+  .cookidooHeroLeft {
+    padding: 46px 40px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBİL
+===================================================== */
+
+@media (max-width: 640px) {
+
+  .cookidooHeroV2 {
+    min-height: 0;
+
+    border-radius: 25px;
+  }
+
+  .cookidooHeroLeft {
+    padding: 31px 18px 29px;
+
+    text-align: left;
+  }
+
+  .cookidooTopMiniBadge {
+    margin-left: 0;
+  }
+
+  .cookidooHeroLeft h2 {
+    font-size: 34px;
+  }
+
+  .cookidooHeroLeft h2 strong {
+    display: inline;
+  }
+
+  .cookidooHeroLeft > p {
+    font-size: 13px;
+  }
+
+  .cookidooHeroLeft .cookidooQuickStats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cookidooHeroLeft .cookidooQuickStats > div {
+    padding: 13px 8px;
+  }
+
+
+  /* dark alan */
+
+  .cookidooExperience {
+    grid-template-columns: 1fr;
+
+    min-height: 670px;
+  }
+
+  .cookidooDeviceArea {
+    min-height: 370px;
+  }
+
+  .cookidooTm7Device {
+    width: 330px;
+  }
+
+  .cookidooRealScreenCard {
+    width: 245px;
+
+    bottom: 30px;
+  }
+
+  .cookidooRealScreenCard img {
+    height: 135px;
+  }
+
+
+  /* metin aşağı */
+
+  .cookidooExperienceContent {
+    padding: 15px 23px 32px;
+  }
+
+  .cookidooExperienceBrand {
+    font-size: 16px;
+  }
+
+  .cookidooExperienceContent h3 {
+    font-size: 30px;
+  }
+
+  .cookidooExperienceStats > div {
+    min-height: 66px;
+  }
+
+}
+/* =========================================
+   COOKIDOO HERO — MOCKUP'A YAKIN SON DÜZEN
+========================================= */
+
+.cookidooHeroV2 {
+  grid-template-columns: 46% 54%;
+  min-height: 560px;
+}
+
+/* SOL TARAF */
+
+.cookidooHeroLeft {
+  padding: 55px 45px 48px 55px;
+}
+
+.cookidooHeroLeft h2 {
+  font-size: clamp(40px, 3.5vw, 58px);
+  max-width: 610px;
+}
+
+/* SAĞ TARAF */
+
+.cookidooExperience {
+  min-height: 560px;
+
+  grid-template-columns: 56% 44%;
+
+  background:
+    radial-gradient(
+      circle at 28% 50%,
+      rgba(42, 133, 73, 0.24),
+      transparent 34%
+    ),
+    linear-gradient(
+      105deg,
+      #334032 0%,
+      #17231c 35%,
+      #09110d 72%,
+      #050a07 100%
+    );
+}
+
+/* Beyaz bölümden koyuya yumuşak geçiş */
+
+.cookidooExperience::after {
+  content: "";
+  position: absolute;
+
+  left: -120px;
+  top: 0;
+  bottom: 0;
+
+  width: 200px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,1) 0%,
+      rgba(255,255,255,.75) 28%,
+      rgba(255,255,255,0) 100%
+    );
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* CİHAZ ALANI */
+
+.cookidooDeviceArea {
+  position: relative;
+  z-index: 3;
+
+  min-height: 560px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* arkadaki yeşil ışık */
+
+.cookidooDeviceGlow {
+  position: absolute;
+
+  width: 370px;
+  height: 370px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(39, 186, 92, .20),
+      rgba(39, 186, 92, .06) 45%,
+      transparent 72%
+    );
+
+  filter: blur(22px);
+}
+
+/* TM7 ekran gövdesini CSS ile oluşturuyoruz */
+
+.cookidooScreenDevice {
+  position: relative;
+  z-index: 4;
+
+  width: min(390px, 90%);
+
+  padding: 13px 13px 16px;
+
+  border-radius: 25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #151a17,
+      #050706
+    );
+
+  box-shadow:
+    0 35px 65px rgba(0,0,0,.48),
+    0 8px 18px rgba(0,0,0,.32);
+
+  transform:
+    perspective(1000px)
+    rotateX(2deg)
+    rotateY(-2deg);
+}
+
+.cookidooScreenDevice img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  border-radius: 12px;
+
+  object-fit: cover;
+
+  filter:
+    brightness(1.06)
+    contrast(1.03)
+    saturate(.94);
+}
+
+/* üstte TM7 ekranındaki küçük yarık */
+
+.cookidooScreenTop {
+  width: 58px;
+  height: 4px;
+
+  margin: -3px auto 9px;
+
+  border-radius: 999px;
+
+  background: #646b67;
+}
+
+/* alttaki cihaz detayı */
+
+.cookidooScreenBottom {
+  position: absolute;
+
+  left: 50%;
+  bottom: -12px;
+
+  width: 80px;
+  height: 18px;
+
+  transform: translateX(-50%);
+
+  border-radius: 0 0 12px 12px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #232a26,
+      #080a09
+    );
+}
+
+.cookidooScreenBottom span {
+  position: absolute;
+
+  width: 26px;
+  height: 3px;
+
+  left: 50%;
+  top: 6px;
+
+  transform: translateX(-50%);
+
+  border-radius: 999px;
+
+  background: #69706c;
+}
+
+
+/* SAĞ METİN */
+
+.cookidooExperienceContent {
+  padding: 48px 32px 48px 12px;
+}
+
+.cookidooExperienceBrand {
+  font-size: 20px;
+}
+
+.cookidooExperienceContent h3 {
+  font-size: clamp(31px, 2.5vw, 43px);
+  line-height: 1.08;
+
+  white-space: normal;
+}
+
+/* Metnin 4 satıra bölünmesini engelle */
+
+.cookidooExperienceContent h3 br {
+  display: block;
+}
+
+.cookidooExperienceStats strong {
+  font-size: 14px;
+}
+
+.cookidooExperienceStats small {
+  font-size: 10px;
+}
+
+
+/* ALT KARTLAR — MOCKUP'TAKİ GİBİ DAHA KOMPAKT */
+
+.cookidooFeatureGrid {
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.cookidooFeatureCard {
+  min-height: 126px;
+
+  padding: 18px 20px;
+
+  border-radius: 19px;
+}
+
+.cookidooFeatureIcon {
+  width: 39px;
+  height: 39px;
+}
+
+.cookidooFeatureCard h3 {
+  font-size: 15px;
+  margin: 9px 0 5px;
+}
+
+.cookidooFeatureCard p {
+  font-size: 11px;
+}
+
+
+/* NASIL ÇALIŞIR BÖLÜMÜ */
+
+.cookidooHow {
+  margin-top: 16px;
+  padding: 28px 30px;
+}
+
+
+/* MOBİL */
+
+@media (max-width: 640px) {
+
+  .cookidooHeroV2 {
+    grid-template-columns: 1fr;
+  }
+
+  .cookidooHeroLeft {
+    padding: 30px 18px;
+  }
+
+  .cookidooExperience {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .cookidooExperience::after {
+    display: none;
+  }
+
+  .cookidooDeviceArea {
+    min-height: 390px;
+  }
+
+  .cookidooScreenDevice {
+    width: min(330px, 88%);
+  }
+
+  .cookidooExperienceContent {
+    padding: 10px 23px 30px;
+  }
+
+  .cookidooExperienceContent h3 {
+    font-size: 29px;
+  }
+}
+/* =========================================
+   COOKIDOO FINAL HERO IMAGE
+========================================= */
+
+.cookidooHeroV2 {
+  grid-template-columns: 46% 54%;
+  gap: 0;
+  overflow: hidden;
+}
+
+.cookidooExperienceImage {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+
+  overflow: hidden;
+
+  background: #07100b;
+}
+
+.cookidooExperienceImage img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  /* görsel zaten tasarlanmış olduğu için ekstra efekt yok */
+  filter: none;
+}
+
+/* soldan görsele daha yumuşak geçiş */
+
+.cookidooExperienceImage::before {
+  content: "";
+
+  position: absolute;
+  z-index: 2;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 90px;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.32),
+      rgba(255,255,255,0)
+    );
+}
+
+/* MOBİL */
+
+@media (max-width: 640px) {
+
+  .cookidooHeroV2 {
+    grid-template-columns: 1fr;
+  }
+
+  .cookidooExperienceImage {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+
+  .cookidooExperienceImage img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .cookidooExperienceImage::before {
+    display: none;
+  }
+}
+/* ==================================================
+   COOKIDOO FINAL — TEK PARÇA GÖRSEL
+   EN ALTTA KALSIN
+================================================== */
+
+.cookidooHeroV2 {
+  display: grid;
+  grid-template-columns: 46% 54%;
+  align-items: stretch;
+
+  min-height: 520px;
+
+  gap: 0;
+  overflow: hidden;
+
+  border-radius: 30px;
+  background: #fff;
+}
+
+/* SOL */
+
+.cookidooHeroLeft {
+  min-width: 0;
+
+  padding: 48px 42px 42px 48px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cookidooHeroLeft h2 {
+  max-width: 580px;
+
+  font-size: clamp(38px, 3.2vw, 55px);
+  line-height: 1.03;
+}
+
+.cookidooHeroLeft > p {
+  max-width: 570px;
+}
+
+/* SAĞDA OLUŞTURDUĞUMUZ TEK PARÇA GÖRSEL */
+
+.cookidooExperienceImage {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #080d09;
+}
+
+.cookidooExperienceImage img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  /* görselin ana ürünü biraz daha solda olduğu için */
+  object-position: 50% 50%;
+
+  filter: none;
+}
+
+/* Eski beyaz geçişi kaldır */
+.cookidooExperienceImage::before {
+  display: none !important;
+}
+
+/* İSTATİSTİKLER */
+
+.cookidooHeroLeft .cookidooQuickStats {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  margin-top: 25px;
+}
+
+.cookidooHeroLeft .cookidooQuickStats > div {
+  padding: 15px 12px 0;
+}
+
+.cookidooHeroLeft .cookidooQuickStats > div:first-child {
+  padding-left: 0;
+}
+
+.cookidooHeroLeft .cookidooQuickStats strong {
+  font-size: 21px;
+}
+
+.cookidooHeroLeft .cookidooQuickStats span {
+  font-size: 9px;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1050px) {
+
+  .cookidooHeroV2 {
+    grid-template-columns: 1fr;
+  }
+
+  .cookidooExperienceImage {
+    min-height: 0;
+
+    aspect-ratio: 16 / 9;
+  }
+
+  .cookidooExperienceImage img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+}
+
+
+/* ==================================================
+   MOBİL
+================================================== */
+
+@media (max-width: 640px) {
+
+  .cookidooHeroV2 {
+    grid-template-columns: 1fr;
+
+    min-height: 0;
+
+    border-radius: 24px;
+  }
+
+  .cookidooHeroLeft {
+    padding: 29px 18px 26px;
+  }
+
+  .cookidooHeroLeft h2 {
+    font-size: 34px;
+  }
+
+  .cookidooHeroLeft .cookidooQuickStats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cookidooExperienceImage {
+    width: 100%;
+    min-height: 0;
+
+    aspect-ratio: 16 / 9;
+  }
+
+  .cookidooExperienceImage img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+}
+/* ==================================================
+   COOKIDOO HERO — GÖRSELİ KIRPMADAN GÖSTER
+================================================== */
+
+.cookidooHeroV2 {
+  grid-template-columns: 43% 57% !important;
+  align-items: center !important;
+
+  min-height: 0 !important;
+
+  background: #fff;
+}
+
+/* SOL TARAF */
+
+.cookidooHeroLeft {
+  padding: 44px 38px 40px 44px !important;
+}
+
+.cookidooHeroLeft h2 {
+  font-size: clamp(38px, 3vw, 54px) !important;
+  line-height: 1.03 !important;
+}
+
+/* SAĞ GÖRSEL */
+
+.cookidooExperienceImage {
+  position: relative;
+
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+
+  display: block !important;
+
+  overflow: hidden;
+
+  background: #07100b;
+
+  /* görselin kendi yatay oranını koruyoruz */
+  aspect-ratio: 16 / 9;
+}
+
+.cookidooExperienceImage img {
+  width: 100% !important;
+  height: 100% !important;
+
+  display: block;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  transform: none !important;
+  scale: none !important;
+
+  filter: none !important;
+}
+
+/* Eski geçiş efektini tamamen kapat */
+
+.cookidooExperienceImage::before,
+.cookidooExperienceImage::after {
+  display: none !important;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+
+  .cookidooHeroV2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cookidooExperienceImage {
+    width: 100% !important;
+    aspect-ratio: 16 / 9;
+  }
+
+}
+
+
+/* MOBİL */
+
+@media (max-width: 640px) {
+
+  .cookidooHeroLeft {
+    padding: 28px 18px !important;
+  }
+
+  .cookidooHeroLeft h2 {
+    font-size: 33px !important;
+  }
+
+  .cookidooExperienceImage {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    aspect-ratio: 16 / 9;
+  }
+
+  .cookidooExperienceImage img {
+    object-fit: contain !important;
+  }
+}
+/* ==================================================
+   COOKIDOO — SOLA DOĞRU YUMUŞAK GÖRSEL GEÇİŞİ
+================================================== */
+
+.cookidooExperienceImage {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Görselin sol tarafını beyaza doğru erit */
+.cookidooExperienceImage::after {
+  content: "" !important;
+  display: block !important;
+
+  position: absolute !important;
+  inset: 0 auto 0 0 !important;
+
+  width: 26% !important;
+  height: 100% !important;
+
+  pointer-events: none !important;
+  z-index: 2 !important;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.92) 18%,
+    rgba(255, 255, 255, 0.68) 42%,
+    rgba(255, 255, 255, 0.30) 68%,
+    rgba(255, 255, 255, 0) 100%
+  ) !important;
+}
+/* ==================================================
+   COOKIDOO ALT BÖLÜM — KOMPAKT PREMIUM DÜZEN
+================================================== */
+
+/* 6 ÖZELLİK KARTI */
+
+.cookidooFeatureGrid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+
+  margin-top: 14px !important;
+}
+
+.cookidooFeatureCard {
+  position: relative;
+
+  min-height: 108px !important;
+
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 14px;
+  align-items: center;
+
+  padding: 16px 18px !important;
+
+  border: 1px solid #dce9e2 !important;
+  border-radius: 18px !important;
+
+  background: rgba(255,255,255,.96) !important;
+
+  box-shadow:
+    0 10px 28px rgba(25, 73, 46, .045) !important;
+}
+
+/* ikon */
+
+.cookidooFeatureTop {
+  grid-row: 1 / 3;
+  grid-column: 1;
+
+  display: block !important;
+}
+
+.cookidooFeatureIcon {
+  width: 46px !important;
+  height: 46px !important;
+
+  display: grid !important;
+  place-items: center !important;
+
+  border-radius: 14px !important;
+
+  background: #edf7f1 !important;
+
+  font-size: 22px !important;
+}
+
+/* 01, 02, 03 numaraları */
+
+.cookidooFeatureTop small {
+  position: absolute;
+
+  top: 17px;
+  right: 17px;
+
+  color: #a8b9af !important;
+
+  font-size: 10px !important;
+  font-weight: 900 !important;
+}
+
+/* başlık */
+
+.cookidooFeatureCard h3 {
+  grid-column: 2;
+  grid-row: 1;
+
+  margin: 0 26px 3px 0 !important;
+
+  color: #113e28 !important;
+
+  font-size: 14px !important;
+  line-height: 1.25 !important;
+}
+
+/* açıklama */
+
+.cookidooFeatureCard p {
+  grid-column: 2;
+  grid-row: 2;
+
+  margin: 0 !important;
+
+  color: #63736a !important;
+
+  font-size: 10px !important;
+  line-height: 1.45 !important;
+}
+
+
+/* ==================================================
+   NASIL ÇALIŞIR?
+================================================== */
+
+.cookidooHow {
+  margin-top: 14px !important;
+
+  padding: 24px 28px 22px !important;
+
+  border: 1px solid #dce9e2 !important;
+  border-radius: 20px !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f3faf6,
+      #fafcfb
+    ) !important;
+}
+
+.cookidooHowHeader {
+  max-width: none !important;
+}
+
+.cookidooHowHeader > span {
+  font-size: 9px !important;
+  letter-spacing: .16em !important;
+}
+
+.cookidooHowHeader h3 {
+  margin-top: 6px !important;
+
+  font-size: 22px !important;
+  line-height: 1.2 !important;
+}
+
+.cookidooHowSteps {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+
+  margin-top: 20px !important;
+}
+
+.cookidooHowSteps > div {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  grid-template-rows: auto auto;
+
+  column-gap: 12px;
+
+  padding: 0 24px !important;
+
+  border-right: 1px solid #d8e6de !important;
+}
+
+.cookidooHowSteps > div:first-child {
+  padding-left: 0 !important;
+}
+
+.cookidooHowSteps > div:last-child {
+  padding-right: 0 !important;
+  border-right: 0 !important;
+}
+
+/* numara */
+
+.cookidooHowSteps > div > span {
+  grid-row: 1 / 3;
+
+  width: 36px !important;
+  height: 36px !important;
+
+  margin: 0 !important;
+
+  border-radius: 50% !important;
+
+  background:
+    linear-gradient(
+      145deg,
+      #18854f,
+      #0f6b45
+    ) !important;
+
+  font-size: 12px !important;
+}
+
+/* başlık */
+
+.cookidooHowSteps strong {
+  grid-column: 2;
+
+  color: #187548 !important;
+
+  font-size: 13px !important;
+}
+
+/* açıklama */
+
+.cookidooHowSteps p {
+  grid-column: 2;
+
+  margin: 4px 0 0 !important;
+
+  font-size: 10px !important;
+  line-height: 1.45 !important;
+}
+
+
+/* ==================================================
+   FADE TARAFINDAKİ İNCE ÇİZGİYİ KALDIR
+================================================== */
+
+.cookidooExperienceImage {
+  border: 0 !important;
+  outline: 0 !important;
+}
+
+.cookidooHeroV2 {
+  border-left: 0 !important;
+}
+
+.cookidooExperienceImage::before {
+  display: none !important;
+}
+
+/* fade devam etsin ama çizgi görünmesin */
+
+.cookidooExperienceImage::after {
+  left: -2px !important;
+  width: 27% !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff 0%,
+      rgba(255,255,255,.95) 16%,
+      rgba(255,255,255,.72) 40%,
+      rgba(255,255,255,.30) 68%,
+      rgba(255,255,255,0) 100%
+    ) !important;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+
+  .cookidooFeatureGrid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+}
+
+
+/* ==================================================
+   MOBİL
+================================================== */
+
+@media (max-width: 640px) {
+
+  .cookidooFeatureGrid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .cookidooFeatureCard {
+    min-height: 96px !important;
+
+    padding: 14px !important;
+  }
+
+  .cookidooHow {
+    padding: 21px 17px !important;
+  }
+
+  .cookidooHowSteps {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cookidooHowSteps > div {
+    padding: 15px 0 !important;
+
+    border-right: 0 !important;
+    border-bottom: 1px solid #d8e6de !important;
+  }
+
+  .cookidooHowSteps > div:last-child {
+    border-bottom: 0 !important;
+  }
+
+}
+/* =========================================================
+   COOKIDOO — HERO + ALT KISIM FINAL HİZALAMA
+   Bu blok globals.css dosyasının EN ALTINDA kalmalı.
+========================================================= */
+
+
+/* =========================================================
+   1. HERO: SOL VE SAĞ AYNI YÜKSEKLİK
+========================================================= */
+
+.cookidooHeroV2 {
+  display: grid !important;
+  grid-template-columns: 43% 57% !important;
+
+  align-items: stretch !important;
+
+  gap: 0 !important;
+
+  min-height: 0 !important;
+
+  overflow: hidden !important;
+
+  background: #fff !important;
+}
+
+
+/* =========================================================
+   2. SOL TARAF
+========================================================= */
+
+.cookidooHeroLeft {
+  position: relative;
+
+  min-width: 0;
+
+  padding:
+    42px
+    36px
+    0
+    42px !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+
+  justify-content: flex-start !important;
+
+  background: #fff !important;
+}
+
+
+/* badge */
+
+.cookidooTopMiniBadge {
+  margin-bottom: 15px !important;
+}
+
+
+/* başlık */
+
+.cookidooHeroLeft h2 {
+  margin-top: 0 !important;
+  margin-bottom: 18px !important;
+
+  max-width: 540px !important;
+
+  font-size: clamp(38px, 3vw, 52px) !important;
+  line-height: 1.03 !important;
+}
+
+
+/* açıklama */
+
+.cookidooHeroLeft > p {
+  max-width: 540px !important;
+
+  margin:
+    0
+    0
+    20px !important;
+
+  font-size: 13px !important;
+  line-height: 1.65 !important;
+}
+
+
+/* butonlar */
+
+.cookidooHeroActions {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+
+/* =========================================================
+   3. İSTATİSTİKLERİ EN ALTA SABİTLE
+========================================================= */
+
+.cookidooHeroLeft .cookidooQuickStats {
+  width: 100%;
+
+  margin-top: auto !important;
+
+  display: grid !important;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr)) !important;
+
+  border-top:
+    1px solid #dbe8e0 !important;
+}
+
+
+.cookidooHeroLeft .cookidooQuickStats > div {
+  min-width: 0;
+
+  padding:
+    17px
+    10px
+    18px !important;
+
+  border-right:
+    1px solid #dbe8e0 !important;
+
+  border-bottom: 0 !important;
+}
+
+
+.cookidooHeroLeft .cookidooQuickStats > div:first-child {
+  padding-left: 0 !important;
+}
+
+
+.cookidooHeroLeft .cookidooQuickStats > div:last-child {
+  border-right: 0 !important;
+}
+
+
+.cookidooHeroLeft .cookidooQuickStats strong {
+  display: block;
+
+  font-size: 20px !important;
+  line-height: 1 !important;
+}
+
+
+.cookidooHeroLeft .cookidooQuickStats span {
+  display: block;
+
+  margin-top: 5px !important;
+
+  font-size: 8px !important;
+  line-height: 1.3 !important;
+}
+
+
+/* =========================================================
+   4. SAĞ GÖRSEL
+========================================================= */
+
+.cookidooExperienceImage {
+  position: relative !important;
+
+  width: calc(100% + 2px) !important;
+  height: 100% !important;
+
+  margin-left: -2px !important;
+
+  min-height: 0 !important;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden !important;
+
+  border: 0 !important;
+  outline: 0 !important;
+
+  background: #080d09 !important;
+}
+
+
+.cookidooExperienceImage img {
+  width: 100% !important;
+  height: 100% !important;
+
+  display: block !important;
+
+  object-fit: cover !important;
+  object-position: center !important;
+
+  border: 0 !important;
+  outline: 0 !important;
+
+  filter: none !important;
+}
+
+
+/* =========================================================
+   5. FADE — SOLDAKİ ÇİZGİYİ TAMAMEN GİDER
+========================================================= */
+
+.cookidooExperienceImage::before {
+  display: none !important;
+}
+
+
+.cookidooExperienceImage::after {
+  content: "" !important;
+
+  display: block !important;
+
+  position: absolute !important;
+
+  z-index: 3 !important;
+
+  top: 0 !important;
+  bottom: 0 !important;
+
+  /* çizginin üstüne taşır */
+  left: -5px !important;
+
+  width: 28% !important;
+
+  pointer-events: none !important;
+
+  background:
+    linear-gradient(
+      90deg,
+
+      rgba(255, 255, 255, 1) 0%,
+
+      rgba(255, 255, 255, .96) 13%,
+
+      rgba(255, 255, 255, .78) 35%,
+
+      rgba(255, 255, 255, .48) 55%,
+
+      rgba(255, 255, 255, .20) 75%,
+
+      rgba(255, 255, 255, 0) 100%
+
+    ) !important;
+}
+
+
+/* =========================================================
+   6. 6 ÖZELLİK KARTINI HERO'NUN HEMEN ALTINA AL
+========================================================= */
+
+.cookidooFeatureGrid {
+  display: grid !important;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr)) !important;
+
+  gap: 10px !important;
+
+  margin-top: 10px !important;
+}
+
+
+/* kart */
+
+.cookidooFeatureCard {
+  position: relative;
+
+  min-height: 102px !important;
+
+  display: grid !important;
+
+  grid-template-columns:
+    48px
+    minmax(0, 1fr) !important;
+
+  grid-template-rows:
+    auto
+    auto !important;
+
+  column-gap: 13px !important;
+
+  align-content: center !important;
+
+  padding:
+    15px
+    17px !important;
+
+  border:
+    1px solid #dce8e1 !important;
+
+  border-radius:
+    17px !important;
+
+  background:
+    rgba(255,255,255,.97) !important;
+
+  box-shadow:
+    0
+    8px
+    24px
+    rgba(18, 67, 40, .045) !important;
+}
+
+
+/* ikon alanı */
+
+.cookidooFeatureTop {
+  grid-column: 1 !important;
+  grid-row: 1 / 3 !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+
+.cookidooFeatureIcon {
+  width: 43px !important;
+  height: 43px !important;
+
+  display: grid !important;
+
+  place-items: center !important;
+
+  border-radius:
+    13px !important;
+
+  background:
+    #edf7f1 !important;
+
+  font-size:
+    20px !important;
+}
+
+
+/* 01 02 03 */
+
+.cookidooFeatureTop small {
+  position: absolute !important;
+
+  top: 13px !important;
+  right: 14px !important;
+
+  font-size:
+    9px !important;
+
+  color:
+    #a9b9b0 !important;
+}
+
+
+/* kart başlığı */
+
+.cookidooFeatureCard h3 {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+
+  margin:
+    0
+    24px
+    5px
+    0 !important;
+
+  color:
+    #103e28 !important;
+
+  font-size:
+    13px !important;
+
+  line-height:
+    1.25 !important;
+}
+
+
+/* açıklama */
+
+.cookidooFeatureCard p {
+  grid-column: 2 !important;
+  grid-row: 2 !important;
+
+  margin: 0 !important;
+
+  color:
+    #63736a !important;
+
+  font-size:
+    9px !important;
+
+  line-height:
+    1.45 !important;
+}
+
+
+/* =========================================================
+   7. NASIL ÇALIŞIR?
+========================================================= */
+
+.cookidooHow {
+  margin-top:
+    10px !important;
+
+  padding:
+    22px
+    25px
+    20px !important;
+
+  border-radius:
+    18px !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f2f9f5,
+      #fafcfb
+    ) !important;
+}
+
+
+.cookidooHowHeader > span {
+  font-size:
+    8px !important;
+
+  letter-spacing:
+    .16em !important;
+}
+
+
+.cookidooHowHeader h3 {
+  margin:
+    5px
+    0
+    0 !important;
+
+  font-size:
+    20px !important;
+}
+
+
+/* üç adım */
+
+.cookidooHowSteps {
+  display: grid !important;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr)) !important;
+
+  margin-top:
+    18px !important;
+}
+
+
+.cookidooHowSteps > div {
+  display: grid !important;
+
+  grid-template-columns:
+    36px
+    minmax(0, 1fr) !important;
+
+  grid-template-rows:
+    auto
+    auto !important;
+
+  column-gap:
+    11px !important;
+
+  padding:
+    0
+    22px !important;
+
+  border-right:
+    1px solid #d7e5dd !important;
+
+  border-bottom:
+    0 !important;
+}
+
+
+.cookidooHowSteps > div:first-child {
+  padding-left: 0 !important;
+}
+
+
+.cookidooHowSteps > div:last-child {
+  padding-right: 0 !important;
+
+  border-right:
+    0 !important;
+}
+
+
+/* numara */
+
+.cookidooHowSteps > div > span {
+  grid-column: 1 !important;
+  grid-row: 1 / 3 !important;
+
+  width:
+    34px !important;
+
+  height:
+    34px !important;
+
+  margin:
+    0 !important;
+
+  border-radius:
+    50% !important;
+}
+
+
+/* başlık */
+
+.cookidooHowSteps strong {
+  grid-column:
+    2 !important;
+
+  font-size:
+    12px !important;
+
+  color:
+    #187748 !important;
+}
+
+
+/* açıklama */
+
+.cookidooHowSteps p {
+  grid-column:
+    2 !important;
+
+  margin:
+    3px
+    0
+    0 !important;
+
+  font-size:
+    9px !important;
+
+  line-height:
+    1.4 !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .cookidooHeroV2 {
+    grid-template-columns:
+      1fr !important;
+  }
+
+  .cookidooExperienceImage {
+    width:
+      100% !important;
+
+    margin-left:
+      0 !important;
+
+    aspect-ratio:
+      16 / 9;
+  }
+
+  .cookidooFeatureGrid {
+    grid-template-columns:
+      repeat(2, 1fr) !important;
+  }
+
+}
+
+
+/* =========================================================
+   MOBİL
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .cookidooHeroLeft {
+    padding:
+      28px
+      18px
+      0 !important;
+  }
+
+  .cookidooHeroLeft .cookidooQuickStats {
+    grid-template-columns:
+      repeat(2, 1fr) !important;
+
+    margin-top:
+      25px !important;
+  }
+
+  .cookidooHeroLeft .cookidooQuickStats > div {
+    padding:
+      14px
+      8px !important;
+  }
+
+  .cookidooFeatureGrid {
+    grid-template-columns:
+      1fr !important;
+  }
+
+  .cookidooHowSteps {
+    grid-template-columns:
+      1fr !important;
+  }
+
+  .cookidooHowSteps > div {
+    padding:
+      14px
+      0 !important;
+
+    border-right:
+      0 !important;
+
+    border-bottom:
+      1px solid #d7e5dd !important;
+  }
+
+  .cookidooHowSteps > div:last-child {
+    border-bottom:
+      0 !important;
+  }
+
+}
+/* =========================================================
+   COOKIDOO — PREMIUM ALT BÖLÜM RÖTUŞ
+========================================================= */
+
+
+/* =========================================================
+   1. SOL CTA + İSTATİSTİKLERİ AYIR
+========================================================= */
+
+.cookidooHeroActions {
+  margin-top: 4px !important;
+  margin-bottom: 26px !important;
+}
+
+.cookidooHeroLeft .cookidooQuickStats {
+  margin-top: 0 !important;
+
+  padding-top: 0 !important;
+
+  border-top: 1px solid #dce9e2 !important;
+}
+
+.cookidooHeroLeft .cookidooQuickStats > div {
+  padding:
+    18px
+    14px
+    16px !important;
+}
+
+.cookidooHeroLeft .cookidooQuickStats > div:first-child {
+  padding-left: 0 !important;
+}
+
+.cookidooHeroLeft .cookidooQuickStats strong {
+  font-size: 21px !important;
+
+  color: #167b4a !important;
+
+  letter-spacing: -0.4px !important;
+}
+
+.cookidooHeroLeft .cookidooQuickStats span {
+  margin-top: 6px !important;
+
+  font-size: 8.5px !important;
+
+  color: #75847c !important;
+}
+
+
+/* =========================================================
+   2. HERO SOL TARAFIN ALTINI BİRAZ RAHATLAT
+========================================================= */
+
+.cookidooHeroLeft {
+  padding-bottom: 0 !important;
+}
+
+.cookidooHeroV2 {
+  overflow: hidden !important;
+}
+
+
+/* =========================================================
+   3. 6 ÖZELLİK KARTINI PREMIUM YAP
+========================================================= */
+
+.cookidooFeatureGrid {
+  gap: 14px !important;
+
+  margin-top: 18px !important;
+}
+
+
+/* kart */
+
+.cookidooFeatureCard {
+  min-height: 112px !important;
+
+  padding:
+    18px
+    20px !important;
+
+  border:
+    1px solid rgba(207, 225, 215, .9) !important;
+
+  border-radius:
+    21px !important;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,1),
+      rgba(248,252,250,.96)
+    ) !important;
+
+  box-shadow:
+    0 8px 24px rgba(19, 72, 44, .045),
+    0 20px 45px rgba(19, 72, 44, .035) !important;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease !important;
+}
+
+
+.cookidooFeatureCard:hover {
+  transform: translateY(-4px) !important;
+
+  border-color:
+    #b9dbc8 !important;
+
+  box-shadow:
+    0 14px 30px rgba(19, 72, 44, .08),
+    0 24px 55px rgba(19, 72, 44, .06) !important;
+}
+
+
+/* ikon kutusu */
+
+.cookidooFeatureIcon {
+  width: 46px !important;
+  height: 46px !important;
+
+  border-radius:
+    15px !important;
+
+  background:
+    linear-gradient(
+      145deg,
+      #eef8f2,
+      #e4f3ea
+    ) !important;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(31, 133, 79, .04) !important;
+}
+
+
+/* kart numarası */
+
+.cookidooFeatureTop small {
+  top: 16px !important;
+  right: 17px !important;
+
+  padding:
+    4px 7px !important;
+
+  border-radius:
+    999px !important;
+
+  background:
+    #f4f8f5 !important;
+
+  color:
+    #9fafA6 !important;
+
+  font-size:
+    8px !important;
+}
+
+
+/* başlık */
+
+.cookidooFeatureCard h3 {
+  margin-bottom:
+    7px !important;
+
+  font-size:
+    13.5px !important;
+
+  font-weight:
+    850 !important;
+
+  color:
+    #143b29 !important;
+}
+
+
+/* açıklama */
+
+.cookidooFeatureCard p {
+  max-width:
+    95% !important;
+
+  font-size:
+    9.5px !important;
+
+  line-height:
+    1.55 !important;
+
+  color:
+    #687970 !important;
+}
+
+
+/* =========================================================
+   4. NASIL ÇALIŞIR — DAHA PREMIUM PANEL
+========================================================= */
+
+.cookidooHow {
+  position: relative;
+
+  margin-top:
+    16px !important;
+
+  padding:
+    28px
+    30px
+    26px !important;
+
+  overflow: hidden;
+
+  border:
+    1px solid #d9e9e0 !important;
+
+  border-radius:
+    24px !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f0f8f4 0%,
+      #f8fbf9 55%,
+      #ffffff 100%
+    ) !important;
+
+  box-shadow:
+    0 14px 40px rgba(19, 72, 44, .045) !important;
+}
+
+
+/* hafif premium glow */
+
+.cookidooHow::before {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  right: -80px;
+  top: -120px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(42, 167, 95, .10),
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+
+/* üst etiket */
+
+.cookidooHowHeader > span {
+  position: relative;
+  z-index: 2;
+
+  color:
+    #18804d !important;
+
+  font-size:
+    8.5px !important;
+
+  font-weight:
+    900 !important;
+}
+
+
+/* başlık */
+
+.cookidooHowHeader h3 {
+  position: relative;
+  z-index: 2;
+
+  margin-top:
+    7px !important;
+
+  font-size:
+    22px !important;
+
+  letter-spacing:
+    -0.45px !important;
+}
+
+
+/* =========================================================
+   5. 3 ADIMI DAHA RAHATLAT
+========================================================= */
+
+.cookidooHowSteps {
+  position: relative;
+  z-index: 2;
+
+  margin-top:
+    24px !important;
+}
+
+
+.cookidooHowSteps > div {
+  min-height:
+    64px !important;
+
+  padding:
+    0
+    27px !important;
+}
+
+
+.cookidooHowSteps > div:first-child {
+  padding-left:
+    0 !important;
+}
+
+
+.cookidooHowSteps > div:last-child {
+  padding-right:
+    0 !important;
+}
+
+
+/* numara */
+
+.cookidooHowSteps > div > span {
+  width:
+    38px !important;
+
+  height:
+    38px !important;
+
+  background:
+    linear-gradient(
+      145deg,
+      #21945c,
+      #0c6d43
+    ) !important;
+
+  box-shadow:
+    0 8px 17px rgba(21, 127, 72, .16) !important;
+}
+
+
+/* adım başlığı */
+
+.cookidooHowSteps strong {
+  font-size:
+    12.5px !important;
+
+  font-weight:
+    850 !important;
+}
+
+
+/* adım açıklaması */
+
+.cookidooHowSteps p {
+  margin-top:
+    5px !important;
+
+  max-width:
+    330px;
+
+  color:
+    #67786f !important;
+
+  font-size:
+    9.5px !important;
+
+  line-height:
+    1.5 !important;
+}
+
+
+/* =========================================================
+   6. HERO İLE ALT KISIM ARASINDA DAHA TEMİZ GEÇİŞ
+========================================================= */
+
+.cookidooHeroV2 + .cookidooFeatureGrid {
+  margin-top:
+    18px !important;
+}
+
+
+/* =========================================================
+   7. TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .cookidooFeatureGrid {
+    grid-template-columns:
+      repeat(2, 1fr) !important;
+  }
+
+}
+
+
+/* =========================================================
+   8. MOBİL
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .cookidooHeroActions {
+    margin-bottom:
+      20px !important;
+  }
+
+  .cookidooHeroLeft .cookidooQuickStats {
+    margin-top:
+      0 !important;
+  }
+
+  .cookidooFeatureGrid {
+    grid-template-columns:
+      1fr !important;
+
+    gap:
+      11px !important;
+  }
+
+  .cookidooFeatureCard {
+    min-height:
+      104px !important;
+  }
+
+  .cookidooHow {
+    padding:
+      24px
+      18px !important;
+  }
+
+  .cookidooHowSteps {
+    margin-top:
+      18px !important;
+  }
+
+}
+/* =========================================================
+   COOKIDOO SAĞ GÖRSEL — TAM GÖSTER / KESMEYİ KALDIR
+========================================================= */
+
+.cookidooExperienceImage {
+  position: relative !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  min-height: 0 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  overflow: hidden !important;
+
+  background: #080d09 !important;
+
+  border: 0 !important;
+  outline: 0 !important;
+}
+
+
+/* Görseli kesinlikle kırpma */
+
+.cookidooExperienceImage img {
+  display: block !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  transform: none !important;
+
+  border: 0 !important;
+  outline: 0 !important;
+
+  filter: none !important;
+}
+
+
+/* =========================================================
+   HERO ORANINI GÖRSELE BİRAZ DAHA UYGUN HALE GETİR
+========================================================= */
+
+@media (min-width: 1051px) {
+
+  .cookidooHeroV2 {
+    grid-template-columns:
+      42% 58% !important;
+
+    align-items:
+      stretch !important;
+  }
+
+  .cookidooExperienceImage {
+    /* Orijinal görsel yatay olduğu için */
+    aspect-ratio:
+      16 / 9 !important;
+
+    height:
+      auto !important;
+
+    align-self:
+      center !important;
+  }
+
+}
+
+
+/* =========================================================
+   FADE KALSIN
+========================================================= */
+
+.cookidooExperienceImage::after {
+  content: "" !important;
+
+  display: block !important;
+
+  position: absolute !important;
+
+  z-index: 5 !important;
+
+  top: 0 !important;
+  bottom: 0 !important;
+
+  left: -4px !important;
+
+  width: 27% !important;
+
+  pointer-events: none !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,1) 0%,
+      rgba(255,255,255,.96) 14%,
+      rgba(255,255,255,.76) 36%,
+      rgba(255,255,255,.45) 58%,
+      rgba(255,255,255,.18) 78%,
+      rgba(255,255,255,0) 100%
+    ) !important;
+}
+
+
+/* =========================================================
+   TABLET / MOBİL
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .cookidooHeroV2 {
+    grid-template-columns:
+      1fr !important;
+  }
+
+  .cookidooExperienceImage {
+    width:
+      100% !important;
+
+    height:
+      auto !important;
+
+    aspect-ratio:
+      16 / 9 !important;
+  }
+
+  .cookidooExperienceImage img {
+    object-fit:
+      contain !important;
+  }
+
+}
+
+
+@media (max-width: 640px) {
+
+  .cookidooExperienceImage {
+    aspect-ratio:
+      16 / 9 !important;
+  }
+
+}
+/* =========================================================
+   S.S.S / FAQ PREMIUM BÖLÜM
+========================================================= */
+
+.faqPremium {
+  width: min(1420px, 92%);
+  margin: 54px auto 70px;
+  padding: 48px 54px;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(52, 194, 110, .10),
+      transparent 28%
+    ),
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f7fbf8
+    );
+
+  border: 1px solid #dceae2;
+  border-radius: 34px;
+
+  box-shadow:
+    0 26px 70px rgba(18, 73, 44, .08);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   BAŞLIK
+========================================================= */
+
+.faqHeader {
+  max-width: 760px;
+
+  margin: 0 auto 34px;
+
+  text-align: center;
+}
+
+.faqEyebrow {
+  display: inline-block;
+
+  margin-bottom: 12px;
+  padding: 7px 13px;
+
+  border-radius: 999px;
+
+  background: #eaf7ef;
+  color: #177a49;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .15em;
+}
+
+.faqHeader h2 {
+  margin: 0;
+
+  color: #16291f;
+
+  font-size: clamp(38px, 4vw, 56px);
+  line-height: 1.04;
+  letter-spacing: -1.5px;
+}
+
+.faqHeader h2 strong {
+  color: #218354;
+}
+
+.faqHeader p {
+  max-width: 680px;
+
+  margin: 16px auto 0;
+
+  color: #6a7971;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   FAQ LISTE
+========================================================= */
+
+.faqList {
+  display: grid;
+  gap: 11px;
+
+  max-width: 1080px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   FAQ KARTI
+========================================================= */
+
+.faqItem {
+  overflow: hidden;
+
+  border: 1px solid #dce9e2;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,.96);
+
+  box-shadow:
+    0 8px 24px rgba(18, 70, 43, .04);
+
+  transition:
+    border-color .24s ease,
+    box-shadow .24s ease,
+    transform .24s ease,
+    background .24s ease;
+}
+
+.faqItem:hover {
+  transform: translateY(-2px);
+
+  border-color: #bfdcca;
+
+  box-shadow:
+    0 14px 34px rgba(18, 70, 43, .07);
+}
+
+.faqItemOpen {
+  border-color: #b7d9c5;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f7fbf8
+    );
+
+  box-shadow:
+    0 18px 40px rgba(18, 70, 43, .08);
+}
+
+
+/* =========================================================
+   SORU BUTONU
+========================================================= */
+
+.faqQuestion {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 42px 1fr 42px;
+  align-items: center;
+  gap: 14px;
+
+  padding: 17px 18px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #183128;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+
+/* numara */
+
+.faqNumber {
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 12px;
+
+  background: #edf7f1;
+  color: #1a7c4c;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .05em;
+
+  transition:
+    background .22s ease,
+    color .22s ease,
+    transform .22s ease;
+}
+
+.faqItemOpen .faqNumber {
+  background: #18824f;
+  color: white;
+
+  transform: scale(1.04);
+}
+
+
+/* soru metni */
+
+.faqQuestionText {
+  font-size: 15px;
+  font-weight: 850;
+  line-height: 1.35;
+}
+
+
+/* + / - */
+
+.faqToggle {
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+  place-items: center;
+
+  justify-self: end;
+
+  border-radius: 50%;
+
+  background: #eef7f2;
+  color: #16784a;
+
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+
+  transition:
+    transform .24s ease,
+    background .24s ease,
+    color .24s ease;
+}
+
+.faqItemOpen .faqToggle {
+  transform: rotate(180deg);
+
+  background: #18824f;
+  color: white;
+}
+
+
+/* =========================================================
+   CEVAP — ANİMASYONLU
+========================================================= */
+
+.faqAnswer {
+  display: grid;
+
+  grid-template-rows: 0fr;
+
+  transition:
+    grid-template-rows .32s ease;
+}
+
+.faqItemOpen .faqAnswer {
+  grid-template-rows: 1fr;
+}
+
+.faqAnswer > div {
+  min-height: 0;
+
+  overflow: hidden;
+}
+
+.faqAnswer p {
+  margin: 0;
+
+  padding:
+    0
+    72px
+    20px
+    74px;
+
+  color: #68776f;
+
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+
+/* açık soru altında ince çizgi hissi */
+
+.faqItemOpen .faqAnswer p {
+  position: relative;
+}
+
+.faqItemOpen .faqAnswer p::before {
+  content: "";
+
+  position: absolute;
+
+  left: 74px;
+  right: 72px;
+  top: 0;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #dce9e2,
+      transparent
+    );
+}
+
+
+/* =========================================================
+   ALT CTA
+========================================================= */
+
+.faqBottom {
+  max-width: 1080px;
+
+  margin: 24px auto 0;
+  padding: 20px 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  border: 1px solid #d7e8df;
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #edf8f2,
+      #f8fbf9
+    );
+}
+
+.faqBottom > div span {
+  display: block;
+
+  color: #77867e;
+
+  font-size: 10px;
+}
+
+.faqBottom > div strong {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #194b32;
+
+  font-size: 15px;
+}
+
+.faqBottom button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border: 0;
+  border-radius: 999px;
+
+  padding: 13px 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #198450,
+      #25a65f
+    );
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: 900;
+
+  box-shadow:
+    0 12px 28px rgba(25, 132, 80, .20);
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease;
+}
+
+.faqBottom button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 17px 34px rgba(25, 132, 80, .27);
+}
+
+.faqBottom button span {
+  font-size: 18px;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .faqPremium {
+    padding: 40px 28px;
+  }
+
+  .faqQuestion {
+    grid-template-columns: 40px 1fr 40px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBİL
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .faqPremium {
+    width: calc(100% - 20px);
+
+    margin: 30px auto 42px;
+    padding: 31px 13px 18px;
+
+    border-radius: 27px;
+  }
+
+  .faqHeader {
+    margin-bottom: 24px;
+    padding: 0 5px;
+  }
+
+  .faqHeader h2 {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .faqHeader p {
+    font-size: 12px;
+  }
+
+  .faqList {
+    gap: 9px;
+  }
+
+  .faqItem {
+    border-radius: 17px;
+  }
+
+  .faqQuestion {
+    grid-template-columns: 34px 1fr 34px;
+    gap: 10px;
+
+    padding: 14px 13px;
+  }
+
+  .faqNumber {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 10px;
+
+    font-size: 9px;
+  }
+
+  .faqQuestionText {
+    font-size: 13px;
+  }
+
+  .faqToggle {
+    width: 32px;
+    height: 32px;
+
+    font-size: 19px;
+  }
+
+  .faqAnswer p {
+    padding:
+      0
+      14px
+      16px
+      57px;
+
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .faqItemOpen .faqAnswer p::before {
+    left: 57px;
+    right: 14px;
+  }
+
+  .faqBottom {
+    flex-direction: column;
+    align-items: stretch;
+
+    margin-top: 16px;
+    padding: 17px;
+
+    text-align: center;
+
+    border-radius: 18px;
+  }
+
+  .faqBottom button {
+    width: 100%;
+  }
+
+}
+/* =========================================
+   FAQ SON RÖTUŞLAR
+========================================= */
+
+.faqHeader {
+  margin-bottom: 30px !important;
+}
+
+.faqHeader h2 {
+  font-size: clamp(36px, 3.6vw, 52px) !important;
+}
+
+.faqList {
+  gap: 12px !important;
+}
+
+.faqItem {
+  box-shadow:
+    0 10px 26px rgba(18, 70, 43, .045) !important;
+}
+
+.faqItemOpen {
+  box-shadow:
+    0 16px 34px rgba(18, 70, 43, .07) !important;
+}
+
+.faqQuestion {
+  padding: 18px 18px !important;
+}
+
+.faqAnswer p {
+  padding-top: 4px !important;
+  padding-bottom: 22px !important;
+}
+
+.faqItemOpen .faqAnswer p::before {
+  top: -2px !important;
+}
+
+.faqBottom {
+  margin-top: 26px !important;
+
+  box-shadow:
+    0 12px 30px rgba(18, 70, 43, .045) !important;
+}
+/* =====================================================
+   MOBİL MENÜ - TIKLAMA / TAŞMA DÜZELTMESİ
+===================================================== */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 900px) {
+
+  /* Menü KAPALIYKEN */
+  .newDesktopNav {
+    position: fixed !important;
+
+    top: 0 !important;
+    right: 0 !important;
+
+    width: min(86vw, 360px) !important;
+    height: 100dvh !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    background: #fff !important;
+
+    z-index: 10002 !important;
+
+    transform: translateX(105%) !important;
+
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+
+    transition:
+      transform .28s ease,
+      opacity .2s ease,
+      visibility .28s ease !important;
+
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Menü AÇIKKEN */
+  .newDesktopNav.mobileOpen {
+    transform: translateX(0) !important;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  /* Menü arkasındaki karartma */
+  .mobileNavBackdrop {
+    position: fixed !important;
+    inset: 0 !important;
+
+    z-index: 10001 !important;
+
+    background: rgba(10, 25, 17, .45) !important;
+
+    backdrop-filter: blur(2px);
+
+    pointer-events: auto !important;
+  }
+
+  /* Header hamburger */
+  .newMobileMenuButton {
+    position: relative !important;
+    z-index: 10000 !important;
+
+    pointer-events: auto !important;
+  }
+
+  /* Menü içindeki her şeyi kesin tıklanabilir yap */
+  .newDesktopNav button,
+  .newDesktopNav a,
+  .productDropdown,
+  .productDropdownTrigger,
+  .productDropdownMenu {
+    pointer-events: auto !important;
+  }
+
+}
+/* =====================================================
+   MOBILE HEADER + DRAWER — GERÇEK FINAL FIX
+===================================================== */
+
+@media (max-width: 900px) {
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+
+  /* ==================================================
+     ÜST BİLGİ ÇUBUĞU
+  ================================================== */
+
+  .siteTopBar {
+    height: auto !important;
+    min-height: 58px !important;
+
+    padding: 8px 12px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 4px !important;
+
+    background: #fff !important;
+  }
+
+  .topBarInstagram {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    font-size: 12px !important;
+  }
+
+  .topBarConsultant {
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+
+    gap: 3px 8px !important;
+
+    font-size: 9px !important;
+    line-height: 1.3 !important;
+
+    color: #687970 !important;
+    text-align: center !important;
+  }
+
+  .topBarConsultant strong {
+    color: #167849 !important;
+    font-weight: 800 !important;
+  }
+
+  .topBarConsultant i {
+    display: none !important;
+  }
+
+
+  /* ==================================================
+     HEADER STACKING CONTEXT DÜZELTMESİ
+  ================================================== */
+
+  .newSiteHeader {
+  position: sticky !important;
+  top: 0 !important;
+
+  z-index: 20000 !important;
+
+  overflow: visible !important;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease !important;
+
+  will-change: transform;
+}
+
+.newSiteHeader.hideHeader {
+  transform: translateY(-110%) !important;
+}
+
+
+  /* ==================================================
+     HAMBURGER BUTONU
+  ================================================== */
+
+  .newMobileMenuButton {
+    width: 54px !important;
+    height: 54px !important;
+
+    padding: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 6px !important;
+
+    position: relative !important;
+
+    border: 1px solid #d8e8df !important;
+    border-radius: 17px !important;
+
+    background: #f6faf7 !important;
+
+    z-index: 20010 !important;
+
+    overflow: hidden !important;
+  }
+
+  .newMobileMenuButton span {
+    position: static !important;
+
+    display: block !important;
+
+    width: 27px !important;
+    height: 3px !important;
+
+    margin: 0 !important;
+
+    border: 0 !important;
+    border-radius: 99px !important;
+
+    background: #176f48 !important;
+
+    transform: none !important;
+
+    opacity: 1 !important;
+  }
+
+
+  /* ==================================================
+     MENÜ PANELİ — KAPALI
+  ================================================== */
+
+  .newDesktopNav {
+    position: fixed !important;
+
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
+    width: min(87vw, 370px) !important;
+    height: 100dvh !important;
+
+    padding: 22px 20px 30px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 2px !important;
+
+    background: #ffffff !important;
+
+    z-index: 20050 !important;
+
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+
+    transform: translate3d(105%, 0, 0) !important;
+
+    opacity: 0 !important;
+    visibility: hidden !important;
+
+    pointer-events: none !important;
+
+    /* Menü kesinlikle blur olmayacak */
+    filter: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+
+    box-shadow:
+      -18px 0 55px rgba(13, 54, 33, .18) !important;
+
+    transition:
+      transform .28s ease,
+      opacity .2s ease,
+      visibility .28s ease !important;
+  }
+
+
+  /* ==================================================
+     MENÜ PANELİ — AÇIK
+  ================================================== */
+
+  .newDesktopNav.mobileOpen {
+    transform: translate3d(0, 0, 0) !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    pointer-events: auto !important;
+  }
+
+
+  /* ==================================================
+     MENÜNÜN ÜST BAŞLIĞI
+  ================================================== */
+
+  .mobileNavHeader {
+    width: 100% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    flex-shrink: 0 !important;
+
+    padding: 2px 0 17px !important;
+    margin-bottom: 10px !important;
+
+    border-bottom: 1px solid #e0ebe5 !important;
+  }
+
+  .mobileNavHeader strong {
+    color: #173c2b !important;
+
+    font-size: 20px !important;
+    font-weight: 850 !important;
+  }
+
+  .mobileNavHeader button {
+    width: 39px !important;
+    height: 39px !important;
+
+    display: grid !important;
+    place-items: center !important;
+
+    padding: 0 !important;
+
+    border: 0 !important;
+    border-radius: 50% !important;
+
+    background: #edf7f1 !important;
+    color: #147747 !important;
+
+    font-size: 21px !important;
+    line-height: 1 !important;
+  }
+
+
+  /* ==================================================
+     MENÜ LINKLERİ
+  ================================================== */
+
+  .newDesktopNav > button,
+  .newDesktopNav .productDropdownTrigger {
+    width: 100% !important;
+    min-height: 51px !important;
+
+    flex-shrink: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    padding: 11px 9px !important;
+
+    border: 0 !important;
+    border-radius: 11px !important;
+
+    background: transparent !important;
+
+    color: #253b30 !important;
+
+    font-size: 15px !important;
+    font-weight: 700 !important;
+
+    text-align: left !important;
+
+    opacity: 1 !important;
+
+    filter: none !important;
+
+    pointer-events: auto !important;
+  }
+
+  .newDesktopNav > button:active,
+  .newDesktopNav .productDropdownTrigger:active {
+    background: #eff8f3 !important;
+  }
+
+
+  /* ==================================================
+     ÜRÜNLER DROPDOWN
+  ================================================== */
+
+  .newDesktopNav .productDropdown {
+    width: 100% !important;
+
+    position: relative !important;
+
+    pointer-events: auto !important;
+  }
+
+  .newDesktopNav .productDropdownMenu {
+    position: static !important;
+
+    width: 100% !important;
+
+    margin: 2px 0 8px !important;
+
+    box-shadow: none !important;
+  }
+
+
+  /* ==================================================
+     WHATSAPP CTA — MENÜ İÇİ
+  ================================================== */
+
+  .newDesktopNav .mobileNavContact {
+    margin-top: 12px !important;
+
+    min-height: 52px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 15px !important;
+
+    background: linear-gradient(
+      135deg,
+      #147b49,
+      #159253
+    ) !important;
+
+    color: #fff !important;
+
+    font-weight: 850 !important;
+  }
+
+
+  /* ==================================================
+     BACKDROP
+     
+     ÖNEMLİ:
+     BURADA BLUR KULLANMIYORUZ.
+     Önce menüyü tamamen stabil hale getiriyoruz.
+  ================================================== */
+
+  .mobileNavBackdrop {
+    position: fixed !important;
+
+    inset: 0 !important;
+
+    z-index: 15000 !important;
+
+    background: rgba(8, 24, 15, .48) !important;
+
+    /* BUNLAR ÖZELLİKLE KAPALI */
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+
+    pointer-events: auto !important;
+  }
+
+
+  /* ==================================================
+     WHATSAPP WIDGET MENÜNÜN ALTINDA KALSIN
+  ================================================== */
+
+  .waWidget {
+    z-index: 9000 !important;
+  }
+
+}
+/* ==========================================
+   MOBİL - WHATSAPP SABİT BUTONU
+   ========================================== */
+
+@media (max-width: 640px) {
+  .waMiniButton {
+    position: fixed !important;
+    right: 16px !important;
+    bottom: 18px !important;
+
+    width: 58px !important;
+    height: 58px !important;
+    min-width: 58px !important;
+
+    padding: 0 !important;
+    border-radius: 50% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    font-size: 0 !important;
+
+    z-index: 9000 !important;
+
+    box-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.14),
+      0 5px 16px rgba(20, 160, 80, 0.25) !important;
+  }
+
+  @media (max-width: 640px) {
+  .waMiniButton {
+    position: fixed !important;
+    right: 18px !important;
+    bottom: 20px !important;
+
+    width: 62px !important;
+    height: 62px !important;
+    min-width: 62px !important;
+
+    padding: 10px !important;
+
+    background: #ffffff !important;
+    border: 1px solid rgba(20, 125, 78, 0.15) !important;
+    border-radius: 50% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    z-index: 9000 !important;
+
+    box-shadow:
+      0 8px 25px rgba(0, 0, 0, 0.13),
+      0 3px 10px rgba(37, 211, 102, 0.18) !important;
+  }
+
+  .waMiniButton img {
+    width: 42px !important;
+    height: 42px !important;
+    display: block !important;
+    object-fit: contain !important;
+  }
+
+  .waMiniButton .waMiniText {
+    display: none !important;
+  }
+}
+}
+/* ==========================================
+   KAMPANYA POPUP - MOBİL FİNAL
+========================================== */
+
+@media (max-width: 640px) {
+
+  .campaignModalBackdrop {
+    position: fixed !important;
+    inset: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 14px !important;
+
+    background: rgba(8, 22, 15, .60) !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+
+    overflow: hidden !important;
+
+    z-index: 30000 !important;
+  }
+
+  .campaignModal {
+    position: relative !important;
+
+    width: min(390px, calc(100vw - 28px)) !important;
+    height: auto !important;
+    max-height: calc(100dvh - 40px) !important;
+    min-height: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    margin: 0 !important;
+
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+
+    background: #ffffff !important;
+
+    border: 0 !important;
+    border-radius: 26px !important;
+
+    box-shadow:
+      0 28px 80px rgba(0,0,0,.30) !important;
+
+    overscroll-behavior: contain !important;
+  }
+
+  .campaignModalText {
+    flex: 0 0 auto !important;
+
+    padding: 24px 20px 18px !important;
+
+    background: #ffffff !important;
+    color: #173126 !important;
+
+    overflow: visible !important;
+  }
+
+  .campaignClose {
+    position: absolute !important;
+    top: 12px !important;
+    right: 12px !important;
+
+    width: 38px !important;
+    height: 38px !important;
+
+    display: grid !important;
+    place-items: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+    border-radius: 50% !important;
+
+    background: rgba(255,255,255,.96) !important;
+    color: #174632 !important;
+
+    font-size: 21px !important;
+    line-height: 1 !important;
+
+    z-index: 5 !important;
+
+    box-shadow: 0 7px 18px rgba(0,0,0,.12) !important;
+  }
+
+  .campaignPriceBadge {
+    width: 92px !important;
+    height: auto !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 0 15px !important;
+    padding: 11px 8px !important;
+
+    border: 1px solid #dcebe3 !important;
+    border-radius: 17px !important;
+
+    background: #f2f8f4 !important;
+    color: #173126 !important;
+
+    text-align: center !important;
+
+    box-shadow: none !important;
+  }
+
+  .campaignPriceBadge span {
+    font-size: 8px !important;
+    color: #62756a !important;
+  }
+
+  .campaignPriceBadge strong {
+    font-size: 17px !important;
+    line-height: 1.1 !important;
+    color: #17794a !important;
+  }
+
+  .campaignPriceBadge b {
+    margin-top: 2px !important;
+
+    font-size: 11px !important;
+    color: #173126 !important;
+  }
+
+  .campaignDate {
+    display: block !important;
+
+    margin: 0 0 6px !important;
+
+    color: #17804c !important;
+
+    font-size: 10px !important;
+    font-weight: 850 !important;
+    letter-spacing: .11em !important;
+  }
+
+  .campaignModalText h2 {
+    margin: 0 0 14px !important;
+
+    font-size: 40px !important;
+    line-height: .95 !important;
+    letter-spacing: -1px !important;
+
+    color: #173126 !important;
+  }
+
+  .campaignModalText > p {
+    margin: 0 !important;
+
+    font-size: 13px !important;
+    line-height: 1.52 !important;
+
+    color: #66756d !important;
+  }
+
+  .campaignBenefits {
+    display: grid !important;
+    gap: 8px !important;
+
+    margin: 16px 0 !important;
+    padding: 14px !important;
+
+    border: 1px solid #dfece5 !important;
+    border-radius: 17px !important;
+
+    background: #f6faf7 !important;
+  }
+
+  .campaignBenefits div {
+    padding: 0 !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+
+    color: #274b39 !important;
+
+    font-size: 11px !important;
+    font-weight: 750 !important;
+    line-height: 1.4 !important;
+  }
+
+  .campaignActions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+
+    margin: 16px 0 12px !important;
+  }
+
+  .campaignPrimary,
+  .campaignSecondary {
+    width: 100% !important;
+    min-height: 46px !important;
+
+    padding: 11px 14px !important;
+
+    border-radius: 14px !important;
+
+    font-size: 12px !important;
+    font-weight: 850 !important;
+  }
+
+  .campaignPrimary {
+    border: 0 !important;
+
+    background: #189754 !important;
+    color: #ffffff !important;
+
+    box-shadow:
+      0 10px 25px rgba(24,151,84,.18) !important;
+  }
+
+  .campaignSecondary {
+    background: #ffffff !important;
+    color: #197649 !important;
+
+    border: 1px solid #cfe3d8 !important;
+  }
+
+  .campaignLegal {
+    margin: 0 !important;
+
+    color: #89968f !important;
+
+    font-size: 8.5px !important;
+    line-height: 1.45 !important;
+
+    opacity: 1 !important;
+  }
+
+  .campaignModalVisual {
+    flex: 0 0 auto !important;
+
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    background: #ffffff !important;
+
+    overflow: hidden !important;
+  }
+
+  .campaignModalVisual img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 180px !important;
+
+    display: block !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+
+    border-radius: 0 !important;
+
+    transform: none !important;
+    animation: none !important;
+    filter: none !important;
+    box-shadow: none !important;
+  }
+}
+@media (max-width: 640px) {
+  .campaignModalVisual {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+    overflow: hidden !important;
+  }
+
+  .campaignModalVisual img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+
+    display: block !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    border-radius: 0 !important;
+
+    transform: none !important;
+    animation: none !important;
+    filter: none !important;
+    box-shadow: none !important;
+  }
+}
+.campaignModalVisual {
+  width: 100% !important;
+  margin: 18px 0 20px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border-radius: 18px !important;
+  background: #fff !important;
+}
+
+.campaignModalVisual img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border-radius: 18px !important;
+}
+@media (max-width: 640px) {
+
+  .campaignModalBackdrop {
+    overflow: hidden !important;
+    padding: 12px !important;
+  }
+
+  .campaignModal {
+    width: min(390px, calc(100vw - 24px)) !important;
+    max-height: calc(100dvh - 24px) !important;
+
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior: contain !important;
+  }
+
+  .campaignModalVisual {
+    width: 100% !important;
+    min-height: 0 !important;
+
+    margin: 14px 0 16px !important;
+    padding: 0 !important;
+
+    background: transparent !important;
+    border-radius: 18px !important;
+
+    overflow: hidden !important;
+  }
+
+  .campaignModalVisual img {
+    display: block !important;
+
+    width: 100% !important;
+    height: auto !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border-radius: 18px !important;
+
+    transform: none !important;
+    animation: none !important;
+    filter: none !important;
+    box-shadow: none !important;
+  }
+}
+/* ==========================================
+   TM7 FONKSİYONLARI - MOBİL RÖTUŞ
+========================================== */
+
+@media (max-width: 640px) {
+
+  .tm7ModesHeader p {
+    max-width: 92% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+
+  .tm7ModeCard {
+    border-radius: 24px !important;
+    overflow: hidden !important;
+  }
+
+  .tm7ModeMedia {
+    height: 285px !important;
+    min-height: 285px !important;
+  }
+
+  .tm7ModeMedia video {
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: cover !important;
+  }
+
+  .tm7ModeCardBody {
+    min-height: 122px !important;
+
+    padding: 18px 18px 20px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 14px !important;
+  }
+
+  .tm7ModeCardBody small {
+    font-size: 10px !important;
+    letter-spacing: .12em !important;
+  }
+
+  .tm7ModeCardBody h3 {
+    margin-top: 7px !important;
+    margin-bottom: 0 !important;
+
+    font-size: 22px !important;
+    line-height: 1.12 !important;
+  }
+
+  .tm7ModeCardBody button {
+    width: 52px !important;
+    height: 52px !important;
+
+    min-width: 52px !important;
+
+    flex-shrink: 0 !important;
+  }
+
+  /* Telefonda hover açıklamasına gerek yok */
+  .tm7ModeHoverText {
+    display: none !important;
+  }
+}
+/* ==========================================
+   SAYFA / BÖLÜM KİMLİĞİ
+========================================== */
+
+.sectionIdentity {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto 34px;
+  padding: 34px 38px;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(35, 145, 91, 0.10),
+      transparent 32%
+    ),
+    rgba(255, 255, 255, 0.72);
+
+  border: 1px solid rgba(22, 113, 72, 0.13);
+  border-radius: 28px;
+
+  text-align: center;
+}
+
+.sectionIdentityEyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 16px;
+  margin-bottom: 14px;
+
+  border-radius: 999px;
+  background: rgba(31, 143, 88, 0.08);
+
+  color: #198451;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .18em;
+}
+
+.sectionIdentity h1 {
+  margin: 0;
+
+  color: #102c20;
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+}
+
+.sectionIdentity h1 strong {
+  color: #1c8b57;
+  font-weight: 700;
+}
+
+.sectionIdentity p {
+  max-width: 720px;
+  margin: 16px auto 0;
+
+  color: #6e7973;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* MOBİL */
+@media (max-width: 640px) {
+
+  .sectionIdentity {
+    width: calc(100% - 40px);
+    margin: 0 auto 24px;
+
+    padding: 25px 20px 27px;
+
+    border-radius: 24px;
+  }
+
+  .sectionIdentityEyebrow {
+    padding: 7px 13px;
+    margin-bottom: 12px;
+
+    font-size: 10px;
+  }
+
+  .sectionIdentity h1 {
+    font-size: 34px;
+    line-height: 1.06;
+  }
+
+  .sectionIdentity p {
+    margin-top: 13px;
+
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+@media (max-width: 640px) {
+  .sectionIdentity {
+    margin-bottom: 14px !important;
+  }
+
+  .tm7ModesHeader {
+    padding-top: 10px !important;
+  }
+}
+/* ==========================================
+   COOKIDOO - NASIL ÇALIŞIR MOBİL STEPPER
+========================================== */
+
+@media (max-width: 640px) {
+
+  .cookidooHow {
+    margin-top: 28px !important;
+    padding: 26px 22px !important;
+
+    border-radius: 24px !important;
+
+    background:
+      linear-gradient(
+        145deg,
+        #f3faf6,
+        #ffffff
+      ) !important;
+  }
+
+  .cookidooHowHeader {
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+
+  .cookidooHowHeader > span {
+    font-size: 10px !important;
+    letter-spacing: .14em !important;
+  }
+
+  .cookidooHowHeader h3 {
+    margin-top: 8px !important;
+
+    font-size: 25px !important;
+    line-height: 1.15 !important;
+
+    text-align: center !important;
+  }
+
+  .cookidooHowSteps {
+    position: relative !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 0 !important;
+
+    margin-top: 26px !important;
+  }
+
+  .cookidooHowSteps > div {
+    position: relative !important;
+
+    display: grid !important;
+    grid-template-columns: 54px 1fr !important;
+
+    column-gap: 15px !important;
+
+    padding: 16px 0 !important;
+
+    border: 0 !important;
+    border-bottom: 1px solid #dce9e2 !important;
+
+    text-align: left !important;
+  }
+
+  .cookidooHowSteps > div:last-child {
+    border-bottom: 0 !important;
+  }
+
+  .cookidooHowSteps > div > span {
+    grid-column: 1 !important;
+    grid-row: 1 / span 2 !important;
+
+    width: 46px !important;
+    height: 46px !important;
+
+    margin: 0 !important;
+
+    border-radius: 50% !important;
+
+    font-size: 14px !important;
+
+    box-shadow:
+      0 8px 20px rgba(24, 130, 79, .18) !important;
+  }
+
+  .cookidooHowSteps strong {
+    grid-column: 2 !important;
+
+    align-self: end !important;
+
+    margin: 1px 0 4px !important;
+
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+
+    text-align: left !important;
+  }
+
+  .cookidooHowSteps p {
+    grid-column: 2 !important;
+
+    margin: 0 !important;
+
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+
+    text-align: left !important;
+  }
+}
+/* ==========================================
+   YUKARI ÇIK BUTONU
+========================================== */
+
+.scrollToTopButton {
+  position: fixed;
+
+  right: 28px;
+
+  /* WhatsApp butonunun ÜSTÜNDE */
+  bottom: 108px;
+
+  width: 50px;
+  height: 50px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+
+  border: 1px solid rgba(255,255,255,.45);
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #1aa25d,
+      #117c49
+    );
+
+  color: #fff;
+
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1;
+
+  z-index: 8990;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 28px rgba(16, 112, 66, .26);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    opacity .2s ease;
+}
+
+.scrollToTopButton:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 34px rgba(16, 112, 66, .32);
+}
+
+.scrollToTopButton:active {
+  transform: scale(.94);
+}
+
+
+/* MOBİL */
+@media (max-width: 640px) {
+
+  .scrollToTopButton {
+    right: 22px;
+
+    /* WhatsApp'ın üzerinde */
+    bottom: 92px;
+
+    width: 46px;
+    height: 46px;
+
+    font-size: 22px;
+
+    z-index: 8990;
+  }
+}
+/* ==========================================
+   WHATSAPP SABİT BUTONU - DESKTOP + MOBILE
+========================================== */
+
+.waMiniButton {
+  position: fixed !important;
+
+  right: 24px !important;
+  bottom: 24px !important;
+
+  width: 58px !important;
+  height: 58px !important;
+  min-width: 58px !important;
+
+  padding: 8px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border: 1px solid rgba(20, 125, 78, 0.14) !important;
+  border-radius: 50% !important;
+
+  background: #ffffff !important;
+
+  z-index: 9000 !important;
+
+  box-shadow:
+    0 10px 28px rgba(0,0,0,.14),
+    0 4px 14px rgba(37,211,102,.15) !important;
+
+  overflow: hidden !important;
+}
+
+.waMiniButton img {
+  width: 40px !important;
+  height: 40px !important;
+
+  max-width: 40px !important;
+  max-height: 40px !important;
+
+  display: block !important;
+
+  object-fit: contain !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  transform: none !important;
+}
+
+.waMiniButton .waMiniText {
+  display: none !important;
+}
+
+
+/* YUKARI ÇIK BUTONU WHATSAPP'IN ÜSTÜNDE */
+
+.scrollToTopButton {
+  right: 28px !important;
+  bottom: 96px !important;
+}
+
+
+/* MOBİL */
+
+@media (max-width: 640px) {
+
+  .waMiniButton {
+    right: 18px !important;
+    bottom: 18px !important;
+
+    width: 58px !important;
+    height: 58px !important;
+    min-width: 58px !important;
+  }
+
+  .waMiniButton img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .scrollToTopButton {
+    right: 24px !important;
+    bottom: 90px !important;
+  }
+}
+/* ==========================================
+   KAMPANYA POPUP - DESKTOP FİNAL
+========================================== */
+
+@media (min-width: 901px) {
+
+  .campaignModalBackdrop {
+    padding: 24px !important;
+  }
+
+  .campaignModal {
+    width: min(1120px, 92vw) !important;
+    height: min(680px, 86vh) !important;
+    max-height: 86vh !important;
+
+    display: grid !important;
+    grid-template-columns: 0.92fr 1.08fr !important;
+
+    overflow: hidden !important;
+
+    border-radius: 30px !important;
+
+    background:
+      linear-gradient(
+        135deg,
+        #0b3b25,
+        #0d6841
+      ) !important;
+  }
+
+  .campaignModalText {
+    grid-column: 1 !important;
+
+    height: 100% !important;
+
+    padding: 34px 32px 28px !important;
+
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+
+    background: transparent !important;
+  }
+
+  .campaignPriceBadge {
+    width: 112px !important;
+    height: 112px !important;
+
+    margin-bottom: 16px !important;
+  }
+
+  .campaignModalText h2 {
+    font-size: 46px !important;
+    line-height: .95 !important;
+
+    margin-bottom: 16px !important;
+  }
+
+  .campaignModalText > p {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+
+  .campaignBenefits {
+    gap: 7px !important;
+    margin: 16px 0 !important;
+  }
+
+  .campaignBenefits div {
+    padding: 9px 13px !important;
+    font-size: 12px !important;
+  }
+
+  .campaignActions {
+    gap: 8px !important;
+  }
+
+  .campaignPrimary,
+  .campaignSecondary {
+    min-height: 44px !important;
+  }
+
+  /* Sağ taraf */
+  .campaignModalVisual {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+    padding: 28px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background:
+      radial-gradient(
+        circle at center,
+        rgba(44, 210, 119, .12),
+        transparent 42%
+      ),
+      linear-gradient(
+        135deg,
+        #082c1b,
+        #0d6240
+      ) !important;
+
+    border-radius: 0 !important;
+  }
+
+  .campaignModalVisual img {
+    width: 100% !important;
+    height: auto !important;
+
+    max-width: 620px !important;
+    max-height: 560px !important;
+
+    object-fit: contain !important;
+
+    border-radius: 22px !important;
+
+    box-shadow:
+      0 28px 70px rgba(0,0,0,.34) !important;
+  }
+
+  .campaignClose {
+    top: 16px !important;
+    right: 16px !important;
+
+    z-index: 20 !important;
+  }
+}
+/* Masaüstü / mobil kampanya görseli kontrolü */
+
+.campaignModalVisualMobile {
+  display: none !important;
+}
+
+.campaignModalVisualDesktop {
+  display: flex !important;
+}
+
+@media (max-width: 900px) {
+
+  .campaignModalVisualDesktop {
+    display: none !important;
+  }
+
+  .campaignModalVisualMobile {
+    display: block !important;
+  }
+}
+/* ==================================================
+   TM7 KUTU İÇERİĞİ
+================================================== */
+
+.tm7BoxSection {
+  width: min(1440px, calc(100% - 64px));
+  margin: 70px auto;
+  padding: 56px;
+
+  border: 1px solid rgba(22, 108, 70, 0.13);
+  border-radius: 36px;
+
+  background:
+    radial-gradient(
+      circle at 92% 5%,
+      rgba(41, 155, 99, 0.10),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #f5fbf7 100%
+    );
+
+  box-shadow:
+    0 26px 80px rgba(19, 82, 53, 0.07);
+}
+
+
+.tm7BoxVisualWrap {
+  margin-top: 38px;
+}
+
+
+.tm7BoxVisualTop {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: end;
+  gap: 50px;
+
+  margin-bottom: 28px;
+}
+
+
+.tm7BoxVisualTop > div > span {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #198653;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: .18em;
+}
+
+
+.tm7BoxVisualTop h2 {
+  margin: 0;
+
+  color: #102c20;
+
+  font-size: clamp(38px, 4vw, 58px);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+
+  font-weight: 600;
+}
+
+
+.tm7BoxVisualTop h2 strong {
+  display: block;
+
+  color: #1b8d58;
+
+  font-weight: 700;
+}
+
+
+.tm7BoxVisualTop p {
+  margin: 0;
+
+  color: #68766f;
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+
+.tm7BoxImage {
+  position: relative;
+
+  width: 100%;
+
+  padding: 14px;
+
+  border: 1px solid rgba(22, 108, 70, 0.12);
+  border-radius: 30px;
+
+  background: rgba(255,255,255,.78);
+
+  box-shadow:
+    0 24px 65px rgba(15, 72, 47, .10);
+
+  overflow: hidden;
+}
+
+
+.tm7BoxImage img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 21px;
+
+  object-fit: contain;
+}
+
+
+.tm7BoxBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 50px;
+
+  margin-top: 34px;
+  padding: 30px 34px;
+
+  border: 1px solid rgba(28, 132, 83, .12);
+  border-radius: 26px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(240,250,244,.92),
+      rgba(255,255,255,.96)
+    );
+}
+
+
+.tm7BoxBottomText {
+  max-width: 680px;
+}
+
+
+.tm7BoxBottomText > span {
+  color: #16824f;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: .15em;
+}
+
+
+.tm7BoxBottomText h3 {
+  margin: 7px 0 9px;
+
+  color: #15382a;
+
+  font-size: 27px;
+  line-height: 1.15;
+}
+
+
+.tm7BoxBottomText h3 strong {
+  color: #198b56;
+}
+
+
+.tm7BoxBottomText p {
+  margin: 0;
+
+  color: #6d7872;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+.tm7BoxContactButton {
+  min-width: 300px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 14px 18px;
+
+  border: 0;
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #16844f,
+      #1ba45f
+    );
+
+  color: #fff;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 14px 35px rgba(19, 139, 80, .22);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+
+.tm7BoxContactButton:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 19px 42px rgba(19, 139, 80, .28);
+}
+
+
+.tm7BoxContactButton img {
+  width: 36px;
+  height: 36px;
+
+  object-fit: contain;
+}
+
+
+.tm7BoxContactButton span {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+.tm7BoxContactButton small {
+  margin-bottom: 2px;
+
+  opacity: .78;
+
+  font-size: 10px;
+  font-weight: 500;
+}
+
+
+.tm7BoxContactButton b {
+  font-size: 20px;
+}
+@media (max-width: 640px) {
+
+  .tm7BoxSection {
+    width: calc(100% - 28px);
+
+    margin: 36px auto;
+    padding: 20px 14px 22px;
+
+    border-radius: 28px;
+  }
+
+
+  .tm7BoxVisualWrap {
+    margin-top: 22px;
+  }
+
+
+  .tm7BoxVisualTop {
+    display: block;
+
+    margin-bottom: 18px;
+  }
+
+
+  .tm7BoxVisualTop h2 {
+    font-size: 31px;
+  }
+
+
+  .tm7BoxVisualTop p {
+    margin-top: 13px;
+
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+
+  .tm7BoxImage {
+    padding: 5px;
+
+    border-radius: 20px;
+  }
+
+
+  .tm7BoxImage img {
+    border-radius: 16px;
+  }
+
+
+  .tm7BoxBottom {
+    display: block;
+
+    margin-top: 20px;
+    padding: 22px 18px;
+
+    border-radius: 21px;
+  }
+
+
+  .tm7BoxBottomText h3 {
+    font-size: 23px;
+  }
+
+
+  .tm7BoxBottomText p {
+    font-size: 12px;
+  }
+
+
+  .tm7BoxContactButton {
+    width: 100%;
+    min-width: 0;
+
+    margin-top: 19px;
+
+    border-radius: 15px;
+  }
+}
+/* ==========================================
+   TM7 KUTU İÇERİĞİ - DESKTOP BOYUT DÜZELTME
+========================================== */
+
+@media (min-width: 901px) {
+
+  .tm7BoxSection {
+    width: min(1180px, calc(100% - 80px)) !important;
+
+    margin: 56px auto !important;
+    padding: 42px !important;
+
+    border-radius: 32px !important;
+  }
+
+  .tm7BoxSection .sectionIdentity {
+    width: 100% !important;
+    max-width: 980px !important;
+
+    margin: 0 auto 34px !important;
+    padding: 28px 34px !important;
+  }
+
+  .tm7BoxVisualWrap {
+    max-width: 1060px !important;
+
+    margin: 30px auto 0 !important;
+  }
+
+  .tm7BoxVisualTop {
+    grid-template-columns: 1fr 1fr !important;
+
+    gap: 42px !important;
+
+    margin-bottom: 22px !important;
+  }
+
+  .tm7BoxVisualTop h2 {
+    font-size: 44px !important;
+    line-height: 1.02 !important;
+  }
+
+  .tm7BoxVisualTop p {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+  }
+
+  .tm7BoxImage {
+    width: 100% !important;
+    max-width: 900px !important;
+
+    margin: 0 auto !important;
+
+    padding: 10px !important;
+
+    border-radius: 24px !important;
+  }
+
+  .tm7BoxImage img {
+    display: block !important;
+
+    width: 100% !important;
+    height: auto !important;
+
+    max-height: 1080px !important;
+
+    object-fit: contain !important;
+
+    border-radius: 18px !important;
+  }
+
+  .tm7BoxBottom {
+    max-width: 1060px !important;
+
+    margin: 26px auto 0 !important;
+
+    padding: 24px 28px !important;
+  }
+
+  .tm7BoxBottomText h3 {
+    font-size: 24px !important;
+  }
+
+  .tm7BoxBottomText p {
+    font-size: 12px !important;
+  }
+
+  .tm7BoxContactButton {
+    min-width: 275px !important;
+  }
+}
+@media (min-width: 901px) {
+
+  .tm7BoxImage {
+    max-width: 760px !important;
+  }
+
+  .tm7BoxVisualWrap {
+    max-width: 980px !important;
+  }
+
+  .tm7BoxSection {
+    width: min(1120px, calc(100% - 80px)) !important;
+    padding: 38px !important;
+  }
+
+  .tm7BoxVisualTop {
+    max-width: 980px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .tm7BoxBottom {
+    max-width: 980px !important;
+  }
+}
+
+/* ==================================================
+   HEADER SCROLL DAVRANIŞI - GERÇEK FINAL
+================================================== */
+
+/* Navbar'ın sayfadaki yerini korur */
+.newSiteHeaderSlot {
+  width: 100%;
+  min-height: 88px;
+}
+
+/* Normal durumda navbar sayfa akışında */
+.newSiteHeader {
+  position: relative !important;
+  top: auto !important;
+
+  width: 100% !important;
+
+  z-index: 20000 !important;
+
+  transform: translateY(0) !important;
+
+  transition:
+    transform .32s cubic-bezier(.4, 0, .2, 1),
+    box-shadow .3s ease !important;
+
+  will-change: transform;
+}
+
+
+/* Scroll sonrası fixed navbar */
+.newSiteHeader.headerFloating {
+  position: fixed !important;
+
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+
+  width: 100% !important;
+
+  z-index: 20000 !important;
+
+  box-shadow:
+    0 10px 35px rgba(13, 67, 42, .10) !important;
+}
+
+
+/* Yukarı scroll */
+.newSiteHeader.headerFloating.headerVisible {
+  transform: translateY(0) !important;
+}
+
+
+/* Aşağı scroll */
+.newSiteHeader.headerFloating.hideHeader {
+  transform: translateY(-120%) !important;
+}
+
+
+/* MOBİL */
+@media (max-width: 900px) {
+
+  .newSiteHeaderSlot {
+    min-height: 72px;
+  }
+
+  .newSiteHeader.headerFloating {
+    position: fixed !important;
+
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+
+    width: 100% !important;
+  }
+
+}
+
+/* ==================================================
+   İLETİŞİM SAYFASI - PREMIUM
+================================================== */
+
+.contactPagePremium {
+  position: relative;
+
+  width: min(1320px, calc(100% - 70px));
+  margin: 62px auto;
+  padding: 56px;
+
+  border: 1px solid #dcebe3;
+  border-radius: 34px;
+
+  background:
+    radial-gradient(
+      circle at 92% 8%,
+      rgba(38, 179, 105, .08),
+      transparent 26%
+    ),
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f8fcf9
+    );
+
+  box-shadow:
+    0 28px 80px rgba(15, 83, 51, .07);
+}
+
+
+/* ==================================================
+   BAŞLIK
+================================================== */
+
+.contactPageHeader {
+  max-width: 850px;
+  margin: 0 auto 42px;
+
+  text-align: center;
+}
+
+
+.contactPageEyebrow {
+  display: inline-flex;
+
+  margin-bottom: 16px;
+  padding: 8px 16px;
+
+  border-radius: 999px;
+
+  background: #eaf7ef;
+  color: #14824f;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  letter-spacing: .18em;
+}
+
+
+.contactPageHeader h2 {
+  margin: 0;
+
+  color: #10251c;
+
+  font-size: clamp(40px, 4vw, 58px);
+  line-height: 1.06;
+
+  letter-spacing: -.035em;
+}
+
+
+.contactPageHeader h2 strong {
+  color: #198c56;
+}
+
+
+.contactPageHeader p {
+  max-width: 740px;
+
+  margin: 20px auto 0;
+
+  color: #68766f;
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+
+/* ==================================================
+   3 İLETİŞİM KARTI
+================================================== */
+
+.contactChannelGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+
+.contactChannelCard {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 370px;
+
+  padding: 28px;
+
+  border: 1px solid #e0ece5;
+  border-radius: 25px;
+
+  background: rgba(255,255,255,.93);
+
+  box-shadow:
+    0 17px 46px rgba(16, 76, 48, .065);
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease;
+}
+
+
+.contactChannelCard:hover {
+  transform: translateY(-5px);
+
+  border-color: #c8e4d4;
+
+  box-shadow:
+    0 25px 60px rgba(16, 88, 53, .11);
+}
+
+
+.contactChannelTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 14px;
+
+  margin-bottom: 25px;
+}
+
+
+.contactChannelIcon {
+  width: 65px;
+  height: 65px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 21px;
+
+  background: #e9f7ef;
+}
+
+
+.contactChannelIcon img {
+  width: 39px;
+  height: 39px;
+
+  object-fit: contain;
+}
+
+
+.contactPhoneIcon {
+  color: #177bd3;
+
+  background: #e9f5ff;
+
+  font-size: 31px;
+}
+
+
+.contactChannelBadge {
+  padding: 8px 13px;
+
+  border-radius: 999px;
+
+  background: #eff8f2;
+
+  color: #237d50;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+
+.contactChannelCard h3 {
+  margin: 0 0 10px;
+
+  color: #11271d;
+
+  font-size: 24px;
+}
+
+
+.contactChannelCard p {
+  flex: 1;
+
+  margin: 0 0 22px;
+
+  color: #64736b;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+
+.contactChannelValue {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: #14804d;
+
+  font-size: 20px;
+  font-weight: 850;
+}
+
+
+/* ==================================================
+   KART BUTONLARI
+================================================== */
+
+.contactChannelButton {
+  width: 100%;
+  min-height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 11px 17px;
+
+  border: 0;
+  border-radius: 15px;
+
+  text-decoration: none;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+
+.contactChannelButton > img {
+  width: 21px;
+  height: 21px;
+
+  object-fit: contain;
+}
+
+
+.contactChannelButton > span:last-child {
+  margin-left: auto;
+
+  font-size: 18px;
+}
+
+
+.contactWhatsapp .contactChannelButton {
+  background:
+    linear-gradient(
+      135deg,
+      #117a48,
+      #15965a
+    );
+}
+
+
+.contactPhone .contactChannelButton {
+  background:
+    linear-gradient(
+      135deg,
+      #126ac7,
+      #1686e5
+    );
+}
+
+
+.contactInstagram .contactChannelButton {
+  background:
+    linear-gradient(
+      135deg,
+      #d91a74,
+      #f12291
+    );
+}
+
+
+.contactInstagram .contactChannelIcon {
+  background: #fff0f6;
+}
+
+
+.contactInstagram .contactChannelValue {
+  color: #dd1d75;
+}
+
+
+.contactPhone .contactChannelValue {
+  color: #1672cc;
+}
+
+
+.contactPhoneSmall {
+  font-size: 18px;
+}
+
+
+/* ==================================================
+   GÜVEN ŞERİDİ
+================================================== */
+
+.contactTrustStrip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 25px;
+
+  padding: 20px 24px;
+
+  border: 1px solid #deebe4;
+  border-radius: 22px;
+
+  background: rgba(255,255,255,.85);
+}
+
+
+.contactTrustStrip > div {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 5px 20px;
+
+  border-right: 1px solid #e2ebe6;
+}
+
+
+.contactTrustStrip > div:last-child {
+  border-right: 0;
+}
+
+
+.contactTrustStrip > div > span {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  flex: 0 0 38px;
+
+  border-radius: 12px;
+
+  background: #e9f7ef;
+
+  color: #11814d;
+
+  font-size: 17px;
+  font-weight: 900;
+}
+
+
+.contactTrustStrip strong {
+  display: block;
+
+  color: #18382a;
+
+  font-size: 12px;
+}
+
+
+.contactTrustStrip small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #748079;
+
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+
+/* ==================================================
+   DEMO / TANITIM BANNER
+================================================== */
+
+.contactDemoBanner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+
+  gap: 25px;
+
+  margin-top: 22px;
+  padding: 24px 28px;
+
+  border: 1px solid #d8ebe0;
+  border-radius: 25px;
+
+  background:
+    radial-gradient(
+      circle at 8% 50%,
+      rgba(41, 181, 103, .12),
+      transparent 20%
+    ),
+    linear-gradient(
+      135deg,
+      #eefaf3,
+      #f9fdfb
+    );
+}
+
+
+.contactDemoIcon {
+  width: 76px;
+  height: 76px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 22px;
+
+  background: #dff5e8;
+
+  font-size: 34px;
+}
+
+
+.contactDemoContent > span {
+  color: #16824e;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: .16em;
+}
+
+
+.contactDemoContent h3 {
+  margin: 6px 0;
+
+  color: #112b20;
+
+  font-size: 23px;
+}
+
+
+.contactDemoContent h3 strong {
+  color: #168c54;
+}
+
+
+.contactDemoContent p {
+  max-width: 670px;
+
+  margin: 0;
+
+  color: #65726c;
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+
+.contactDemoButton {
+  min-width: 285px;
+  min-height: 62px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 12px 17px;
+
+  border: 0;
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0c7042,
+      #0c8750
+    );
+
+  color: white;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 15px 34px rgba(14, 118, 70, .20);
+}
+
+
+.contactDemoButton img {
+  width: 32px;
+  height: 32px;
+}
+
+
+.contactDemoButton > span {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+.contactDemoButton small {
+  margin-bottom: 2px;
+
+  opacity: .75;
+
+  font-size: 9px;
+  font-weight: 500;
+}
+
+
+.contactDemoButton b {
+  font-size: 20px;
+}
+
+
+.contactPrivacy {
+  margin-top: 18px;
+
+  color: #819088;
+
+  text-align: center;
+
+  font-size: 11px;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+
+  .contactPagePremium {
+    width: calc(100% - 36px);
+
+    padding: 34px 25px;
+  }
+
+  .contactChannelGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contactInstagram {
+    grid-column: 1 / -1;
+  }
+
+  .contactTrustStrip {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
+  }
+
+  .contactTrustStrip > div {
+    border-right: 0;
+  }
+
+  .contactDemoBanner {
+    grid-template-columns: auto 1fr;
+  }
+
+  .contactDemoButton {
+    grid-column: 1 / -1;
+
+    width: 100%;
+  }
+}
+
+
+/* ==================================================
+   MOBİL
+================================================== */
+
+@media (max-width: 640px) {
+
+  .contactPagePremium {
+    width: calc(100% - 24px);
+
+    margin: 28px auto;
+    padding: 28px 16px;
+
+    border-radius: 27px;
+  }
+
+
+  .contactPageHeader {
+    margin-bottom: 28px;
+  }
+
+
+  .contactPageHeader h2 {
+    font-size: 34px;
+    line-height: 1.08;
+  }
+
+
+  .contactPageHeader h2 br {
+    display: none;
+  }
+
+
+  .contactPageHeader p {
+    margin-top: 16px;
+
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+
+  .contactChannelGrid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+
+  .contactInstagram {
+    grid-column: auto;
+  }
+
+
+  .contactChannelCard {
+    min-height: 0;
+
+    padding: 22px 19px;
+
+    border-radius: 21px;
+  }
+
+
+  .contactChannelTop {
+    margin-bottom: 18px;
+  }
+
+
+  .contactChannelIcon {
+    width: 57px;
+    height: 57px;
+
+    border-radius: 17px;
+  }
+
+
+  .contactChannelIcon img {
+    width: 34px;
+    height: 34px;
+  }
+
+
+  .contactChannelCard h3 {
+    font-size: 22px;
+  }
+
+
+  .contactChannelCard p {
+    margin-bottom: 18px;
+
+    font-size: 13px;
+  }
+
+
+  .contactChannelValue {
+    font-size: 18px;
+  }
+
+
+  .contactTrustStrip {
+    grid-template-columns: 1fr;
+
+    padding: 17px;
+  }
+
+
+  .contactTrustStrip > div {
+    padding: 6px 3px;
+  }
+
+
+  .contactDemoBanner {
+    display: block;
+
+    padding: 22px 19px;
+
+    text-align: center;
+  }
+
+
+  .contactDemoIcon {
+    margin: 0 auto 15px;
+  }
+
+
+  .contactDemoContent h3 {
+    font-size: 21px;
+  }
+
+
+  .contactDemoContent p {
+    font-size: 12px;
+  }
+
+
+  .contactDemoButton {
+    width: 100%;
+    min-width: 0;
+
+    margin-top: 20px;
+  }
+}
+@media (max-width: 640px) {
+
+  /* Ana iletişim kutusu daha kompakt */
+  .contactPagePremium {
+    padding: 24px 14px 22px !important;
+    margin: 22px auto !important;
+  }
+
+  .contactPageHeader {
+    margin-bottom: 22px !important;
+  }
+
+  .contactPageHeader h2 {
+    font-size: 31px !important;
+    line-height: 1.06 !important;
+  }
+
+  .contactPageHeader p {
+    font-size: 12.5px !important;
+    line-height: 1.55 !important;
+  }
+
+  /* Kartlar */
+  .contactChannelGrid {
+    gap: 12px !important;
+  }
+
+  .contactChannelCard {
+    padding: 18px 16px !important;
+    border-radius: 18px !important;
+  }
+
+  .contactChannelTop {
+    margin-bottom: 14px !important;
+  }
+
+  .contactChannelIcon {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .contactChannelIcon img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .contactChannelCard h3 {
+    font-size: 20px !important;
+    margin-bottom: 7px !important;
+  }
+
+  .contactChannelCard p {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 14px !important;
+  }
+
+  .contactChannelValue {
+    font-size: 17px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .contactChannelButton {
+    min-height: 46px !important;
+    font-size: 12px !important;
+  }
+
+  /* Güven alanı 2x2 olsun */
+  .contactTrustStrip {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+    padding: 14px !important;
+  }
+
+  .contactTrustStrip > div {
+    padding: 6px !important;
+    align-items: flex-start !important;
+  }
+
+  .contactTrustStrip > div > span {
+    width: 34px !important;
+    height: 34px !important;
+    flex-basis: 34px !important;
+  }
+
+  .contactTrustStrip strong {
+    font-size: 11px !important;
+  }
+
+  .contactTrustStrip small {
+    font-size: 9px !important;
+  }
+
+  /* Demo alanı */
+  .contactDemoBanner {
+    padding: 18px 16px !important;
+    margin-top: 16px !important;
+  }
+
+  .contactDemoIcon {
+    width: 60px !important;
+    height: 60px !important;
+    margin-bottom: 12px !important;
+    font-size: 28px !important;
+  }
+
+  .contactDemoContent h3 {
+    font-size: 19px !important;
+    line-height: 1.15 !important;
+  }
+
+  .contactDemoContent p {
+    font-size: 11.5px !important;
+    line-height: 1.5 !important;
+  }
+
+  .contactDemoButton {
+    min-height: 54px !important;
+    margin-top: 15px !important;
+  }
+
+  .contactPrivacy {
+    margin-top: 13px !important;
+    font-size: 9px !important;
+  }
+}
+/* ===== İLETİŞİM - MOBİL GÜVEN ALANI AYIRICI ÇİZGİLER ===== */
+@media (max-width: 640px) {
+
+  /* Üst sıranın alt çizgisi */
+  .contactTrustStrip > div:nth-child(1),
+  .contactTrustStrip > div:nth-child(2) {
+    border-bottom: 1px solid rgba(20, 80, 55, 0.09) !important;
+  }
+
+  /* Sol sütunun sağ çizgisi */
+  .contactTrustStrip > div:nth-child(1),
+  .contactTrustStrip > div:nth-child(3) {
+    border-right: 1px solid rgba(20, 80, 55, 0.09) !important;
   }
 }
