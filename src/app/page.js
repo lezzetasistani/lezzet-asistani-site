@@ -341,6 +341,13 @@ useEffect(() => {
         <button className="campaignClose" onClick={() => setOpen(false)}>×</button>
 
         <div className="campaignModalText">
+
+<h2>
+            Çekici
+            <br />
+            Fırsat!
+          </h2>
+
           <div className="campaignTopInfo">
   <div className="campaignPriceBadge">
     <span>Vade Farksız</span>
@@ -353,11 +360,7 @@ useEffect(() => {
   </small>
 </div>
 
-          <h2>
-            Çekici
-            <br />
-            Fırsat!
-          </h2>
+          
 
 {/* MOBİLDE GÖRÜNECEK */}
           <div className="campaignModalVisual campaignModalVisualMobile">

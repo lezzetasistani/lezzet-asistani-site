@@ -13259,3 +13259,13 @@ body {
     letter-spacing: -1px !important;
   }
 }
+@media (max-width: 640px) {
+
+  .campaignModalText h2 {
+    margin: 0 0 14px !important;
+  }
+
+  .campaignTopInfo {
+    margin: 0 0 14px !important;
+  }
+}
