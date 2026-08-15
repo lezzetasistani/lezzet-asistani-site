@@ -372,17 +372,17 @@ useEffect(() => {
 
          <p>
   Ağustos ayına özel Thermomix TM7 kampanyasında,
-  normal satış fiyatı <strong>6.990₺</strong> olan
+  <strong> Garanti Bonus kredi kartıyla 3 taksitli alımda 10.000₺ Bonus</strong>
+  {' '}fırsatından yararlanabilirsiniz. Ayrıca normal satış fiyatı
+  <strong> 6.990₺</strong> olan
   <strong> Kobold VM7 Şarjlı El Süpürgesi</strong>,
-  kampanya kuponuyla
-  <strong> 4.000₺</strong> oluyor.
-  Kampanya detaylarını öğrenmek ve kupon avantajından
-  nasıl yararlanabileceğinizi öğrenmek için
-  bana WhatsApp'tan ulaşabilirsiniz.
+  kampanya kuponuyla <strong>4.000₺</strong> oluyor.
+  Kampanya detayları için bana WhatsApp'tan ulaşabilirsiniz.
 </p>
 
           <div className="campaignBenefits">
   <div>✓ Vade farksız 6 taksitle TM7: 89.990₺</div>
+  <div>✓ Garanti Bonus kredi kartına 3 taksitli alımda 10.000₺ Bonus</div>
   <div>✓ Kobold VM7 kuponlu fiyatı: 4.000₺</div>
   <div>✓ 3 aylık Cookidoo üyeliği ücretsiz</div>
 </div>
