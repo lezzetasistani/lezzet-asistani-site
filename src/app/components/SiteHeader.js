@@ -238,7 +238,7 @@ export default function SiteHeader({ onContact }) {
       onContact();
     } else {
       window.open(
-        'https://wa.me/905016923135?text=Merhaba%2C%20Thermomix%20TM7%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.',
+        'https://wa.me/905016923135?text=Merhaba%2C%20Thermomix%20TM7%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%20%28S%C4%B0TE%29',
         '_blank'
       );
     }
@@ -255,7 +255,7 @@ export default function SiteHeader({ onContact }) {
       onContact();
     } else {
       window.open(
-        'https://wa.me/905016923135?text=Merhaba%2C%20Thermomix%20TM7%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.',
+         'https://wa.me/905016923135?text=Merhaba%2C%20Thermomix%20TM7%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%20%28S%C4%B0TE%29',
         '_blank'
       );
     }

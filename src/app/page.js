@@ -108,7 +108,7 @@ function ContactModal({ open, onClose }) {
         <div className="professionalContactGrid">
           <a
             className="professionalContactCard professionalWhatsappCard"
-            href={`https://wa.me/${SITE.whatsapp}?text=Merhaba%20Doğukan%20Bey,%20Thermomix%20TM7%20hakkında%20bilgi%20almak%20istiyorum.`}
+           href={`https://wa.me/${SITE.whatsapp}?text=Merhaba%2C%20Thermomix%20TM7%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%20%28S%C4%B0TE%29`}
             target="_blank"
             rel="noreferrer"
             onClick={reportWhatsAppConversion}
