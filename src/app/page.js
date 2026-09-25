@@ -353,9 +353,9 @@ useEffect(() => {
         <div className="campaignModalText">
 
 <h2>
-            Çekici
+            Sofradaki Her Şey
             <br />
-            Fırsat!
+            Thermomix’ten!
           </h2>
 
           <div className="campaignTopInfo">
@@ -366,7 +366,7 @@ useEffect(() => {
   </div>
 
   <small className="campaignDate">
-    1 - 31 AĞUSTOS
+    16 - 30 EYLÜL
   </small>
 </div>
 
@@ -381,21 +381,20 @@ useEffect(() => {
 </div>
 
          <p>
-  Ağustos ayına özel Thermomix TM7 kampanyasında,
-  <strong> Garanti Bonus kredi kartıyla 3 taksitli alımda 10.000₺ Bonus</strong>
-  {' '}fırsatından yararlanabilirsiniz. Ayrıca normal satış fiyatı
-  <strong> 6.990₺</strong> olan
-  <strong> Kobold VM7 Şarjlı El Süpürgesi</strong>,
-  kampanya kuponuyla <strong>4.000₺</strong> oluyor.
-  Kampanya detayları için bana WhatsApp'tan ulaşabilirsiniz.
+  16–30 Eylül tarihleri arasında Thermomix TM7 satın alımlarında
+  <strong> 5.000₺ değerinde Migros çeki hediye!</strong>
+  {' '}Ayrıca Thermomix Yemek Takımı
+  <strong> kupon koduyla 2.750₺</strong> ve
+  <strong> 3 aylık Cookidoo® üyeliği ücretsiz.</strong>
+  {' '}Kampanya detayları için bana WhatsApp&apos;tan ulaşabilirsiniz.
 </p>
 
           <div className="campaignBenefits">
   <div>✓ Vade farksız 6 taksitle TM7: 89.990₺</div>
-  <div>✓ Garanti Bonus kredi kartına 3 taksitli alımda 10.000₺ Bonus</div>
-  <div>✓ 9.000₺ değerinde +3 yıl ek garanti hediye</div>
-  <div>✓ Kobold VM7 kuponlu fiyatı: 4.000₺</div>
-  <div>✓ 3 aylık Cookidoo üyeliği ücretsiz</div>
+  <div>✓ 5.000₺ değerinde Migros çeki hediye</div>
+  <div>✓ Thermomix Yemek Takımı kupon koduyla 2.750₺</div>
+  <div>✓ 3 aylık Cookidoo® üyeliği ücretsiz</div>
+  <div>✓ Kampanya 2.000 adet stokla sınırlıdır</div>
 </div>
 
           <div className="campaignActions">
@@ -412,9 +411,9 @@ useEffect(() => {
           </div>
 
           <p className="campaignLegal">
-  Kampanya 1-31 Ağustos tarihleri arasında ve 3000 adet stokla
-  sınırlıdır. Diğer kampanyalarla birleştirilemez. Ayrıntılı bilgi için
-  iletişime geçiniz.
+  Kampanya 16–30 Eylül tarihleri arasında geçerli olup 2.000 adet stokla
+  sınırlıdır ve başka kampanyalarla birleştirilemez. Kampanya koşulları
+  ve detaylı bilgi için iletişime geçebilirsiniz.
 </p>
         </div>
 
@@ -466,7 +465,7 @@ function Hero({ go, contact }) {
       </div>
 
       <div className="campaignHeroCard">
-  <div className="campaignBadge">🔥 Ağustos Fırsatı</div>
+  <div className="campaignBadge">🔥 Eylül Fırsatı</div>
 
   <Link
     href="/thermomix-tm7-fiyat-kampanya"
@@ -475,7 +474,7 @@ function Hero({ go, contact }) {
   >
     <img
       src="/tm7-kampanya.jpg"
-      alt="Thermomix TM7 güncel fiyat ve Ağustos 2026 kampanyaları"
+      alt="Thermomix TM7 güncel fiyat ve Eylül 2026 kampanyaları"
     />
   </Link>
 

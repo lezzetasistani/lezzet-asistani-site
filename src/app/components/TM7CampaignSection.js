@@ -24,7 +24,7 @@ export default function TM7CampaignSection({
       <div className="tm7CampaignHeroText">
 
         <span className="tm7CampaignHeroBadge">
-          🔥 Ağustos 2026 Fırsatı
+          🔥 Eylül 2026 Fırsatı
         </span>
 
         <h1>
@@ -34,7 +34,7 @@ export default function TM7CampaignSection({
 
         <p>
           Thermomix TM7’nin güncel satış fiyatını, ödeme ve taksit
-          seçeneklerini ve Ağustos ayına özel kampanya avantajlarını
+          seçeneklerini ve Eylül ayına özel kampanya avantajlarını
           inceleyin.
         </p>
 
@@ -45,10 +45,10 @@ export default function TM7CampaignSection({
         </div>
 
         <div className="tm7CampaignHeroBenefits">
-          <span>✓ Garanti kredi kartlı ile 3 taksit alımda 10.000₺ Garanti Bonus</span>
-          <span>✓ 9.000₺ değerinde +3 yıl ek garanti hediye</span>
-          <span>✓ Kobold VM7 kampanya kuponuyla 4.000₺</span>
-          <span>✓ 3 aylık Cookidoo üyeliği</span>
+          <span>✓ 5.000₺ değerinde Migros çeki hediye</span>
+          <span>✓ Thermomix Yemek Takımı kupon koduyla 2.750₺</span>
+          <span>✓ 3 aylık Cookidoo® üyeliği ücretsiz</span>
+          <span>✓ Kampanya 2.000 adet stokla sınırlı</span>
           <span>✓ Satın alma öncesi birebir danışmanlık</span>
         </div>
 
@@ -81,22 +81,23 @@ export default function TM7CampaignSection({
         )}
 
         <small className="tm7CampaignDisclaimer">
-  Kampanya avantajları 31 Ağustos 2026 tarihine kadar geçerlidir.
-  Kampanya koşulları ve stok durumu değişiklik gösterebilir.
-</small>
+          Kampanya 16–30 Eylül 2026 tarihleri arasında geçerli olup
+          2.000 adet stokla sınırlıdır. Diğer kampanyalarla
+          birleştirilemez. Kampanya koşulları ve stok durumu değişiklik
+          gösterebilir.
+        </small>
 
       </div>
-
 
       <div className="tm7CampaignHeroVisual">
 
         <div className="tm7CampaignHeroLabel">
-          🔥 Ağustos Fırsatı
+          🔥 Eylül Fırsatı
         </div>
 
         <img
           src="/tm7-kampanya.jpg"
-          alt="Thermomix TM7 Ağustos 2026 fiyat ve kampanya fırsatları"
+          alt="Thermomix TM7 Eylül 2026 fiyat ve kampanya fırsatları"
         />
 
       </div>

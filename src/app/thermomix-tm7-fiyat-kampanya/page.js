@@ -5,10 +5,10 @@ import TM7CampaignDetailSection from '../components/TM7CampaignDetailSection';
 import SiteFooter from '../components/SiteFooter';
 
 export const metadata = {
-  title: 'Thermomix TM7 Fiyatı ve Ağustos 2026 Kampanyaları',
+  title: 'Thermomix TM7 Fiyatı ve Eylül 2026 Kampanyaları',
 
   description:
-    'Thermomix TM7 fiyatı 89.990₺. Ağustos 2026 kampanyalarını, 10.000₺ Bonus, 9.000₺ değerinde +3 yıl ek garanti ve taksit seçeneklerini inceleyin.',
+    'Thermomix TM7 fiyatı 89.990₺. Eylül 2026 kampanyasında 5.000₺ Migros çeki, Thermomix Yemek Takımı avantajı, 3 aylık ücretsiz Cookidoo® üyeliği ve vade farksız 6 taksit seçeneklerini inceleyin.',
 
   alternates: {
     canonical: '/thermomix-tm7-fiyat-kampanya',
@@ -20,17 +20,17 @@ export const metadata = {
     url: 'https://lezzetasistani.com/thermomix-tm7-fiyat-kampanya',
     siteName: 'Lezzet Asistanı',
 
-    title: 'Thermomix TM7 Fiyatı ve Ağustos 2026 Kampanyaları',
+    title: 'Thermomix TM7 Fiyatı ve Eylül 2026 Kampanyaları',
 
     description:
-      'Thermomix TM7 fiyatı 89.990₺. Ağustos 2026 kampanyalarını, 10.000₺ Bonus, +3 yıl ek garanti ve taksit seçeneklerini inceleyin.',
+      'Thermomix TM7 fiyatı 89.990₺. Eylül 2026 kampanyasında 5.000₺ Migros çeki, Thermomix Yemek Takımı, 3 aylık ücretsiz Cookidoo® üyeliği ve vade farksız 6 taksit avantajlarını inceleyin.',
 
     images: [
       {
         url: 'https://lezzetasistani.com/tm7-kampanya.jpg',
         width: 1200,
         height: 630,
-        alt: 'Thermomix TM7 Ağustos 2026 fiyat ve kampanyaları',
+        alt: 'Thermomix TM7 Eylül 2026 fiyat ve kampanyaları',
       },
     ],
   },
@@ -38,10 +38,10 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
 
-    title: 'Thermomix TM7 Fiyatı ve Ağustos 2026 Kampanyaları',
+    title: 'Thermomix TM7 Fiyatı ve Eylül 2026 Kampanyaları',
 
     description:
-      'Thermomix TM7 fiyatı 89.990₺. Ağustos 2026 kampanyalarını, Bonus, ek garanti ve taksit seçeneklerini inceleyin.',
+      'Thermomix TM7 fiyatı 89.990₺. Eylül 2026 kampanyasında 5.000₺ Migros çeki, Thermomix Yemek Takımı, ücretsiz Cookidoo® üyeliği ve vade farksız 6 taksit avantajlarını inceleyin.',
 
     images: ['https://lezzetasistani.com/tm7-kampanya.jpg'],
   },
@@ -53,9 +53,9 @@ export default function ThermomixTM7FiyatKampanyaPage() {
       <SiteHeader />
 
       <main className="advisorPage">
-  <TM7CampaignSection showDetailLink={false} />
-  <TM7CampaignDetailSection />
-</main>
+        <TM7CampaignSection showDetailLink={false} />
+        <TM7CampaignDetailSection />
+      </main>
 
       <ConsultantSection />
       <SiteFooter />
