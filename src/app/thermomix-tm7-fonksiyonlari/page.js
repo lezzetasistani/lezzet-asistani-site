@@ -17,7 +17,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
-    url: 'https://lezzetasistani.com/thermomix-tm7-fonksiyonlari',
+    url: 'https://www.lezzetasistani.com/thermomix-tm7-fonksiyonlari',
     siteName: 'Lezzet Asistanı',
 
     title: 'Thermomix TM7 Fonksiyonları ve Modları',
@@ -27,7 +27,7 @@ export const metadata = {
 
     images: [
       {
-        url: 'https://lezzetasistani.com/tm7-kampanya.jpg',
+        url: 'https://www.lezzetasistani.com/tm7-kampanya.jpg',
         width: 1200,
         height: 630,
         alt: 'Thermomix TM7 fonksiyonları ve otomatik modları',
@@ -43,7 +43,7 @@ export const metadata = {
     description:
       'Thermomix TM7 fonksiyonlarını, otomatik modlarını ve kullanım özelliklerini detaylı inceleyin.',
 
-    images: ['https://lezzetasistani.com/tm7-kampanya.jpg'],
+    images: ['https://www.lezzetasistani.com/tm7-kampanya.jpg'],
   },
 };
 

@@ -17,7 +17,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
-    url: 'https://lezzetasistani.com/cookidoo',
+    url: 'https://www.lezzetasistani.com/cookidoo',
     siteName: 'Lezzet Asistanı',
 
     title: 'Cookidoo Nedir? Thermomix Tarif Platformu',
@@ -27,7 +27,7 @@ export const metadata = {
 
     images: [
       {
-        url: 'https://lezzetasistani.com/tm7-kampanya.jpg',
+        url: 'https://www.lezzetasistani.com/tm7-kampanya.jpg',
         width: 1200,
         height: 630,
         alt: 'Cookidoo Thermomix tarif platformu ve Rehberli Pişirme',
@@ -43,7 +43,7 @@ export const metadata = {
     description:
       'Cookidoo tarif platformunu, Rehberli Pişirme özelliğini, tarif arşivini ve planlama özelliklerini keşfedin.',
 
-    images: ['https://lezzetasistani.com/tm7-kampanya.jpg'],
+    images: ['https://www.lezzetasistani.com/tm7-kampanya.jpg'],
   },
 };
 

@@ -18,7 +18,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
-    url: 'https://lezzetasistani.com/thermomix-danismani',
+    url: 'https://www.lezzetasistani.com/thermomix-danismani',
     siteName: 'Lezzet Asistanı',
 
     title: 'Thermomix Danışmanı | TM7 Satış ve Kullanım Desteği',
@@ -28,7 +28,7 @@ export const metadata = {
 
     images: [
       {
-        url: 'https://lezzetasistani.com/tm7-kampanya.jpg',
+        url: 'https://www.lezzetasistani.com/tm7-kampanya.jpg',
         width: 1200,
         height: 630,
         alt: 'Lezzet Asistanı Thermomix TM7 danışmanlığı',
@@ -44,7 +44,7 @@ export const metadata = {
     description:
       'Thermomix TM7 ürün tanıtımı, satın alma süreci ve satış sonrası kişisel danışmanlık desteği hakkında bilgi alın.',
 
-    images: ['https://lezzetasistani.com/tm7-kampanya.jpg'],
+    images: ['https://www.lezzetasistani.com/tm7-kampanya.jpg'],
   },
 };
 

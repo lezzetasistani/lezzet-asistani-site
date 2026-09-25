@@ -17,7 +17,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
-    url: 'https://lezzetasistani.com/thermomix-tm7-fiyat-kampanya',
+    url: 'https://www.lezzetasistani.com/thermomix-tm7-fiyat-kampanya',
     siteName: 'Lezzet Asistanı',
 
     title: 'Thermomix TM7 Fiyatı ve Eylül 2026 Kampanyaları',
@@ -27,7 +27,7 @@ export const metadata = {
 
     images: [
       {
-        url: 'https://lezzetasistani.com/tm7-kampanya.jpg',
+        url: 'https://www.lezzetasistani.com/tm7-kampanya.jpg',
         width: 1200,
         height: 630,
         alt: 'Thermomix TM7 Eylül 2026 fiyat ve kampanyaları',
@@ -43,7 +43,7 @@ export const metadata = {
     description:
       'Thermomix TM7 fiyatı 89.990₺. Eylül 2026 kampanyasında 5.000₺ Migros çeki, Thermomix Yemek Takımı, ücretsiz Cookidoo® üyeliği ve vade farksız 6 taksit avantajlarını inceleyin.',
 
-    images: ['https://lezzetasistani.com/tm7-kampanya.jpg'],
+    images: ['https://www.lezzetasistani.com/tm7-kampanya.jpg'],
   },
 };
 

@@ -4,7 +4,7 @@ export default function robots() {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://lezzetasistani.com/sitemap.xml',
-    host: 'https://lezzetasistani.com',
+    sitemap: 'https://www.lezzetasistani.com/sitemap.xml',
+    host: 'https://www.lezzetasistani.com',
   };
 }
