@@ -353,9 +353,9 @@ useEffect(() => {
         <div className="campaignModalText">
 
 <h2>
-            Sofradaki Her Şey
+            Sonbahar
             <br />
-            Thermomix’ten!
+            Fırsatı!
           </h2>
 
           <div className="campaignTopInfo">
@@ -366,7 +366,7 @@ useEffect(() => {
   </div>
 
   <small className="campaignDate">
-    16 - 30 EYLÜL
+    1 - 31 EKİM 2026
   </small>
 </div>
 
@@ -381,20 +381,27 @@ useEffect(() => {
 </div>
 
          <p>
-  16–30 Eylül tarihleri arasında Thermomix TM7 satın alımlarında
-  <strong> 5.000₺ değerinde Migros çeki hediye!</strong>
-  {' '}Ayrıca Thermomix Yemek Takımı
-  <strong> kupon koduyla 2.750₺</strong> ve
+  1–31 Ekim tarihleri arasında Thermomix TM7 satın alımında
+  <strong> Sonbahar Fırsatı!</strong>
+  {' '}Thermomix® Kesme Aparatı+ ve 3 Yıl Ek Garanti paketi,
+  <strong> kupon koduyla 22.990₺ yerine 3.500₺.</strong>
+  {' '}İlk kez Cookidoo® aboneliği satın alanlara
   <strong> 3 aylık Cookidoo® üyeliği ücretsiz.</strong>
-  {' '}Kampanya detayları için bana WhatsApp&apos;tan ulaşabilirsiniz.
+  {' '}Satın alım yalnızca resmî Vorwerk sitesi üzerinden gerçekleştirilir.
+  Kampanya detayları için bana WhatsApp’tan ulaşabilirsiniz.
 </p>
 
           <div className="campaignBenefits">
-  <div>✓ Vade farksız 6 taksitle TM7: 89.990₺</div>
-  <div>✓ 5.000₺ değerinde Migros çeki hediye</div>
-  <div>✓ Thermomix Yemek Takımı kupon koduyla 2.750₺</div>
-  <div>✓ 3 aylık Cookidoo® üyeliği ücretsiz</div>
-  <div>✓ Kampanya 2.000 adet stokla sınırlıdır</div>
+  <div>✓ TM7: 89.990₺ — tüm kredi kartlarına vade farksız 6 taksit</div>
+  <div>
+    ✓ Kesme Aparatı+ ve 3 Yıl Ek Garanti paketi,
+    kupon koduyla 22.990₺ yerine 3.500₺
+  </div>
+  <div>
+    ✓ İlk kez Cookidoo® aboneliği satın alanlara
+    3 aylık Cookidoo® üyeliği ücretsiz
+  </div>
+  <div>✓ Kampanya 5.000 adet stokla sınırlıdır</div>
 </div>
 
           <div className="campaignActions">
@@ -411,9 +418,12 @@ useEffect(() => {
           </div>
 
           <p className="campaignLegal">
-  Kampanya 16–30 Eylül tarihleri arasında geçerli olup 2.000 adet stokla
-  sınırlıdır ve başka kampanyalarla birleştirilemez. Kampanya koşulları
-  ve detaylı bilgi için iletişime geçebilirsiniz.
+  Kampanya 1–31 Ekim 2026 tarihleri arasında geçerli olup
+  5.000 adet stokla sınırlıdır ve başka kampanyalarla birleştirilemez.
+  Vorwerk Türkiye kampanyayı değiştirme hakkını saklı tutar.
+  Ücretsiz 3 aylık Cookidoo® üyeliği, ilk kez Cookidoo® aboneliği
+  satın alanlar için geçerlidir. Kampanya koşulları ve kupon kodu
+  detayları için iletişime geçebilirsiniz.
 </p>
         </div>
 
@@ -465,7 +475,7 @@ function Hero({ go, contact }) {
       </div>
 
       <div className="campaignHeroCard">
-  <div className="campaignBadge">🔥 Eylül Fırsatı</div>
+  <div className="campaignBadge">🔥 Ekim Fırsatı</div>
 
   <Link
     href="/thermomix-tm7-fiyat-kampanya"
@@ -474,7 +484,7 @@ function Hero({ go, contact }) {
   >
     <img
       src="/tm7-kampanya.jpg"
-      alt="Thermomix TM7 güncel fiyat ve Eylül 2026 kampanyaları"
+      alt="Thermomix TM7 güncel fiyat ve Ekim 2026 kampanyaları"
     />
   </Link>
 

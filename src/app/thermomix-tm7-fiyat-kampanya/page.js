@@ -4,11 +4,16 @@ import ConsultantSection from '../components/ConsultantSection';
 import TM7CampaignDetailSection from '../components/TM7CampaignDetailSection';
 import SiteFooter from '../components/SiteFooter';
 
-export const metadata = {
-  title: 'Thermomix TM7 Fiyatı ve Eylül 2026 Kampanyaları',
+const campaignTitle =
+  'Thermomix TM7 Fiyatı ve Ekim 2026 Sonbahar Fırsatı';
 
-  description:
-    'Thermomix TM7 fiyatı 89.990₺. Eylül 2026 kampanyasında 5.000₺ Migros çeki, Thermomix Yemek Takımı avantajı, 3 aylık ücretsiz Cookidoo® üyeliği ve vade farksız 6 taksit seçeneklerini inceleyin.',
+const campaignDescription =
+  'TM7 89.990₺, tüm kredi kartlarına vade farksız 6 taksit. 1–31 Ekim: Kesme Aparatı+ ve 3 Yıl Ek Garanti paketi kupon koduyla 22.990₺ yerine 3.500₺.';
+
+export const metadata = {
+  title: campaignTitle,
+
+  description: campaignDescription,
 
   alternates: {
     canonical: '/thermomix-tm7-fiyat-kampanya',
@@ -20,17 +25,14 @@ export const metadata = {
     url: 'https://www.lezzetasistani.com/thermomix-tm7-fiyat-kampanya',
     siteName: 'Lezzet Asistanı',
 
-    title: 'Thermomix TM7 Fiyatı ve Eylül 2026 Kampanyaları',
+    title: campaignTitle,
 
-    description:
-      'Thermomix TM7 fiyatı 89.990₺. Eylül 2026 kampanyasında 5.000₺ Migros çeki, Thermomix Yemek Takımı, 3 aylık ücretsiz Cookidoo® üyeliği ve vade farksız 6 taksit avantajlarını inceleyin.',
+    description: campaignDescription,
 
     images: [
       {
         url: 'https://www.lezzetasistani.com/tm7-kampanya.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Thermomix TM7 Eylül 2026 fiyat ve kampanyaları',
+        alt: 'Thermomix TM7 Ekim 2026 Sonbahar Fırsatı, fiyat ve kampanya avantajları',
       },
     ],
   },
@@ -38,10 +40,9 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
 
-    title: 'Thermomix TM7 Fiyatı ve Eylül 2026 Kampanyaları',
+    title: campaignTitle,
 
-    description:
-      'Thermomix TM7 fiyatı 89.990₺. Eylül 2026 kampanyasında 5.000₺ Migros çeki, Thermomix Yemek Takımı, ücretsiz Cookidoo® üyeliği ve vade farksız 6 taksit avantajlarını inceleyin.',
+    description: campaignDescription,
 
     images: ['https://www.lezzetasistani.com/tm7-kampanya.jpg'],
   },

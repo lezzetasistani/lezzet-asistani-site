@@ -3,42 +3,41 @@ import Link from 'next/link';
 export default function TM7CampaignDetailSection() {
   const campaignItems = [
     {
-      title: '5.000₺ Migros Çeki Hediye',
+      title: 'Kesme Aparatı+ ve 3 Yıl Ek Garanti Paketi',
       text:
-        '16–30 Eylül 2026 tarihleri arasında Thermomix TM7 satın alanlara 5.000₺ değerinde Migros çeki hediye edilmektedir.',
-    },
-    {
-      title: 'Thermomix Yemek Takımı 2.750₺',
-      text:
-        'Kampanya döneminde Thermomix Yemek Takımı, kampanya kupon koduyla 2.750₺ indirimli fiyatla alınabilir.',
+        '1–31 Ekim 2026 tarihleri arasında Thermomix TM7 satın alımında Thermomix® Kesme Aparatı+ ve 3 Yıl Ek Garanti paketi, kupon koduyla 22.990₺ yerine 3.500₺ karşılığında alınabilir.',
     },
     {
       title: '3 Aylık Cookidoo® Üyeliği Ücretsiz',
       text:
-        'Thermomix TM7 satın alımında 3 aylık Cookidoo® üyeliğinden ücretsiz olarak yararlanabilir, binlerce tarife ve Rehberli Pişirme özelliklerine erişebilirsiniz.',
+        'İlk kez Cookidoo® aboneliği satın alanlara 3 aylık Cookidoo® üyeliği ücretsiz sunulur. Cookidoo ile tariflere ve Rehberli Pişirme özelliklerine erişebilirsiniz.',
     },
     {
-      title: 'Ödeme ve Taksit Seçenekleri',
+      title: 'Tüm Kredi Kartlarına Vade Farksız 6 Taksit',
       text:
-        'Thermomix TM7’nin Eylül 2026 satış fiyatı 89.990₺’dir. Kampanya döneminde vade farksız 6 taksit seçeneğinden yararlanılabilir.',
+        'Thermomix TM7’nin Ekim 2026 satış fiyatı 89.990₺’dir. Tüm kredi kartlarına vade farksız 6 taksit seçeneğinden yararlanabilirsiniz.',
     },
     {
-      title: '2.000 Adet Stokla Sınırlı',
+      title: '5.000 Adet Stokla Sınırlı',
       text:
-        '16–30 Eylül 2026 tarihleri arasında geçerli kampanya 2.000 adet stokla sınırlıdır ve başka kampanyalarla birleştirilemez.',
+        '1–31 Ekim 2026 tarihleri arasında geçerli Sonbahar Fırsatı kampanyası 5.000 adet stokla sınırlıdır ve başka kampanyalarla birleştirilemez.',
+    },
+    {
+      title: 'Resmî Vorwerk Sitesinden Satın Alım',
+      text:
+        'Thermomix TM7 satın alma işlemi yalnızca resmî Vorwerk sitesi üzerinden gerçekleştirilir. Satın alma süreci ve kampanya kupon kodunun kullanımı konusunda danışman desteği alabilirsiniz.',
     },
     {
       title: 'Satın Alma Öncesi ve Sonrası Danışmanlık',
       text:
-        'Thermomix TM7 hakkında satın alma öncesinde merak ettiklerinizi sorabilir; satın alma sonrasında da cihaz kullanımı, tarifler ve aklınıza takılan konularda ihtiyaç duyduğunuzda benimle iletişime geçebilirsiniz.',
+        'Thermomix TM7 hakkında satın alma öncesinde merak ettiklerinizi sorabilir; satın alma sonrasında da cihaz kullanımı, tarifler ve aklınıza takılan konularda benimle iletişime geçebilirsiniz.',
     },
   ];
 
   return (
     <section className="tm7CampaignDetailSection">
-
       <div className="tm7CampaignDetailHeader">
-        <span>EYLÜL 2026 KAMPANYA REHBERİ</span>
+        <span>EKİM 2026 SONBAHAR FIRSATI</span>
 
         <h2>
           Thermomix TM7 kampanyasında
@@ -46,8 +45,8 @@ export default function TM7CampaignDetailSection() {
         </h2>
 
         <p>
-          Eylül 2026 döneminde geçerli Thermomix TM7 fiyat,
-          ödeme ve kampanya avantajlarını tek tek inceleyin.
+          1–31 Ekim 2026 tarihleri arasında geçerli Thermomix TM7
+          fiyat, ödeme ve kampanya avantajlarını tek tek inceleyin.
         </p>
       </div>
 
@@ -69,7 +68,6 @@ export default function TM7CampaignDetailSection() {
       </div>
 
       <div className="tm7CampaignProcessBlock">
-
         <div>
           <span>THERMOMIX TM7</span>
 
@@ -79,15 +77,24 @@ export default function TM7CampaignDetailSection() {
           </h2>
 
           <p>
-            Satın alma öncesinde güncel kampanya koşullarını,
-            ödeme seçeneklerini ve stok durumunu kontrol ederek
-            size uygun satın alma seçeneğini belirleyebilirsiniz.
+            Güncel kampanya koşulları, kupon kodu, ödeme seçenekleri
+            ve stok durumu hakkında bilgi almak için benimle
+            iletişime geçebilirsiniz. Satın alım yalnızca resmî
+            Vorwerk sitesi üzerinden gerçekleştirilir.
           </p>
 
           <p>
-            Kampanya 16–30 Eylül 2026 tarihleri arasında geçerli olup
-            2.000 adet stokla sınırlıdır. Kampanya koşulları ve stok
-            durumu dönem içerisinde değişiklik gösterebilir.
+            Kesme Aparatı+ ve 3 Yıl Ek Garanti paketi, TM7 fiyatına
+            ek olarak kupon koduyla 3.500₺ karşılığında alınabilir.
+            Ücretsiz 3 aylık Cookidoo® üyeliği, ilk kez Cookidoo®
+            aboneliği satın alanlar için geçerlidir.
+          </p>
+
+          <p>
+            Kampanya 1–31 Ekim 2026 tarihleri arasında geçerli olup
+            5.000 adet stokla sınırlıdır ve başka kampanyalarla
+            birleştirilemez. Vorwerk Türkiye kampanyayı değiştirme
+            hakkını saklı tutar.
           </p>
         </div>
 
@@ -104,9 +111,7 @@ export default function TM7CampaignDetailSection() {
             Cookidoo →
           </Link>
         </div>
-
       </div>
-
     </section>
   );
 }
