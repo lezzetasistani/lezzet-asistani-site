@@ -306,143 +306,138 @@ function WhatsAppWidget({ contact, contactModalOpen }) {
 }
 function CampaignPopup({ contact }) {
   const [open, setOpen] = useState(false);
-
   const campaignModalRef = useRef(null);
 
-useEffect(() => {
-  if (!open) return;
+  useEffect(() => {
+    if (!open) return;
 
-  const timer = requestAnimationFrame(() => {
-    if (campaignModalRef.current) {
-      campaignModalRef.current.scrollTop = 0;
-    }
-  });
+    const timer = requestAnimationFrame(() => {
+      if (campaignModalRef.current) {
+        campaignModalRef.current.scrollTop = 0;
+      }
+    });
 
-  return () => cancelAnimationFrame(timer);
-}, [open]);
+    return () => cancelAnimationFrame(timer);
+  }, [open]);
 
-useEffect(() => {
-  if (typeof window === 'undefined') return;
+  useEffect(() => {
+    const storageKey = 'campaignPopupShown-2026-11';
 
-  const alreadyShown = sessionStorage.getItem('campaignPopupShown');
+    if (sessionStorage.getItem(storageKey)) return;
 
-  if (alreadyShown) return;
+    const isMobile = window.matchMedia('(max-width: 640px)').matches;
+    const delay = isMobile ? 7000 : 4500;
 
-  const isMobile = window.matchMedia('(max-width: 640px)').matches;
+    const timer = setTimeout(() => {
+      setOpen(true);
+      sessionStorage.setItem(storageKey, 'true');
+    }, delay);
 
-  const delay = isMobile ? 7000 : 4500;
-
-  const timer = setTimeout(() => {
-    setOpen(true);
-    sessionStorage.setItem('campaignPopupShown', 'true');
-  }, delay);
-
-  return () => clearTimeout(timer);
-}, []);
+    return () => clearTimeout(timer);
+  }, []);
 
   if (!open) return null;
 
   return (
     <div className="campaignModalBackdrop">
-      <div
-  className="campaignModal"
-  ref={campaignModalRef}
->
-        <button className="campaignClose" onClick={() => setOpen(false)}>×</button>
+      <div className="campaignModal" ref={campaignModalRef}>
+        <button
+          className="campaignClose"
+          onClick={() => setOpen(false)}
+          aria-label="Kampanya penceresini kapat"
+        >
+          ×
+        </button>
 
         <div className="campaignModalText">
-
-<h2>
-            Sonbahar
+          <h2>
+            En Sevilen Kampanya
             <br />
-            Fırsatı!
+            Geri Döndü!
           </h2>
 
           <div className="campaignTopInfo">
-  <div className="campaignPriceBadge">
-    <span>Vade Farksız</span>
-    <strong>6 Taksitle</strong>
-    <b>TM7 89.990₺</b>
-  </div>
+            <div className="campaignPriceBadge">
+              <span>Vade Farksız</span>
+              <strong>9 Taksitle</strong>
+              <b>TM7 89.990₺</b>
+            </div>
 
-  <small className="campaignDate">
-    1 - 31 EKİM 2026
-  </small>
-</div>
+            <small className="campaignDate">
+              1–30 KASIM 2026
+            </small>
+          </div>
 
-          
-
-{/* MOBİLDE GÖRÜNECEK */}
+          {/* MOBİLDE GÖRÜNECEK */}
           <div className="campaignModalVisual campaignModalVisualMobile">
-  <img
-    src="/tm7-kampanya.jpg"
-    alt="Thermomix TM7 Kampanya"
-  />
-</div>
+            <img
+              src="/tm7-kampanya.jpg"
+              alt="Thermomix TM7 Kasım 2026 kampanyası"
+            />
+          </div>
 
-         <p>
-  1–31 Ekim tarihleri arasında Thermomix TM7 satın alımında
-  <strong> Sonbahar Fırsatı!</strong>
-  {' '}Thermomix® Kesme Aparatı+ ve 3 Yıl Ek Garanti paketi,
-  <strong> kupon koduyla 22.990₺ yerine 3.500₺.</strong>
-  {' '}İlk kez Cookidoo® aboneliği satın alanlara
+          <p>
+  1–30 Kasım tarihleri arasında Thermomix TM7 satın alanlara
+  <strong>
+    {' '}Thermomix® Karıştırma Kabı, kupon koduyla
+    15.290₺ yerine 6.000₺!
+  </strong>
+  {' '}Ayrıca
   <strong> 3 aylık Cookidoo® üyeliği ücretsiz.</strong>
-  {' '}Satın alım yalnızca resmî Vorwerk sitesi üzerinden gerçekleştirilir.
-  Kampanya detayları için bana WhatsApp’tan ulaşabilirsiniz.
+  {' '}Satın alım yalnızca resmî Vorwerk sitesi üzerinden
+  gerçekleştirilir. Kampanya detayları için bana WhatsApp’tan
+  ulaşabilirsiniz.
 </p>
 
           <div className="campaignBenefits">
-  <div>✓ TM7: 89.990₺ — tüm kredi kartlarına vade farksız 6 taksit</div>
-  <div>
-    ✓ Kesme Aparatı+ ve 3 Yıl Ek Garanti paketi,
-    kupon koduyla 22.990₺ yerine 3.500₺
-  </div>
-  <div>
-    ✓ İlk kez Cookidoo® aboneliği satın alanlara
-    3 aylık Cookidoo® üyeliği ücretsiz
-  </div>
-  <div>✓ Kampanya 5.000 adet stokla sınırlıdır</div>
-</div>
+            <div>✓ Vade farksız 9 taksitle TM7: 89.990₺</div>
+            <div>
+              ✓ Ek karıştırma kabı kupon koduyla
+              15.290₺ yerine 6.000₺
+            </div>
+            <div>✓ 3 aylık Cookidoo® üyeliği ücretsiz</div>
+            <div>✓ Kampanya stoklarla sınırlıdır</div>
+          </div>
 
           <div className="campaignActions">
             <button
-  className="campaignPrimary"
-  onClick={() => {
-    setOpen(false);
-    contact();
-  }}
->
-  WhatsApp’tan Bilgi Al
-</button>
-            <button className="campaignSecondary" onClick={() => setOpen(false)}>Siteye Devam Et</button>
+              className="campaignPrimary"
+              onClick={() => {
+                setOpen(false);
+                contact();
+              }}
+            >
+              WhatsApp’tan Bilgi Al
+            </button>
+
+            <button
+              className="campaignSecondary"
+              onClick={() => setOpen(false)}
+            >
+              Siteye Devam Et
+            </button>
           </div>
 
           <p className="campaignLegal">
-  Kampanya 1–31 Ekim 2026 tarihleri arasında geçerli olup
-  5.000 adet stokla sınırlıdır ve başka kampanyalarla birleştirilemez.
-  Vorwerk Türkiye kampanyayı değiştirme hakkını saklı tutar.
-  Ücretsiz 3 aylık Cookidoo® üyeliği, ilk kez Cookidoo® aboneliği
-  satın alanlar için geçerlidir. Kampanya koşulları ve kupon kodu
-  detayları için iletişime geçebilirsiniz.
+  Kampanya 1–30 Kasım 2026 tarihleri arasında geçerlidir.
+  Ek karıştırma kabı, TM7 fiyatına ek olarak kupon koduyla
+  6.000₺ karşılığında alınabilir. Kampanya stoklarla sınırlıdır
+  ve farklı kampanyalarla birleştirilemez. Kampanya koşulları
+  ve kupon kodu detayları için iletişime geçebilirsiniz.
 </p>
         </div>
 
         <div className="campaignModalVisual campaignModalVisualDesktop">
           <img
             src="/tm7-kampanya.jpg"
-            alt="Thermomix TM7 Kampanya"
+            alt="Thermomix TM7 Kasım 2026 kampanyası"
           />
         </div>
-
-        
       </div>
-
-
     </div>
   );
 }
 function Hero({ go, contact }) {
-
   return (
     <section className="hero heroCampaign">
       <div className="heroText">
@@ -475,7 +470,7 @@ function Hero({ go, contact }) {
       </div>
 
       <div className="campaignHeroCard">
-  <div className="campaignBadge">🔥 Ekim Fırsatı</div>
+  <div className="campaignBadge">🔥 Kasım Fırsatı</div>
 
   <Link
     href="/thermomix-tm7-fiyat-kampanya"
@@ -484,7 +479,7 @@ function Hero({ go, contact }) {
   >
     <img
       src="/tm7-kampanya.jpg"
-      alt="Thermomix TM7 güncel fiyat ve Ekim 2026 kampanyaları"
+      alt="Thermomix TM7 güncel fiyat ve Kasım 2026 kampanyaları"
     />
   </Link>
 

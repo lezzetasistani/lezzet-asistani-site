@@ -5,10 +5,10 @@ import TM7CampaignDetailSection from '../components/TM7CampaignDetailSection';
 import SiteFooter from '../components/SiteFooter';
 
 const campaignTitle =
-  'Thermomix TM7 Fiyatı ve Ekim 2026 Sonbahar Fırsatı';
+  'Thermomix TM7 Fiyatı ve Kasım 2026 Fırsatı';
 
 const campaignDescription =
-  'TM7 89.990₺, tüm kredi kartlarına vade farksız 6 taksit. 1–31 Ekim: Kesme Aparatı+ ve 3 Yıl Ek Garanti paketi kupon koduyla 22.990₺ yerine 3.500₺.';
+  'TM7 89.990₺, vade farksız 9 taksit. 1–30 Kasım 2026: ek karıştırma kabı kupon koduyla 15.290₺ yerine 6.000₺. Ayrıca 3 aylık Cookidoo® üyeliği ücretsiz.';
 
 export const metadata = {
   title: campaignTitle,
@@ -32,7 +32,7 @@ export const metadata = {
     images: [
       {
         url: 'https://www.lezzetasistani.com/tm7-kampanya.jpg',
-        alt: 'Thermomix TM7 Ekim 2026 Sonbahar Fırsatı, fiyat ve kampanya avantajları',
+        alt: 'Thermomix TM7 Kasım 2026 kampanyası: 9 taksit ve ek karıştırma kabı kupon koduyla 6.000₺',
       },
     ],
   },
