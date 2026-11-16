@@ -180,28 +180,6 @@ export default function TM7FunctionsSection({
     }
   ];
 
-  const stopPreview = (video) => {
-    if (!video) return;
-
-    video.pause();
-
-    try {
-      video.currentTime = 0.05;
-    } catch {}
-  };
-
-  const playPreview = (video) => {
-    if (!video) return;
-
-    if (
-      typeof window !== 'undefined' &&
-      window.matchMedia('(hover: hover) and (pointer: fine)').matches
-    ) {
-      video.muted = true;
-      video.play().catch(() => {});
-    }
-  };
-
   const closeMode = () => {
     if (modalVideoRef.current) {
       modalVideoRef.current.pause();
@@ -254,7 +232,7 @@ export default function TM7FunctionsSection({
 
         <p>
   Thermomix TM7’nin pişirme, hazırlık ve temizlik fonksiyonlarını keşfedin.
-  Kartlardaki modları izleyebilir, detayları görmek için karta dokunabilirsiniz.
+  Detayları görmek ve videoyu izlemek için karta dokunun.
 </p>
 {showDetailLink && (
   <Link
@@ -274,39 +252,37 @@ export default function TM7FunctionsSection({
             onClick={() => setSelectedMode(mode)}
           >
             <div
-              className="tm7ModeMedia"
-              onMouseEnter={(e) => {
-                const video = e.currentTarget.querySelector('video');
-                playPreview(video);
-              }}
-              onMouseLeave={(e) => {
-                const video = e.currentTarget.querySelector('video');
-                stopPreview(video);
-              }}
-            >
-              <video
-                src={mode.video}
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                onLoadedMetadata={(e) => {
-                  try {
-                    e.currentTarget.currentTime = 0.05;
-                  } catch {}
-                }}
-              />
+  className="tm7ModeMedia"
+  style={{
+    background: '#14251e',
+    aspectRatio: '16 / 9',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }}
+>
+  <span
+    aria-hidden="true"
+    style={{
+      color: '#fff',
+      fontSize: '42px',
+      position: 'relative',
+      zIndex: 2,
+    }}
+  >
+    ▶
+  </span>
 
-              <div className="tm7ModeMediaShade"></div>
+  <div className="tm7ModeMediaShade"></div>
 
-              <span className="tm7ModeNumber">
-                {String(index + 1).padStart(2, '0')}
-              </span>
+  <span className="tm7ModeNumber">
+    {String(index + 1).padStart(2, '0')}
+  </span>
 
-              <span className="tm7ModeHoverText">
-                ▶ Ön İzleme
-              </span>
-            </div>
+  <span className="tm7ModeHoverText">
+    Videoyu İzle
+  </span>
+</div>
 
             <div className="tm7ModeCardBody">
               <div>
@@ -353,12 +329,13 @@ export default function TM7FunctionsSection({
 
             <div className="tm7ModeModalVideo">
               <video
-                ref={modalVideoRef}
-                src={selectedMode.video}
-                controls
-                playsInline
-                preload="metadata"
-              />
+  key={selectedMode.video}
+  ref={modalVideoRef}
+  src={selectedMode.video}
+  controls
+  playsInline
+  preload="none"
+/>
             </div>
 
             <div className="tm7ModeModalInfo">
