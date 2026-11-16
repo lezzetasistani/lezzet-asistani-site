@@ -259,8 +259,25 @@ export default function TM7FunctionsSection({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    position: 'relative',
+overflow: 'hidden',
   }}
 >
+<img
+  src={mode.video.replace(/\.mp4$/i, '.webp')}
+  alt={mode.title}
+  loading="lazy"
+  decoding="async"
+  width={640}
+  height={360}
+  style={{
+    position: 'absolute',
+    inset: 0,
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+  }}
+/>
   <span
     aria-hidden="true"
     style={{
